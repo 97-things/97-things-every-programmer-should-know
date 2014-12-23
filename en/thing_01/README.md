@@ -1,6 +1,6 @@
 # Act with Prudence
 
-*"Whatever you undertake, act with prudence and consider the consequences" Anon*
+> *"Whatever you undertake, act with prudence and consider the consequences" Anon*
 
 No matter how comfortable a schedule looks at the beginning of an iteration, you can't avoid being under pressure some of the time. If you find yourself having to choose between "doing it right" and "doing it quick" it is often appealing to "do it quick" on the understanding that you'll come back and fix it later. When you make this promise to yourself, your team, and your customer, you mean it. But all too often the next iteration brings new problems and you become focused on them. This sort of deferred work is known as technical debt and it is not your friend. Specifically, Martin Fowler calls this deliberate technical debt in his [taxonomy of technical debt](http://martinfowler.com/bliki/TechnicalDebtQuadrant.html), which should not be confused with inadvertent technical debt.
 
