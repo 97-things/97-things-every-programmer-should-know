@@ -13,4 +13,4 @@
 
 Дзен – это про отдельную личность. Убунту – это Дзен для группы людей. Мы очень-очень редко пишем код лишь для себя самих.
 
-Автор оригинала -  [Aslam Khan](http://programmer.97things.oreilly.com/wiki/index.php/Aslam_Khan)
+Автор оригинала - [Aslam Khan](http://programmer.97things.oreilly.com/wiki/index.php/Aslam_Khan)
