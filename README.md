@@ -1,5 +1,5 @@
 97 Things Every Programmer Should Know
-======
+=======
 
 *Pearls of wisdom for programmers collected from leading practitioners.*
 
