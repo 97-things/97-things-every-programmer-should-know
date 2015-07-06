@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Act with Prudence](/thing_01/README.md)
+* [Act with Prudence](thing_01/README.md)
 * [Apply Functional Programming Principles](thing_02/README.md)
 * [Ask "What Would the User Do?" (You Are not the User)](thing_03/README.md)
 * [Automate Your Coding Standard](thing_04/README.md)
