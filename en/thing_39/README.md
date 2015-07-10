@@ -17,8 +17,7 @@ So why did the unnecessary code end up there in the first place? Why did one pro
 - It was a fun bit of extra stuff, and the programmer wanted to write it. *(Hint: Write code because it adds value, not because it amuses you.)*
 - Someone thought that it might be needed in the future, so felt it was best to code it now. *(Hint: That isn't YAGNI. If you don't need it right now, don't write it right now.)*
 - It didn't appear to be that big an "extra," so it was easier to implement it rather than go back to the customer to see whether it was really required. *(Hint: It always takes longer to write and to maintain extra code. And the customer is actually quite approachable. A small extra bit of code snowballs over time into a large piece of work that needs maintenance.)*
-
-The programmer invented extra requirements that were neither documented nor discussed that justified the extra feature. The requirement was actually bogus. *(Hint: Programmers do not set system requirements; the customer does.)*
+- The programmer invented extra requirements that were neither documented nor discussed that justified the extra feature. The requirement was actually bogus. *(Hint: Programmers do not set system requirements; the customer does.)*
 
 What are you working on right now? Is it all needed?
 
