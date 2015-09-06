@@ -10,16 +10,16 @@ Space and time complexity are given as the function *O(f(n))* which for n equal 
 
 ![](http://programmer.97things.oreilly.com/wiki/images/c/c0/Clearly.jpeg)
 
-|access time|capacity
----|---|---
-**register**|< 1 ns|64 b
-**cache line**| |64 B
-**L1 cache**|1 ns|64 KB
-**L2 cache**|4 ns|8 MB
-**RAM**|20 ns|32 GB
-**disk**|10 ms|10 TB
-**LAN**|20 ms|> 1 PB
-**Internet**|100 ms|> 1 ZB
+|              | access time      |   capacity |
+|--------------|-----------------:| ----------:|
+| register     |  < 1 ns          |        64b |
+| cache line   |                  |        64B |
+| L1 cache     |  1 ns            | 64 KB      |
+| L2 cache     |  4 ns            | 8 MB       |
+| RAM          | 20 ns            | 32 GB      |
+| disk         | 10 ms            | 10 TB      |
+| LAN          | 20 ms            | > 1 PB     |
+| internet     | 100 ms           | > 1 ZB     |
 
 Complexity analysis is in terms of an abstract machine, but software runs on real machines. Modern computer systems are organized as hierarchies of physical and virtual machines, including language runtimes, operating systems, CPUs, cache memory, random-access memory, disk drives, and networks. The first table shows the limits on random access time and storage capacity for a typical networked server.
 
@@ -30,13 +30,15 @@ Algorithms and data structures vary in how effectively they use caches. For inst
 - Binary search of a sorted array requires only *O(log(n))* comparisons.
 - Search of a van Emde Boas tree is *O(log(n))* and cache-oblivious.
 
-Search time|(ns)|||
----|---|---|---
-**8**|50|90|40
-**64**|180|150|70
-**512**|1200|230|100
-**4096**|17000|320|160
-|**linear**|**binary**|**vEB**
+
+|Elements | Search time (ns)|       |         |
+|:--------|-----------:|-----------:|--------:|
+|         | **linear** | **binary** |	**vEB** |
+| 8       | 50         | 90         | 40      |
+| 64      | 180        | 150        | 70      |
+| 512     | 1200       | 230        | 100     |
+| 4096    | 17000      | 320        | 160     |
+
 
 How to choose? In the last analysis, by measuring. The second table shows the time required to search arrays of 64-bit integers via these three methods. On my computer:
 - Linear search is competitive for small arrays, but loses exponentially for larger arrays.
