@@ -14,7 +14,7 @@ Sure, test automation is great, but why stop there? Repetitive tasks abound in a
 
 Did you ever have a "But it (checks out|builds|passes tests) on my machine?" argument with your teammates? Modern IDEs have thousands of potential settings, and it is essentially impossible to ensure that all team members have identical configurations. Build automation systems such as Ant or Autotools give you control and repeatability.
 
-##Common misconception #3: I need to learn exotic tools in order to automate.
+## Common misconception #3: I need to learn exotic tools in order to automate.
 
 You can go a long way with a decent shell language (such as bash or PowerShell) and a build automation system. If you need to interact with web sites, use a tool such as iMacros or Selenium.
 
