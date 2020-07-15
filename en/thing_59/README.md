@@ -16,7 +16,7 @@ Let's say our webshop offers items that can be downloaded and items that need to
 ```
 public class Shipping {
     public boolean ship(Item item, SurfaceAddress address) { ... }
-    public boolean ship(Item item, EMailAddress address { ... }
+    public boolean ship(Item item, EMailAddress address) { ... }
 }
 ```
 
