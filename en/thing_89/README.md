@@ -4,7 +4,7 @@
 
 > The vendor sent a performance analysis and tuning specialist to determine the cause of the delays. He soon found one specific program running on the terminal consuming almost all the CPU capacity. Using a profiling tool, he zoomed in on the program and he could see the function that was the culprit. The source code read:
 
-> ```
+```
 for (i=0; i<strlen(s); ++i) {
   if (... s[i] ...) ...
 }
