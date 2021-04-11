@@ -36,6 +36,6 @@ The simple partitioning shown above resolves the issues. Each of these classes c
 
 The astute reader will see that there are still dependencies in the above solution. That `Employee` is still depended upon by the other classes. So if `Employee` is modified, the other classes will likely have to be recompiled and redeployed. Thus, `Employee` cannot be modified and then independently deployed. However, the other classes can be modified and independently deployed. No modification of one of them can force any of the others to be recompiled or redeployed. Even `Employee` could be independently deployed through a careful use of the *Dependency Inversion Principle* (DIP), but that's a topic for a [different book](http://www.amazon.com/dp/0135974445/).
 
-Careful application of the SRP, separating things that change for different reasons, is one if the keys to creating designs that have an independently deployable component structure.
+Careful application of the SRP, separating things that change for different reasons, is one of the keys to creating designs that have an independently deployable component structure.
 
 by [Uncle Bob](http://programmer.97things.oreilly.com/wiki/index.php/Uncle_Bob)
