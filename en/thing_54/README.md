@@ -19,14 +19,14 @@ The answer depends on your project, and on your personal stake in the production
 So what can we do if we see a problem?
 
 1. Avoid creating an interim solution in the first place.
-- Change the forces that influence the decision of the project manager.
-- Leave it as is.
+2. Change the forces that influence the decision of the project manager.
+3. Leave it as is.
 
 Let's examine these options more closely:
 
 1. Avoidance does not work in most places. There is an actual problem to solve, and the standards have turned out to be too restrictive. You might spend some energy trying to change the standards. An honorable albeit tedious endeavor... and that change will not be effective in time for your problem at hand.
-- The forces are rooted in the project culture, which resists volitional change. It could be successful in very small projects — especially if it's just you — and you just happen to clean the mess without asking in advance. It could also be successful if the project is such a mess that it is visibly stalled and some time for cleaning up is commonly accepted.
-- The status quo automatically applies if the previous option does not.
+2. The forces are rooted in the project culture, which resists volitional change. It could be successful in very small projects — especially if it's just you — and you just happen to clean the mess without asking in advance. It could also be successful if the project is such a mess that it is visibly stalled and some time for cleaning up is commonly accepted.
+3. The status quo automatically applies if the previous option does not.
 
 You will create many solutions, some of them will be interim, most of them will be useful. The best way to overcome interim solutions is to make them superfluous, to provide a more elegant and useful solution. May you be granted the [serenity](http://en.wikipedia.org/wiki/Serenity_prayer) to accept the things you cannot change, courage to change the things you can, and wisdom to know the difference.
 
