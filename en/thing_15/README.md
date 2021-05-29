@@ -8,7 +8,7 @@ A section should be chosen so that at each endpoint the *state of the program* (
 
 Many of the coding practices that are well known (although perhaps less well followed) and considered 'good' make reasoning easier. Hence, just by intending to reason about your code, you already start thinking toward a better style and structure. Unsurprisingly, most of these practices can be checked by static code analyzers:
 
-1. Avoid using goto statements, as they make remote sections highly interdependent.
+- Avoid using goto statements, as they make remote sections highly interdependent.
 - Avoid using modifiable global variables, as they make all sections that use them dependent.
 - Each variable should have the smallest possible scope. For example, a local object can be declared right before its first usage.
 - Make objects *immutable* whenever relevant.
