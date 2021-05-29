@@ -1,0 +1,13 @@
+# Push Your Limits
+
+For many areas in life you need to know your limits in order to survive. Where it concerns personal safety, your limits define a boundary that should not be crossed. Where it concerns personal limitations, skills, and knowledge, however, knowing your limits serves an entirely different purpose. In programming, you want to know your limits so that you can pass them in order to become a better programmer.
+
+Fortunately, not many programmers view their code as a ticket to their next paycheck. Those of us who are truly programmers at heart thrive on immersing ourselves in new code and new concepts, and will never cease to take an interest in and learn new technology. Whichever technology or programming language these programmers favor, they have one important thing in common: They know their limits, and they thrive on pushing them little by little every day.
+
+We have all experienced that, if not armed with the knowledge we need or wished we had, attacking a bug or a problem head on takes a lot of time and effort. It can be too easy to pass the beast on to a colleague you know has the solution or can find one quickly. But how will that help you become a better problem solver? A programmer unaware of their own limits — or, worse, aware of them but not challenging them — is more likely to end up working in a never-ending loop of the same tasks every day. To insert a break into this loop, you need to acknowledge your limits by defining your programmatic weaknesses: Is your code readable by others? Are your tests sufficient? Focus on your weaknesses and you'll find that at the end of the struggle, you will have pushed that boundary an inch forward.
+
+Needless to say, what others know should not be forgotten. Fellow programmers and colleagues offer a nearby source of knowledge and information which should be shared and taught to others. They are, however, ignorant of your limits. It is your responsibility to acknowledge exactly where your boundaries are hiding so that you can make better use of the knowledge they offer. One of the most challenging and, many would say, most effective ways to extend your own limits is to explain code and concepts to fellow programmers, for example by blogging or hosting a presentation. You will then force yourself to focus on one of your weaknesses, while at the same time deepening your own and others' knowledge by discussing and getting feedback from others.
+
+At the end of the day, it is not about surviving. It is about surviving in the best way possible, by actively challenging yourself to excel as a programmer.
+
+By [Karoline Klever](http://programmer.97things.oreilly.com/wiki/index.php/Karoline_Klever)
