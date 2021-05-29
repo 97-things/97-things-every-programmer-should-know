@@ -3,13 +3,13 @@
 Depressingly often (happened to me again just before I wrote this), the view many programmers have of the process of going from source code to a statically linked executable in a compiled language is:
 
 1. Edit source code
-- Compile source code into object files
-- Something magical happens
-- Run executable
+2. Compile source code into object files
+3. Something magical happens
+4. Run executable
 
 Step 3 is, of course, the linking step. Why would I say such an outrageous thing? I've been doing tech support for decades, and I get the following questions again and again:
 
-1. The linker says def is defined more than once.
+- The linker says def is defined more than once.
 - The linker says abc is an unresolved symbol.
 - Why is my executable so large?
 
