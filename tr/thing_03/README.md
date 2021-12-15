@@ -1,4 +1,4 @@
-# "Kullanıcı Ne Yapar?" (Kullanıcı Siz değilsiniz)
+# "Kullanıcı Ne Yapar?" Diye Sor (Kullanıcı Siz değilsiniz)
 
 Hepimiz başkalarının bizim gibi düşündüğünü varsayma eğilimindeyiz ama yapmazlar. Psikologlar buna yanlış fikir birliği yanlılığı diyor. İnsanlar bizden farklı düşündüklerinde veya davrandıklarında, onları (bilinçaltında) bir şekilde kusurlu olarak etiketlememiz oldukça olasıdır.
 
