@@ -11,7 +11,7 @@
 1. [İzci Kuralı](thing_08/README.md)
 1. [Başkalarını Suçlamadan Önce Kodunuzu Kontrol Edin](thing_09/README.md)
 1. [Araçlarınızı Özenle Seçin](thing_10/README.md)
-1. [Code in the Language of the Domain](thing_11/README.md)
+1. [Domain Dilindeki Kod](thing_11/README.md)
 1. [Code Is Design](thing_12/README.md)
 1. [Code Layout Matters](thing_13/README.md)
 1. [Code Reviews](thing_14/README.md)
