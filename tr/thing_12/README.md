@@ -1,0 +1,17 @@
+# Kod Tasarımdır
+
+Yarın uyandığınızı ve inşaat sektörünün yüzyılın atılımını yaptığını öğrendiğinizi hayal edin. Milyonlarca ucuz, inanılmaz hızlı robot, malzemeleri hiç yoktan üretebilir, sıfıra yakın bir güç maliyetine sahip olabilir ve kendilerini onarabilir. Ve daha da iyi hale geliyor: Bir inşaat projesi için net bir plan verildiğinde, robotlar onu insan müdahalesi olmadan ihmal edilebilir bir maliyetle inşa edebilirler.
+
+İnşaat sektörü üzerindeki etkisi tahmin edilebilir, ancak yukarı yönde ne olur? İnşaat maliyetleri ihmal edilebilir olsaydı, mimarların ve tasarımcıların davranışları nasıl değişirdi? Günümüzde fiziksel modeller ve bilgisayar modelleri inşa edilmekte ve inşaata yatırım yapmadan önce titizlikle test edilmektedir. İnşaat aslında ücretsiz olsaydı rahatsız olur muyduk? Başka çıkarımlar da var. Modası geçmiş modellerle birlikte, bitmemiş tasarımlar, nihai hedefe bir yaklaşım üzerine tekrar tekrar inşa edilerek ve geliştirilerek gelişir. Sıradan bir gözlemci, bitmemiş bir tasarımı bitmiş bir üründen ayırt etmekte zorlanabilir.
+
+Zaman çizgilerini tahmin etme yeteneğimiz kaybolacak. İnşaat maliyetleri, tasarım maliyetlerinden daha kolay hesaplanır, bir kiriş kurmanın yaklaşık maliyetini ve kaç tane kirişe ihtiyacımız olduğunu biliyoruz. Öngörülebilir görevler sıfıra doğru küçüldükçe, daha az öngörülebilir tasarım süresi baskın olmaya başlar. Sonuçlar daha hızlı üretilir, ancak güvenilir zaman çizgileri kayıp gider.
+
+Tabii ki, rekabetçi bir ekonominin baskıları hala geçerli. İnşaat maliyetleri ortadan kaldırıldığında, bir tasarımı hızla tamamlayabilen bir şirket pazarda avantaj elde eder. Tasarımın hızlı yapılması, mühendislik firmalarının temel itici gücü haline gelir. Kaçınılmaz olarak, tasarıma derinden aşina olmayan biri, doğrulanmamış bir sürüm görecek, erken piyasaya sürmenin pazar avantajını görecek ve "Bu yeterince iyi görünüyor" diyecektir.
+
+Bazı ölüm kalım projeleri daha gayretli olacak, ancak çoğu durumda tüketiciler eksik tasarım yüzünden acı çekmeyi öğreniyor. Şirketler, sattıkları kırık binaları ve araçları 'düzeltmek' için her zaman sihirli robotlarımızı gönderebilirler. Tüm bunlar, şaşırtıcı bir şekilde mantık dışı bir sonuca işaret ediyor: Tek öncülümüz, inşaat maliyetlerinde önemli bir düşüş oldu ve bunun sonucunda *kalite daha da kötüleşti*.
+
+Yukarıdaki hikayenin yazılımda ortaya çıkması bizi şaşırtmamalı. Kodun tasarım olduğunu kabul edersek mekanik yerine daha çok yaratıcı bir süreç *yazılım krizi* olarak açıklanır. Artık bir *tasarım krizimiz var*: Kaliteli, onaylanmış tasarımlara olan talep, onları yaratma kapasitemizi aşıyor. Eksik tasarımı kullanma baskısı güçlüdür.
+
+Neyse ki bu model nasıl daha iyi olabileceğimize dair ipuçları da sunuyor. Fiziksel simülasyonlar otomatik teste eşittir; yazılım tasarımı, acımasız bir dizi testle doğrulanana kadar tamamlanmış sayılmaz. Bu tür testleri daha etkili kılmak için, büyük sistemlerin devasa durum uzayını dizginlemenin yollarını buluyoruz. İyileştirilmiş diller ve tasarım uygulamaları bize umut veriyor. Son olarak, kaçınılmaz bir gerçek var: Harika tasarımlar, kendilerini zanaatlarında ustalaşmaya adayan büyük tasarımcılar tarafından üretilir. Kodun da bundan bir farkı yok.
+
+[Ryan Brush](http://programmer.97things.oreilly.com/wiki/index.php/Ryan_Brush) Tarafından
