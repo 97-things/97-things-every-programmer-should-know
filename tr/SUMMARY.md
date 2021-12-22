@@ -12,7 +12,7 @@
 1. [Başkalarını Suçlamadan Önce Kodunuzu Kontrol Edin](thing_09/README.md)
 1. [Araçlarınızı Özenle Seçin](thing_10/README.md)
 1. [Domain Dilindeki Kod](thing_11/README.md)
-1. [Code Is Design](thing_12/README.md)
+1. [Kod Tasarımdır](thing_12/README.md)
 1. [Code Layout Matters](thing_13/README.md)
 1. [Code Reviews](thing_14/README.md)
 1. [Coding with Reason](thing_15/README.md)
