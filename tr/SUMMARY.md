@@ -13,7 +13,7 @@
 1. [Araçlarınızı Özenle Seçin](thing_10/README.md)
 1. [Domain Dilindeki Kod](thing_11/README.md)
 1. [Kod Tasarımdır](thing_12/README.md)
-1. [Code Layout Matters](thing_13/README.md)
+1. [Kod Düzeni Önemlidir](thing_13/README.md)
 1. [Code Reviews](thing_14/README.md)
 1. [Coding with Reason](thing_15/README.md)
 1. [A Comment on Comments](thing_16/README.md)
