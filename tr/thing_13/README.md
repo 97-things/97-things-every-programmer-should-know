@@ -1,0 +1,15 @@
+# Kod Düzeni Önemlidir
+
+Uzun bir süre önce, personelin zaten kodu değiştirmek için bir nedenleri olmadıkça girintiyi değiştirmesine izin verilmeyen bir Cobol sistemi üzerinde çalıştım, çünkü birisi bir satırın başındaki özel sütunlardan birine bir satırın kaymasına izin vererek bir şeyi bozdu. Bu, düzen yanıltıcı olsa bile uygulandı, ki bazen öyleydi, bu yüzden kodu çok dikkatli okumamız gerekiyordu çünkü ona güvenemedik. Politika, programcı sürüklemesinde bir servete mal olmuş olmalı.
+
+Hepimizin programlama zamanımızın çoğunu kod okumaya ve gezinmeye harcadığımızı gösteren araştırmalar var, değişikliğin *nerede* yapılacağı bulmak, aslında yazmaktan çok optimize etmek istediğimiz şey bu.
+
+- *Taraması kolay.* İnsanlar görsel desen eşleştirmede gerçekten iyiler (savanada aslanları tespit etmemiz gerektiğinden kalanlar), bu yüzden doğrudan alanla alakalı olmayan her şeyi yaparak kendime yardımcı olabilirim, çoğu ticari dilde gelen tüm "tesadüfi karmaşıklık", standartlaştırarak arka plana kaybolur. Aynı şekilde davranan kod aynı görünüyorsa, algısal sistemim farklılıkları seçmeme yardımcı olacaktır. Bu nedenle, bir sınıfın bölümlerinin bir derleme birimi içinde nasıl düzenleneceğine ilişkin kuralları da gözlemliyorum: sabitler, alanlar, genel yöntemler, özel yöntemler.
+
+- *Etkileyici düzen.* Kodumuzun yalnızca adımları listelemek yerine ne yaptığını olabildiğince açık bir şekilde ifade etmesi için doğru adları bulmaya zaman ayırmayı öğrendik, değil mi? Kodun düzeni de bu ifadenin bir parçasıdır. İlk adım, ekibin temel bilgiler için otomatik bir biçimlendirici üzerinde anlaşmasını sağlamaktır, ardından kodlama yaparken elle ayarlamalar yapabilirim. Aktif bir anlaşmazlık olmadıkça, bir ekip hızla ortak bir "el yapımı" stil üzerinde birleşecektir. Bir biçimlendirici niyetimi anlayamaz (bilmem gerekir ki, bir zamanlar bir tane yazmıştım) ve satır sonlarının ve gruplamaların sadece dilin sözdizimini değil, kodun amacını yansıtması benim için daha önemli. (Kevin McGuire beni otomatik kod biçimlendiricilere olan esaretimden kurtardı.)
+
+- *Kompakt format.* Bir ekrana ne kadar çok girebilirsem, dosyaları kaydırarak veya değiştirerek bağlamı bozmadan o kadar çok görebilirim, bu da kafamda daha az durum tutabileceğim anlamına gelir. Uzun prosedür yorumları ve çok sayıda boşluk, 8 karakterli adlar ve satır yazıcıları için anlamlıydı, ancak şimdi sözdizimi renklendirme ve çapraz bağlama yapan bir IDE'de yaşıyorum. Pikseller benim sınırlayıcı faktörümdür, bu yüzden herkesin kodu anlamama katkıda bulunmasını istiyorum. Düzenin kodu anlamama yardımcı olmasını istiyorum, ancak bundan daha fazlasını değil.
+
+Yazılımcı olmayan bir arkadaş bir keresinde kodun şiir gibi göründüğünü söylemişti. Gerçekten iyi bir koddan, metindeki her şeyin bir amacı olduğu ve fikri anlamama yardımcı olmak için orada olduğu hissini alıyorum. Ne yazık ki, kod yazmak şiir yazmakla aynı romantik imaja sahip değil.
+
+[Steve Freeman](http://programmer.97things.oreilly.com/wiki/index.php/Steve_Freeman) Tarafından
