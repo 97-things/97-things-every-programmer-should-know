@@ -15,7 +15,7 @@
 1. [Kod Tasarımdır](thing_12/README.md)
 1. [Kod Düzeni Önemlidir](thing_13/README.md)
 1. [Kod İncelemeleri](thing_14/README.md)
-1. [Coding with Reason](thing_15/README.md)
+1. [Akıllı Kodlama](thing_15/README.md)
 1. [A Comment on Comments](thing_16/README.md)
 1. [Comment Only What the Code Cannot Say](thing_17/README.md)
 1. [Continuous Learning](thing_18/README.md)
