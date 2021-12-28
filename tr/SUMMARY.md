@@ -17,7 +17,7 @@
 1. [Kod İncelemeleri](thing_14/README.md)
 1. [Akıllı Kodlama](thing_15/README.md)
 1. [Yorumlar Üzerine Bir Yorum](thing_16/README.md)
-1. [Comment Only What the Code Cannot Say](thing_17/README.md)
+1. [Yalnızca Kodun Söyleyemediklerini Yorumlayın](thing_17/README.md)
 1. [Continuous Learning](thing_18/README.md)
 1. [Convenience Is not an -ility](thing_19/README.md)
 1. [Deploy Early and Often](thing_20/README.md)
