@@ -20,7 +20,7 @@
 1. [Yalnızca Kodun Söyleyemediklerini Yorumlayın](thing_17/README.md)
 1. [Devamlı öğrenme](thing_18/README.md)
 1. [Kolaylık bir yetenek değildir](thing_19/README.md)
-1. [Deploy Early and Often](thing_20/README.md)
+1. [Erken ve Sıkça Dağıtın](thing_20/README.md)
 1. [Distinguish Business Exceptions from Technical](thing_21/README.md)
 1. [Do Lots of Deliberate Practice](thing_22/README.md)
 1. [Domain-Specific Languages](thing_23/README.md)
