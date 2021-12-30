@@ -22,7 +22,7 @@
 1. [Kolaylık bir yetenek değildir](thing_19/README.md)
 1. [Erken ve Sıkça Dağıtın](thing_20/README.md)
 1. [İş İstisnalarını Tekniklerden Ayırın](thing_21/README.md)
-1. [Do Lots of Deliberate Practice](thing_22/README.md)
+1. [Bol Bol Kasıtlı Uygulama Yapın](thing_22/README.md)
 1. [Domain-Specific Languages](thing_23/README.md)
 1. [Don't Be Afraid to Break Things](thing_24/README.md)
 1. [Don't Be Cute with Your Test Data](thing_25/README.md)
