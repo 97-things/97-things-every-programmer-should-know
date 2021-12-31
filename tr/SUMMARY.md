@@ -24,7 +24,7 @@
 1. [İş İstisnalarını Tekniklerden Ayırın](thing_21/README.md)
 1. [Bol Bol Kasıtlı Uygulama Yapın](thing_22/README.md)
 1. [Etki Alanına Özgü Diller](thing_23/README.md)
-1. [Don't Be Afraid to Break Things](thing_24/README.md)
+1. [Bir Şeyleri Kırmaktan Korkma](thing_24/README.md)
 1. [Don't Be Cute with Your Test Data](thing_25/README.md)
 1. [Don't Ignore that Error!](thing_26/README.md)
 1. [Don't Just Learn the Language, Understand its Culture](thing_27/README.md)
