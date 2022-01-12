@@ -27,7 +27,7 @@
 1. [Bir Şeyleri Kırmaktan Korkma](thing_24/README.md)
 1. [Test Verilerinizle Sevimli Olmayın](thing_25/README.md)
 1. [Hatayı Görmezden Gelmeyin!](thing_26/README.md)
-1. [Don't Just Learn the Language, Understand its Culture](thing_27/README.md)
+1. [Sadece Dili Öğrenmeyin, Kültürünü Anlayın](thing_27/README.md)
 1. [Don't Nail Your Program into the Upright Position](thing_28/README.md)
 1. [Don't Rely on "Magic Happens Here"](thing_29/README.md)
 1. [Don't Repeat Yourself](thing_30/README.md)
