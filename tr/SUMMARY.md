@@ -29,7 +29,7 @@
 1. [Hatayı Görmezden Gelmeyin!](thing_26/README.md)
 1. [Sadece Dili Öğrenmeyin, Kültürünü Anlayın](thing_27/README.md)
 1. [Programınızı Dik Konumda Çivilemeyin](thing_28/README.md)
-1. [Don't Rely on "Magic Happens Here"](thing_29/README.md)
+1. ["Burada Sihir Olur"a Güvenmeyin](thing_29/README.md)
 1. [Don't Repeat Yourself](thing_30/README.md)
 1. [Don't Touch that Code!](thing_31/README.md)
 1. [Encapsulate Behavior, not Just State](thing_32/README.md)
