@@ -31,7 +31,7 @@
 1. [Programınızı Dik Konumda Çivilemeyin](thing_28/README.md)
 1. ["Burada Sihir Olur"a Güvenmeyin](thing_29/README.md)
 1. [Kendinizi Tekrar Etmeyin (Don't Repeat Yourself - DRY)](thing_30/README.md)
-1. [Don't Touch that Code!](thing_31/README.md)
+1. [O Koda Dokunma!](thing_31/README.md)
 1. [Encapsulate Behavior, not Just State](thing_32/README.md)
 1. [Floating-point Numbers Aren't Real](thing_33/README.md)
 1. [Fulfill Your Ambitions with Open Source](thing_34/README.md)
