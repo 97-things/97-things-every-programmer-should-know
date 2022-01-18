@@ -32,7 +32,7 @@
 1. ["Burada Sihir Olur"a Güvenmeyin](thing_29/README.md)
 1. [Kendinizi Tekrar Etmeyin (Don't Repeat Yourself - DRY)](thing_30/README.md)
 1. [O Koda Dokunma!](thing_31/README.md)
-1. [Encapsulate Behavior, not Just State](thing_32/README.md)
+1. [Sadece Durumu Değil, Davranışı Kapsülleyin](thing_32/README.md)
 1. [Floating-point Numbers Aren't Real](thing_33/README.md)
 1. [Fulfill Your Ambitions with Open Source](thing_34/README.md)
 1. [The Golden Rule of API Design](thing_35/README.md)
