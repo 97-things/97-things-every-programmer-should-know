@@ -34,7 +34,7 @@
 1. [O Koda Dokunma!](thing_31/README.md)
 1. [Sadece Durumu Değil, Davranışı Kapsülleyin](thing_32/README.md)
 1. [Kayan Noktalı Sayılar Gerçek Değil](thing_33/README.md)
-1. [Fulfill Your Ambitions with Open Source](thing_34/README.md)
+1. [Açık Kaynak ile Hedeflerinizi Gerçekleştirin](thing_34/README.md)
 1. [The Golden Rule of API Design](thing_35/README.md)
 1. [The Guru Myth](thing_36/README.md)
 1. [Hard Work Does not Pay Off](thing_37/README.md)
