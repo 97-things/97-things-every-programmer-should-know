@@ -37,7 +37,7 @@
 1. [Açık Kaynak ile Hedeflerinizi Gerçekleştirin](thing_34/README.md)
 1. [API Tasarımının Altın Kuralı](thing_35/README.md)
 1. [Guru Efsanesi](thing_36/README.md)
-1. [Hard Work Does not Pay Off](thing_37/README.md)
+1. [Sıkı Çalışmanın Getirisi Yok](thing_37/README.md)
 1. [How to Use a Bug Tracker](thing_38/README.md)
 1. [Improve Code by Removing It](thing_39/README.md)
 1. [Install Me](thing_40/README.md)
