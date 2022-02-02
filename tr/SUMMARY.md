@@ -39,7 +39,7 @@
 1. [Guru Efsanesi](thing_36/README.md)
 1. [Sıkı Çalışmanın Getirisi Yok](thing_37/README.md)
 1. [Hata İzleyici Nasıl Kullanılır](thing_38/README.md)
-1. [Improve Code by Removing It](thing_39/README.md)
+1. [Kodu Kaldırarak İyileştirin](thing_39/README.md)
 1. [Install Me](thing_40/README.md)
 1. [Inter-Process Communication Affects Application Response Time](thing_41/README.md)
 1. [Keep the Build Clean](thing_42/README.md)
