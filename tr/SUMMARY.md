@@ -41,7 +41,7 @@
 1. [Hata İzleyici Nasıl Kullanılır](thing_38/README.md)
 1. [Kodu Kaldırarak İyileştirin](thing_39/README.md)
 1. [Install Me](thing_40/README.md)
-1. [Inter-Process Communication Affects Application Response Time](thing_41/README.md)
+1. [Süreçler Arası İletişim Uygulama Yanıt Süresini Etkiler](thing_41/README.md)
 1. [Keep the Build Clean](thing_42/README.md)
 1. [Know How to Use Command-line Tools](thing_43/README.md)
 1. [Know Well More than Two Programming Languages](thing_44/README.md)
