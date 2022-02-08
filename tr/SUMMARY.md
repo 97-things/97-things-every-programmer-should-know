@@ -44,7 +44,7 @@
 1. [Süreçler Arası İletişim Uygulama Yanıt Süresini Etkiler](thing_41/README.md)
 1. [Yapıyı Temiz Tutun](thing_42/README.md)
 1. [Komut Satırı Araçlarını Nasıl Kullanacağınızı Bilin](thing_43/README.md)
-1. [Know Well More than Two Programming Languages](thing_44/README.md)
+1. [İkiden Fazla Programlama Dilini İyi Bilin](thing_44/README.md)
 1. [Know Your IDE](thing_45/README.md)
 1. [Know Your Limits](thing_46/README.md)
 1. [Know Your Next Commit](thing_47/README.md)
