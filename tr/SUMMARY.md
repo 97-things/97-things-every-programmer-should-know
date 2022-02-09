@@ -47,7 +47,7 @@
 1. [İkiden Fazla Programlama Dilini İyi Bilin](thing_44/README.md)
 1. [IDE'nizi Bilin](thing_45/README.md)
 1. [Sınırlarınızı Bilin](thing_46/README.md)
-1. [Know Your Next Commit](thing_47/README.md)
+1. [Bir Sonraki İşleminizi(Commit) Bilin](thing_47/README.md)
 1. [Large Interconnected Data Belongs to a Database](thing_48/README.md)
 1. [Learn Foreign Languages](thing_49/README.md)
 1. [Learn to Estimate](thing_50/README.md)
