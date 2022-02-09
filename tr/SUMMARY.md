@@ -49,7 +49,7 @@
 1. [Sınırlarınızı Bilin](thing_46/README.md)
 1. [Bir Sonraki İşleminizi(Commit) Bilin](thing_47/README.md)
 1. [Büyük Birbirine Bağlı Veriler Bir Veritabanına Aittir](thing_48/README.md)
-1. [Learn Foreign Languages](thing_49/README.md)
+1. [Yabancı Diller Öğrenin](thing_49/README.md)
 1. [Learn to Estimate](thing_50/README.md)
 1. [Learn to Say "Hello, World"](thing_51/README.md)
 1. [Let Your Project Speak for Itself](thing_52/README.md)
