@@ -51,7 +51,7 @@
 1. [Büyük Birbirine Bağlı Veriler Bir Veritabanına Aittir](thing_48/README.md)
 1. [Yabancı Diller Öğrenin](thing_49/README.md)
 1. [Tahmin Etmeyi Öğrenin](thing_50/README.md)
-1. [Learn to Say "Hello, World"](thing_51/README.md)
+1. ["Merhaba Dünya" Demeyi Öğrenin](thing_51/README.md)
 1. [Let Your Project Speak for Itself](thing_52/README.md)
 1. [The Linker Is not a Magical Program](thing_53/README.md)
 1. [The Longevity of Interim Solutions](thing_54/README.md)
