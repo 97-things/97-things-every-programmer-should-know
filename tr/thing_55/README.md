@@ -1,0 +1,16 @@
+# Arayüzlerin Doğru Kullanımını Kolay ve Yanlış Kullanımını Zorlaştırın
+
+Yazılım geliştirmede en yaygın görevlerden biri arayüz belirtimidir. Arayüzler en yüksek soyutlama seviyesinde (kullanıcı arayüzleri), en düşük seviyede (fonksiyon arayüzleri) ve aradaki seviyelerde (sınıf arayüzleri, kütüphane arayüzleri vb.) oluşur. Bir sistemle nasıl etkileşime gireceklerini belirlemek için son kullanıcılarla birlikte çalışın, bir API belirtmek için geliştiricilerle işbirliği yapın veya bir sınıfa özel işlevler bildirin, arayüz tasarımı işinizin önemli bir parçasıdır. Bunu iyi yaparsanız, arayüzlerinizi kullanmak bir zevk olacak ve başkalarının üretkenliğini artıracaktır. Kötü yaparsanız, arayüzleriniz bir hayal kırıklığı ve hata kaynağı olacaktır.
+
+İyi arayüzler şunlardır:
+
+- **Doğru kullanımı kolay.** İyi tasarlanmış bir arayüz kullanan kişiler, hemen hemen her zaman arayüzü doğru kullanır, çünkü bu en az dirençli yoldur. Bir GUI'de, hemen hemen her zaman doğru simgeye, düğmeye veya menü girişine tıklarlar, çünkü bu yapılması açık ve kolay olan şeydir. Bir API'de, neredeyse her zaman doğru parametreleri doğru değerlerle iletirler, çünkü en doğal olan budur. Doğru kullanımı kolay arayüzler sayesinde *işler yoluna girer.*
+- **Yanlış kullanımı zor.** İyi arayüzler, insanların yapabileceği hataları tahmin eder ve bunları gerçekleştirmeyi zor, ideal olarak imkansız hale getirir. Bir GUI, örneğin mevcut bağlamda hiçbir anlam ifade etmeyen komutları devre dışı bırakabilir veya kaldırabilir veya bir API, parametrelerin herhangi bir sırayla iletilmesine izin vererek argüman sıralama sorunlarını ortadan kaldırabilir.
+
+Doğru kullanımı kolay arayüzler tasarlamanın iyi bir yolu, onları var olmadan önce kullanmaktır. Bir GUI'yi (muhtemelen bir beyaz tahta üzerinde veya bir masadaki dizin kartlarını kullanarak) oluşturun ve herhangi bir temel kod oluşturulmadan önce onunla oynayın. İşlevler bildirilmeden önce çağrıları bir API'ye yazın. Genel kullanım durumlarını gözden geçirin ve arayüzün nasıl davranmasını *istediğinizi* belirtin. Neye tıklayabilmek *istemek* istiyorsunuz? Neyi geçebilmek *istiyorsun*? Kullanımı kolay arayüzler doğal görünüyor çünkü yapmak istediğinizi yapmanıza izin veriyorlar. Bunları bir kullanıcının bakış açısından geliştirirseniz, bu tür arayüzleri bulmanız daha olasıdır. (Bu bakış açısı, önce test programlamanın güçlü yönlerinden biridir.)
+
+Arayüzlerin yanlış kullanımını zorlaştırmak iki şeyi gerektirir. İlk olarak, kullanıcıların yapabileceği hataları tahmin etmeli ve bunları önlemenin yollarını bulmalısınız. İkinci olarak, erken sürüm sırasında bir arayüzün nasıl kötüye kullanıldığını gözlemlemeli ve arayüzü değiştirmelisiniz. Evet, arayüzü değiştirin! Bu tür hataları önlemek için. Yanlış kullanımı önlemenin en iyi yolu, bu tür bir kullanımı imkansız kılmaktır. Kullanıcılar geri alınamaz bir eylemi geri almak istemeye devam ederse, eylemi geri alınabilir hale getirmeye çalışın. Bir API'ye yanlış değeri aktarmaya devam ederlerse, API'yi, kullanıcıların geçmek istediği değerleri alacak şekilde değiştirmek için elinizden gelenin en iyisini yapın.
+
+Her şeyden önce, arayüzlerin uygulayıcılarının değil, kullanıcılarının rahatlığı için var olduğunu unutmayın.
+
+[Scott Meyers](http://programmer.97things.oreilly.com/wiki/index.php/Scott_Meyers) Tarafından
