@@ -52,7 +52,7 @@
 1. [Yabancı Diller Öğrenin](thing_49/README.md)
 1. [Tahmin Etmeyi Öğrenin](thing_50/README.md)
 1. ["Merhaba Dünya" Demeyi Öğrenin](thing_51/README.md)
-1. [Let Your Project Speak for Itself](thing_52/README.md)
+1. [Bırakın Projeniz Kendi Adına Konuşsun](thing_52/README.md)
 1. [The Linker Is not a Magical Program](thing_53/README.md)
 1. [The Longevity of Interim Solutions](thing_54/README.md)
 1. [Make Interfaces Easy to Use Correctly and Hard to Use Incorrectly](thing_55/README.md)
