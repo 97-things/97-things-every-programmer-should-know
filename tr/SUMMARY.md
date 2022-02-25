@@ -58,7 +58,7 @@
 1. [Arayüzlerin Doğru Kullanımını Kolay ve Yanlış Kullanımını Zorlaştırın](thing_55/README.md)
 1. [Görünmezi Daha Görünür Hale Getirin](thing_56/README.md)
 1. [Mesaj Geçişi, Paralel Sistemlerde Daha İyi Ölçeklenebilirlik Sağlar](thing_57/README.md)
-1. [A Message to the Future](thing_58/README.md)
+1. [Geleceğe Mesaj](thing_58/README.md)
 1. [Missing Opportunities for Polymorphism](thing_59/README.md)
 1. [News of the Weird: Testers Are Your Friends](thing_60/README.md)
 1. [One Binary](thing_61/README.md)
