@@ -62,7 +62,7 @@
 1. [Polimorfizm için Kaçırılan Fırsatlar](thing_59/README.md)
 1. [Tuhaf Haber: Testçiler Arkadaşlarınızdır](thing_60/README.md)
 1. [Tek İkili](thing_61/README.md)
-1. [Only the Code Tells the Truth](thing_62/README.md)
+1. [Sadece Kod Gerçeği Söyler](thing_62/README.md)
 1. [Own (and Refactor) the Build](thing_63/README.md)
 1. [Pair Program and Feel the Flow](thing_64/README.md)
 1. [Prefer Domain-Specific Types to Primitive Types](thing_65/README.md)
