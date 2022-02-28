@@ -60,7 +60,7 @@
 1. [Mesaj Geçişi, Paralel Sistemlerde Daha İyi Ölçeklenebilirlik Sağlar](thing_57/README.md)
 1. [Geleceğe Mesaj](thing_58/README.md)
 1. [Polimorfizm için Kaçırılan Fırsatlar](thing_59/README.md)
-1. [News of the Weird: Testers Are Your Friends](thing_60/README.md)
+1. [Tuhaf Haber: Testçiler Arkadaşlarınızdır](thing_60/README.md)
 1. [One Binary](thing_61/README.md)
 1. [Only the Code Tells the Truth](thing_62/README.md)
 1. [Own (and Refactor) the Build](thing_63/README.md)
