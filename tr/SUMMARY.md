@@ -65,7 +65,7 @@
 1. [Sadece Kod Gerçeği Söyler](thing_62/README.md)
 1. [Yapıya Sahip Olun (ve Yeniden Düzenleyin)](thing_63/README.md)
 1. [Programı Eşleştirin ve Akışı Hissedin](thing_64/README.md)
-1. [Prefer Domain-Specific Types to Primitive Types](thing_65/README.md)
+1. [Domain Alanına Özgü Türleri İlkel Türlere Tercih Edin](thing_65/README.md)
 1. [Prevent Errors](thing_66/README.md)
 1. [The Professional Programmer](thing_67/README.md)
 1. [Put Everything Under Version Control](thing_68/README.md)
