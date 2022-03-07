@@ -67,7 +67,7 @@
 1. [Programı Eşleştirin ve Akışı Hissedin](thing_64/README.md)
 1. [Domain Alanına Özgü Türleri İlkel Türlere Tercih Edin](thing_65/README.md)
 1. [Hataları Önle](thing_66/README.md)
-1. [The Professional Programmer](thing_67/README.md)
+1. [Profesyonel Yazılımcı](thing_67/README.md)
 1. [Put Everything Under Version Control](thing_68/README.md)
 1. [Put the Mouse Down and Step Away from the Keyboard](thing_69/README.md)
 1. [Read Code](thing_70/README.md)
