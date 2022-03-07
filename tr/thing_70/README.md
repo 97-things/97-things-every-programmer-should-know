@@ -1,0 +1,13 @@
+# Kodu Okuyun
+
+Biz yazılımcılar tuhaf yaratıklarız. Kod yazmayı seviyoruz. Ama iş okumaya gelince genellikle çekiniriz. Sonuçta, kod yazmak çok daha eğlenceli ve kod okumak zor, bazen neredeyse imkansız. Başkalarının kodunu okumak özellikle zordur. Mutlaka diğer insanların kodu kötü olduğu için değil, muhtemelen sorunları sizden farklı şekilde düşündükleri ve çözdükleri için. Ancak başka birinin kodunu okumanın kendinizinkini geliştirebileceğini hiç düşündünüz mü?
+
+Bir dahaki sefere kod okuduğunuzda, durun ve bir an için düşünün. Kodun okunması kolay mı yoksa zor mu? Okumak zorsa, neden bu? Biçimlendirme kötü mü? Adlandırma tutarsız mı yoksa mantıksız mı? Aynı kod parçasında birkaç endişe birbirine karışmış mı? Belki de dil seçimi kodun okunabilir olmasını engelliyor? Başkalarının hatalarından ders almaya çalışın ki kodunuz aynı hataları içermesin. Birkaç sürprizle karşılaşabilirsiniz. Örneğin, bağımlılık kırma teknikleri düşük bağlantı için iyi olabilir, ancak bazen kodun okunmasını zorlaştırabilir. Ve bazılarının *zarif kod* dediğine, diğerleri *okunamaz* der.
+
+Kodun okunması kolaysa, ondan öğrenebileceğiniz yararlı bir şey olup olmadığını görmek için durun. Belki de bilmediğiniz veya daha önce uygulamakta zorlandığınız bir tasarım kalıbı kullanılıyor. Belki yöntemler daha kısadır ve isimleri sizinkinden daha anlamlıdır. Bazı açık kaynak projeleri, mükemmel, okunabilir kodun nasıl yazılacağına dair iyi örneklerle doludur - diğerleri ise tam tersi örnekler olarak hizmet eder! Kodlarından bazılarına göz atın ve bir göz atın.
+
+Şu anda üzerinde çalışmadığınız bir projeden kendi eski kodunuzu okumak da aydınlatıcı bir deneyim olabilir. En eski kodlarınızdan bazılarıyla başlayın ve bugüne kadar ilerleyin. Muhtemelen, okumanın, yazdığınız zamanki kadar kolay olmadığını göreceksiniz. Erken kodunuzun aynı zamanda belirli bir utanç verici eğlence değeri olabilir, tıpkı dün gece barda içki içerken söylediğiniz her şeyin size hatırlatılması gibi. Becerilerinizi yıllar içinde nasıl geliştirdiğinize bir bakın, gerçekten motive edici olabilir. Kodun hangi alanlarının okunmasının zor olduğunu gözlemleyin ve bugün hala aynı şekilde kod yazıp yazmadığınızı düşünün.
+
+Bu nedenle, bir daha programlama becerilerinizi geliştirme ihtiyacı hissettiğinizde, başka bir kitap okumayın. Kodu okuyun.
+
+[Karianne Berg](http://programmer.97things.oreilly.com/wiki/index.php/Karianne_Berg) Tarafından

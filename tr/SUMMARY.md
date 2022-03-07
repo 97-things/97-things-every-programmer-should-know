@@ -70,7 +70,7 @@
 1. [Profesyonel Yazılımcı](thing_67/README.md)
 1. [Her Şeyi Sürüm Kontrolü Altına Alın](thing_68/README.md)
 1. [Fareyi Yere Bırakın ve Klavyeden Uzaklaşın](thing_69/README.md)
-1. [Read Code](thing_70/README.md)
+1. [Kodu Okuyun](thing_70/README.md)
 1. [Read the Humanities](thing_71/README.md)
 1. [Reinvent the Wheel Often](thing_72/README.md)
 1. [Resist the Temptation of the Singleton Pattern](thing_73/README.md)
