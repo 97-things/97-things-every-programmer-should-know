@@ -72,7 +72,7 @@
 1. [Fareyi Yere Bırakın ve Klavyeden Uzaklaşın](thing_69/README.md)
 1. [Kodu Okuyun](thing_70/README.md)
 1. [Beşeri Bilimleri Okuyun](thing_71/README.md)
-1. [Reinvent the Wheel Often](thing_72/README.md)
+1. [Tekerleği Sıklıkla Yeniden İcat Edin](thing_72/README.md)
 1. [Resist the Temptation of the Singleton Pattern](thing_73/README.md)
 1. [The Road to Performance Is Littered with Dirty Code Bombs](thing_74/README.md)
 1. [Simplicity Comes from Reduction](thing_75/README.md)
