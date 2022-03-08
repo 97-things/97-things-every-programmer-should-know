@@ -1,0 +1,15 @@
+# Tekerleği Sıklıkla Yeniden İcat Edin
+
+"Var olan bir şeyi kullanın - tekerleği yeniden icat etmek aptalca..."
+
+Bunu hiç duydunuz mu ya da bunun bir varyasyonunu? Elbette duymuşsunuzdur! Her geliştirici ve öğrenci muhtemelen bu tür yorumları sık sık duyar. Neden? Tekerleği yeniden icat etmek neden bu kadar hoş karşılanmaz? Çünkü çoğu zaman mevcut kod çalışan koddur. Halihazırda bir çeşit kalite kontrolünden, titiz testlerden geçmiştir ve başarıyla kullanılmaktadır. Ek olarak, yeniden icat etmeye harcanan zaman ve çabanın, mevcut bir ürün veya kod tabanını kullanmanın yanı sıra karşılığını vermesi de olası değildir. Tekerleği yeniden icat etmeye zahmet etmeli misiniz? Niye ya? Ne zaman?
+
+Belki yazılım geliştirmedeki kalıplar hakkında yayınlar veya yazılım tasarımı üzerine kitaplar görmüşsünüzdür. Bu kitaplar, içerdiği bilgiler ne kadar harika olursa olsun, uyuyabilir. Aynı şekilde yelkencilikle ilgili bir film izlemek de yelken açmaktan çok farklıdır, bu yüzden kendi yazılımınızı sıfırdan tasarlamak, test etmek, kırmak, onarmak ve yol boyunca geliştirmek yerine mevcut kodu kullanmak da öyle.
+
+Tekerleği yeniden icat etmek, yalnızca kod yapılarının nereye yerleştirileceğine dair bir alıştırma değildir: Bu, halihazırda var olan çeşitli bileşenlerin iç işleyişine ilişkin kapsamlı bir bilginin nasıl elde edileceğidir. Bellek yöneticilerinin nasıl çalıştığını biliyor musunuz? Sanal sayfalama? Bunları kendiniz uygulayabilir misiniz? Çift bağlantılı listelere ne dersiniz? Dinamik dizi sınıfları? ODBC istemcileri? Bildiğiniz ve beğendiğiniz popüler bir arayüz gibi çalışan bir grafik kullanıcı arayüzü yazabilir misiniz? Kendi web tarayıcı widget'larınızı oluşturabilir misiniz? Çok iş parçacıklı bir sisteme karşı çoğullamalı bir sistemi ne zaman yazacağınızı biliyor musunuz? Dosya veya bellek tabanlı bir veritabanı arasında nasıl karar verilir? Çoğu geliştirici, bu tür temel yazılım uygulamalarını hiçbir zaman kendileri oluşturmamıştır ve bu nedenle nasıl çalıştıkları konusunda derin bir bilgiye sahip değildir. Sonuç olarak, tüm bu tür yazılımlar, sadece çalışan gizemli kara kutular olarak görülüyor. Suyun sadece yüzeyini anlamak, altındaki gizli tehlikeleri ortaya çıkarmak için yeterli değildir. Yazılım geliştirmedeki daha derin şeyleri bilmemek, mükemmel işler yaratma yeteneğinizi sınırlayacaktır.
+
+Tekerleği yeniden icat etmek ve yanlış yapmak, onu ilk kez çivilemekten daha değerlidir. Deneme yanılma yoluyla öğrenilen, duygusal bir bileşeni olan ve tek başına teknik bir kitap okumanın sağlayamayacağı dersler vardır!
+
+Öğrenilmiş gerçekler ve kitap zekası çok önemlidir, ancak harika bir yazılımcı olmak, gerçekleri toplamakla ilgili olduğu kadar deneyim kazanmakla da ilgilidir. Bir vücut geliştiricisi için ağırlık kaldırma ne kadar önemliyse, tekerleği yeniden icat etmek de bir geliştiricinin eğitimi ve becerisi için o kadar önemlidir.
+
+[Jason P Sage](http://programmer.97things.oreilly.com/wiki/index.php/Jason_P_Sage) Tarafından
