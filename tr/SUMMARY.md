@@ -75,7 +75,7 @@
 1. [Tekerleği Sıklıkla Yeniden İcat Edin](thing_72/README.md)
 1. [Singleton Modelin Cazibesine Kapılma](thing_73/README.md)
 1. [Performansa Giden Yol Kirli Kod Bombalarıyla Dolu](thing_74/README.md)
-1. [Simplicity Comes from Reduction](thing_75/README.md)
+1. [Sadelik Azaltmadan Gelir](thing_75/README.md)
 1. [The Single Responsibility Principle](thing_76/README.md)
 1. [Start from Yes](thing_77/README.md)
 1. [Step Back and Automate, Automate, Automate](thing_78/README.md)
