@@ -78,7 +78,7 @@
 1. [Sadelik Azaltmadan Gelir](thing_75/README.md)
 1. [Tek Sorumluluk İlkesi(The Single Responsibility)](thing_76/README.md)
 1. [Evet'ten Başlayın](thing_77/README.md)
-1. [Step Back and Automate, Automate, Automate](thing_78/README.md)
+1. [Geri Adım Atın ve Otomatikleştirin, Otomatikleştirin, Otomatikleştirin](thing_78/README.md)
 1. [Take Advantage of Code Analysis Tools](thing_79/README.md)
 1. [Test for Required Behavior, not Incidental Behavior](thing_80/README.md)
 1. [Test Precisely and Concretely](thing_81/README.md)
