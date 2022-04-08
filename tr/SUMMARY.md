@@ -80,7 +80,7 @@
 1. [Evet'ten Başlayın](thing_77/README.md)
 1. [Geri Adım Atın ve Otomatikleştirin, Otomatikleştirin, Otomatikleştirin](thing_78/README.md)
 1. [Kod Analiz Araçlarından Yararlanın](thing_79/README.md)
-1. [Test for Required Behavior, not Incidental Behavior](thing_80/README.md)
+1. [Tesadüfi Davranış Değil, Gerekli Davranış Testi](thing_80/README.md)
 1. [Test Precisely and Concretely](thing_81/README.md)
 1. [Test While You Sleep (and over Weekends)](thing_82/README.md)
 1. [Testing Is the Engineering Rigor of Software Development](thing_83/README.md)
