@@ -84,7 +84,7 @@
 1. [Kesin ve Somut Test Edin](thing_81/README.md)
 1. [Uyurken (ve Hafta Sonları) Test Edin](thing_82/README.md)
 1. [Test, Yazılım Geliştirmenin Mühendislik Zorluğudur](thing_83/README.md)
-1. [Thinking in States](thing_84/README.md)
+1. [Durumlarda Düşünmek](thing_84/README.md)
 1. [Two Heads Are Often Better than One](thing_85/README.md)
 1. [Two Wrongs Can Make a Right (and Are Difficult to Fix)](thing_86/README.md)
 1. [Ubuntu Coding for Your Friends](thing_87/README.md)
