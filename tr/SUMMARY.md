@@ -89,7 +89,7 @@
 1. [İki Yanlış Bir Doğru Yapabilir (ve Düzeltilmesi Zordur)](thing_86/README.md)
 1. [Arkadaşlarınız İçin Ubuntu Kodlama](thing_87/README.md)
 1. [Unix Araçları Arkadaşlarınızdır](thing_88/README.md)
-1. [Use the Right Algorithm and Data Structure](thing_89/README.md)
+1. [Doğru Algoritmayı ve Veri Yapısını Kullanın](thing_89/README.md)
 1. [Verbose Logging Will Disturb Your Sleep](thing_90/README.md)
 1. [WET Dilutes Performance Bottlenecks](thing_91/README.md)
 1. [When Programmers and Testers Collaborate](thing_92/README.md)
