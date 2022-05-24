@@ -88,7 +88,7 @@
 1. [İki Kafa Çoğu Zaman Bir Kafadan Daha İyidir](thing_85/README.md)
 1. [İki Yanlış Bir Doğru Yapabilir (ve Düzeltilmesi Zordur)](thing_86/README.md)
 1. [Arkadaşlarınız İçin Ubuntu Kodlama](thing_87/README.md)
-1. [The Unix Tools Are Your Friends](thing_88/README.md)
+1. [Unix Araçları Arkadaşlarınızdır](thing_88/README.md)
 1. [Use the Right Algorithm and Data Structure](thing_89/README.md)
 1. [Verbose Logging Will Disturb Your Sleep](thing_90/README.md)
 1. [WET Dilutes Performance Bottlenecks](thing_91/README.md)
