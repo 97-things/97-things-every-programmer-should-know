@@ -20,7 +20,7 @@ Some_Number:= Distance + Velocity; -- Will be caught by the compiler as a type e
 
 Developers in less demanding domains might also benefit from applying more domain-specific typing, where they might otherwise continue to use the primitive data types offered by the language and its libraries, such as strings and floats. In Java, C++, Python, and other modern languages the abstract data type is known as class. Using classes such as `Velocity_In_Knots` and `Distance_In_Nautical_Miles` adds a lot of value with respect to code quality:
 
-1. The code becomes more readable as it expresses concepts of a domain, not just Float or String.
+- The code becomes more readable as it expresses concepts of a domain, not just Float or String.
 - The code becomes more testable as the code encapsulates behavior that is easily testable.
 - The code facilitates reuse across applications and systems.
 
