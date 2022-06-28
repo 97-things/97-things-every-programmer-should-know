@@ -93,7 +93,7 @@
 1. [Ayrıntılı Log Kaydı Uykunuzu Bozacak](thing_90/README.md)
 1. [WET Performans Darboğazlarını Azaltıyor](thing_91/README.md)
 1. [Programcılar ve Test Uzmanları İşbirliği Yaptığında](thing_92/README.md)
-1. [Write Code as If You Had to Support It for the Rest of Your Life](thing_93/README.md)
+1. [Hayatınız Boyunca Desteklemek Zorundaymışsınız Gibi Kod Yazın](thing_93/README.md)
 1. [Write Small Functions Using Examples](thing_94/README.md)
 1. [Write Tests for People](thing_95/README.md)
 1. [You Gotta Care about the Code](thing_96/README.md)
