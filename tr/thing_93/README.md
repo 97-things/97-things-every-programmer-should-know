@@ -1,0 +1,13 @@
+# Hayatınız Boyunca Desteklemek Zorundaymışsınız Gibi Kod Yazın
+
+97 kişiye her programcının ne bilmesi ve yapması gerektiğini sorabilir ve 97 farklı cevap duyabilirsiniz. Bu aynı anda hem ezici hem de korkutucu olabilir. Tüm tavsiyeler iyidir, tüm ilkeler sağlamdır ve tüm hikayeler ikna edicidir, ancak nereden başlamalı? Daha da önemlisi, bir kez başladığınızda, öğrendiğiniz tüm en iyi uygulamalara nasıl ayak uydurursunuz ve bunları programlama uygulamanızın ayrılmaz bir parçası haline nasıl getirirsiniz?
+
+Bence cevap sizin düşünce yapınızda ya da daha açık bir ifadeyle tavrınızda yatıyor. Diğer geliştiricilerinizi, test uzmanlarınızı, yöneticilerinizi, satış ve pazarlama görevlilerinizi ve son kullanıcıları umursamıyorsanız, örneğin, Test Odaklı Geliştirme kullanmaya veya kodunuza net yorumlar yazmaya yönlendirilmezsiniz. Tutumunuzu ayarlamanın ve her zaman en kaliteli ürünleri sunmaya yönelmenin basit bir yolu olduğunu düşünüyorum:
+
+> *Hayatınız Boyunca Desteklemek Zorundaymışsınız Gibi Kod Yazın.*
+
+Bu kadar. Bu fikri kabul ederseniz, birçok harika şey olacak. Önceki veya mevcut işverenlerinizden herhangi birinin gecenin bir yarısı sizi arayıp fooBar yöntemini yazarken yaptığınız seçimleri açıklamanızı isteme hakkına sahip olduğunu kabul etseydiniz, yavaş yavaş uzman bir programcı olma yolunda ilerlersiniz. Doğal olarak daha iyi değişken ve yöntem adları bulmak istersiniz. Yüzlerce satırdan oluşan kod bloklarından uzak durursunuz. Tasarım kalıplarını arar, öğrenir ve kullanırsınız. Sürekli olarak yorum yazar, kodunuzu test eder ve yeniden düzenlersiniz. Hayatınızın geri kalanında yazdığınız tüm kodları desteklemek de ölçeklenebilir bir çaba olmalıdır. Bu nedenle daha iyi, daha akıllı ve daha verimli olmaktan başka seçeneğiniz kalmaz.
+
+Üzerinde düşünürseniz, yıllar önce yazdığınız kod, beğenseniz de beğenmeseniz de kariyerinizi etkiler. Tasarladığınız ve yazdığınız her yöntem ve sınıf ve modül ile bilginizin, tavrınızın, aziminizin, profesyonelliğinizin, bağlılık seviyenizin ve keyif derecenizin izini bırakıyorsunuz. İnsanlar gördükleri koda göre sizin hakkınızda fikir oluşturacaklar. Bu görüşler sürekli olumsuz ise, kariyerinizden umduğunuzdan daha az şey elde edeceksiniz. Her kod satırıyla kariyerinize, müşterilerinize ve kullanıcılarınıza iyi bakın ve Hayatınız Boyunca Desteklemek Zorundaymışsınız Gibi Kod Yazın.
+
+[Yuriy Zubarev](http://programmer.97things.oreilly.com/wiki/index.php/Yuriy_Zubarev) Tarafından
