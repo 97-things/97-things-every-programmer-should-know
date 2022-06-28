@@ -97,4 +97,4 @@
 1. [Örnekleri Kullanarak Küçük Fonksiyonlar Yazın](thing_94/README.md)
 1. [İnsanlar için Testler Yaz](thing_95/README.md)
 1. [Kodu Önemsemelisiniz](thing_96/README.md)
-1. [Your Customers Do not Mean What They Say](thing_97/README.md)
+1. [Müşterileriniz Ne Dediklerini Kastetmez](thing_97/README.md)
