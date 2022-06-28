@@ -96,5 +96,5 @@
 1. [Hayatınız Boyunca Desteklemek Zorundaymışsınız Gibi Kod Yazın](thing_93/README.md)
 1. [Örnekleri Kullanarak Küçük Fonksiyonlar Yazın](thing_94/README.md)
 1. [İnsanlar için Testler Yaz](thing_95/README.md)
-1. [You Gotta Care about the Code](thing_96/README.md)
+1. [Kodu Önemsemelisiniz](thing_96/README.md)
 1. [Your Customers Do not Mean What They Say](thing_97/README.md)
