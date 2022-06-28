@@ -90,7 +90,7 @@
 1. [Arkadaşlarınız İçin Ubuntu Kodlama](thing_87/README.md)
 1. [Unix Araçları Arkadaşlarınızdır](thing_88/README.md)
 1. [Doğru Algoritmayı ve Veri Yapısını Kullanın](thing_89/README.md)
-1. [Verbose Logging Will Disturb Your Sleep](thing_90/README.md)
+1. [Ayrıntılı Log Kaydı Uykunuzu Bozacak](thing_90/README.md)
 1. [WET Dilutes Performance Bottlenecks](thing_91/README.md)
 1. [When Programmers and Testers Collaborate](thing_92/README.md)
 1. [Write Code as If You Had to Support It for the Rest of Your Life](thing_93/README.md)
