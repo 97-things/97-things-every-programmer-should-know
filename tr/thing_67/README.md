@@ -1,0 +1,19 @@
+# Profesyonel Yazılımcı
+
+Profesyonel yazılımcı nedir?
+
+Profesyonel bir yazılımcının en önemli özelliği *kişisel sorumluluktur*. Profesyonel yazılımcılar kariyerleri, tahminleri, program taahhütleri, hataları ve işçilikleri için sorumluluk alırlar. Profesyonel bir yazılımcı bu sorumluluğu başkalarına devretmez.
+
+- Eğer bir profesyonelseniz, o zaman kendi kariyerinizden *siz* sorumlusunuz. *Siz* okumaktan ve öğrenmekten sorumlusunuz. Sektör ve teknoloji ile güncel kalmaktan siz sorumlusunuz. Çok fazla yazılımcı, onları eğitmenin işverenlerinin işi olduğunu düşünüyor. Üzgünüm, bu tamamen yanlış. Sizce doktorlar böyle mi davranıyor? Sizce avukatlar böyle mi davranır? Hayır, kendilerini kendi zamanlarına ve kendi nikellerine göre eğitirler. Mesai dışındaki zamanlarının çoğunu günlükleri ve kararları okuyarak geçirirler. Kendilerini güncel tutuyorlar. Biz de öyle yapmalıyız. Sizinle işvereniniz arasındaki ilişki, iş sözleşmenizde güzel bir şekilde belirtilmiştir. Kısacası: Size ödeme yapacaklarına söz veriyorlar ve siz de iyi bir iş çıkaracağınıza söz veriyorsunuz.
+
+- Profesyoneller yazdıkları kodun sorumluluğunu alırlar. Çalıştığını bilmedikleri sürece kod yayınlamazlar. Bunu bir dakikalığına düşün. Emin olmadığınız bir kodu yayınlamaya istekliyseniz, kendinizi nasıl bir profesyonel olarak kabul edebilirsiniz? Profesyonel yazılımcılar QA'nın *hiçbir şey* bulmasını beklerler çünkü *kodlarını tamamen test edene kadar yayınlamazlar*. Elbette QA bazı problemler bulacaktır çünkü kimse mükemmel değildir. Ancak profesyoneller olarak tavrımız, QA'nın bulması için hiçbir şey bırakmamak olmalıdır.
+
+- Profesyoneller takım oyuncularıdır. Sadece kendi çalışmalarının değil, tüm ekibin çıktısının sorumluluğunu alırlar. Birbirlerine yardım ederler, birbirlerine öğretirler, birbirlerinden öğrenirler ve hatta gerektiğinde birbirlerini korurlar. Bir takım arkadaşı düştüğünde, diğerleri bir gün korunmaya ihtiyaç duyacaklarını bilerek devreye girer.
+
+- Profesyoneller büyük hata listelerine tolerans göstermezler. Büyük bir hata listesi özensiz. Sorun izleme veritabanında binlerce sorunu olan sistemler dikkatsizliğin trajedileridir. Gerçekten de, çoğu projede bir sorun takip sistemine duyulan ihtiyaç, dikkatsizliğin bir belirtisidir. Yalnızca en büyük sistemlerin hata listeleri o kadar uzun olmalıdır ki, bunları yönetmek için otomasyon gerekir.
+
+- Profesyoneller ortalığı karıştırmazlar. İşçiliklerinden gurur duyarlar. Kodlarını temiz, iyi yapılandırılmış ve okunması kolay tutarlar. Üzerinde anlaşmaya varılan standartları ve en iyi uygulamaları takip ederler. Asla, *asla* acele etmezler. Bir doktorun *sizin* üzerinde açık kalp ameliyatı yapmasını izlerken beden dışı bir deneyim yaşadığınızı hayal edin. Bu doktorun bir *son tarihi* var (gerçek anlamda). Kalp-akciğer baypas makinesi kan hücrelerinden çok fazlasına zarar vermeden işini bitirmeli. Nasıl davranmasını istiyorsun? Tipik bir yazılım geliştiricisi gibi davranmasını, acele etmesini ve ortalığı karıştırmasını mı istiyorsunuz? "Geri dönüp bunu daha sonra düzelteceğim" demesini mi istiyorsunuz? Yoksa disiplinlerine dikkatle bağlı kalmasını, zamanını ayırmasını, yaklaşımının makul olarak alabileceği en iyi yaklaşım olduğundan emin olmasını mı istiyorsunuz? Karışıklık mı istiyorsunuz yoksa profesyonellik mi?
+
+Profesyoneller sorumludur. Kendi kariyerleri için sorumluluk alırlar. Kodlarının düzgün çalıştığından emin olmak için sorumluluk alırlar. İşçiliklerinin kalitesi için sorumluluk alırlar. Son teslim tarihleri yaklaştığında ilkelerinden vazgeçmezler. Gerçekten de, baskı arttığında, profesyoneller doğru olduğunu bildikleri disiplinlere daha da sıkı sarılırlar.
+
+[Uncle Bob](http://programmer.97things.oreilly.com/wiki/index.php/Uncle_Bob) Tarafından

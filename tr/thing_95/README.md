@@ -1,0 +1,15 @@
+# İnsanlar için Testler Yaz
+
+Üretim kodunuzun bir kısmı veya tamamı için otomatik testler yazıyorsunuz. Tebrikler! Testlerinizi kodu yazmadan önce mi yazıyorsunuz? Daha iyi!! Bunu yapmak bile sizi yazılım mühendisliği uygulamalarının öncülerinden ilk benimseyenlerden biri yapar. Ama iyi testler mi yazıyorsun? Nasıl söyleyebilirsin? Bunun bir yolu "Testleri kimin için yazıyorum?" diye sormaktır. Cevap "Benim için, hataları düzeltme zahmetinden kurtarmak için" veya "Derleyici için, böylece çalıştırılabilmeleri için" ise, o zaman olası en iyi testleri yazmıyorsunuzdur. Peki testleri *kimin* için yazmalısınız? Kodunuzu anlamaya çalışan kişi için.
+
+İyi testler, test ettikleri kod için belge görevi görür. Kodun nasıl çalıştığını açıklarlar. Her kullanım senaryosu için test(ler):
+
+1. Karşılanması gereken bağlamı, başlangıç noktasını veya ön koşulları tanımlayın
+2. Yazılımın nasıl çağrıldığını gösterin
+3. Beklenen sonuçları veya doğrulanacak son koşulları tanımlayın
+
+Farklı kullanım senaryoları, bunların her birinin biraz farklı versiyonlarına sahip olacaktır. Kodunuzu anlamaya çalışan kişinin birkaç teste bakabilmesi ve söz konusu testlerin bu üç bölümünü karşılaştırarak yazılımın farklı davranmasına neyin sebep olduğunu görebilmesi gerekir. Her test, bu üç kısım arasındaki neden-sonuç ilişkisini açıkça göstermelidir. Bu, testte görünmeyenlerin görünenler kadar önemli olduğu anlamına gelir. Testte çok fazla kod, okuyucunun önemsiz önemsiz şeylerle dikkatini dağıtır. Mümkün olduğunda, bu tür önemsiz şeyleri anlamlı yöntem çağrılarının arkasına saklayın - Extract Method yeniden düzenleme en iyi arkadaşınızdır. Ve her teste, belirli kullanım senaryosunu açıklayan anlamlı bir ad verdiğinizden emin olun, böylece test okuyucusu, çeşitli senaryoların ne olduğunu anlamak için her testi tersine mühendislik yapmak zorunda kalmaz. Bunların arasında, test sınıfının ve sınıf yönteminin adları, en azından başlangıç ​​noktasını ve yazılımın nasıl çağrıldığını içermelidir. Bu, yöntem adlarının hızlı bir şekilde taranması yoluyla test kapsamının doğrulanmasını sağlar. Ayrıca, isimlerin görülmesi veya okunması çok uzun sürmediği sürece, beklenen sonuçların test yöntemi adlarına dahil edilmesi faydalı olabilir.
+
+Testlerinizi test etmek de iyi bir fikirdir. Tespit ettiklerini düşündüğünüz hataları, bu hataları üretim koduna ekleyerek doğrulayabilirsiniz (elbette atacağınız kendi özel kopyanız). Hataları yararlı ve anlamlı bir şekilde bildirdiklerinden emin olun. Ayrıca testlerinizin kodunuzu anlamaya çalışan bir kişiyle net bir şekilde konuştuğunu doğrulamanız gerekir. Bunu yapmanın tek yolu, kodunuza aşina olmayan birinin testlerinizi okumasını ve ne öğrendiğini size söylemesini sağlamaktır. Ne dediklerini dikkatlice dinleyin. Bir şeyi net bir şekilde anlamadılarsa, muhtemelen çok parlak olmadıkları için değildir. Çok net olmamanız daha olasıdır. (Devam edin ve testlerini okuyarak rolleri tersine çevirin!)
+
+by [Gerard Meszaros](http://programmer.97things.oreilly.com/wiki/index.php/Gerard_Meszaros)

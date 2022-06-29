@@ -1,0 +1,15 @@
+# Sadece Durumu Değil, Davranışı Kapsülleyin
+
+Sistem teorisinde, büyük ve karmaşık sistem yapılarıyla uğraşırken, kapsama en yararlı yapılardan biridir. Yazılım endüstrisinde, kapsama veya kapsüllemenin değeri iyi anlaşılmıştır. Kapsama, alt rutinler ve işlevler, modüller ve paketler, sınıflar vb. gibi programlama dili yapıları tarafından desteklenir.
+
+Modüller ve paketler, kapsülleme için daha büyük ölçekli ihtiyaçları ele alırken, sınıflar, alt rutinler ve işlevler konunun daha incelikli yönlerini ele alır. Yıllar geçtikçe, sınıfların, geliştiricilerin doğru yapması en zor kapsülleme yapılarından biri gibi göründüğünü keşfettim. 3000 satırlık tek bir ana yönteme sahip bir sınıf veya ilkel nitelikleri için yalnızca *set* ve *get* yöntemlerine sahip bir sınıf bulmak nadir değildir. Bu örnekler, dahil olan geliştiricilerin, modelleme yapıları olarak nesnelerin gücünden yararlanmada başarısız olduklarından, nesne yönelimli düşünceyi tam olarak anlamadıklarını göstermektedir. POJO (Düz Eski Java Nesnesi) ve POCO (Düz Eski C# Nesnesi veya Düz Eski CLR Nesnesi) terimlerine aşina olan geliştiriciler için, bir modelleme paradigması olarak OO'nun temellerine geri dönme niyeti buydu, nesneler sade ve basittir, ama aptal değil.
+
+Bir nesne, davranışın gerçek durum tarafından tanımlandığı hem durumu hem de davranışı kapsar. Bir kapı nesnesi düşünün. Dört durumu vardır: kapalı, açık, kapanıyor, açılıyor. İki işlem sağlar: aç ve kapat. Duruma bağlı olarak, açma ve kapama işlemleri farklı davranacaktır. Bir nesnenin bu doğal özelliği, tasarım sürecini kavramsal olarak basitleştirir. İki basit göreve indirgenir: nesneler arası etkileşim protokolleri de dahil olmak üzere farklı nesnelere sorumluluk tahsisi ve delegasyonu.
+
+Bunun pratikte nasıl çalıştığı en iyi bir örnekle gösterilmiştir. Diyelim ki üç sınıfımız var: Customer, Order ve Item. Customer nesnesi, kredi limiti ve kredi doğrulama kuralları için doğal yer tutucudur. Bir Order nesnesi, ilişkili Customer hakkında bilgi sahibidir ve addItem işlemi, "customer.validateCredit(item.price())" item ini çağırarak gerçek kredi kontrolünü devreder. Yöntemin son koşulu başarısız olursa, bir istisna atılabilir ve satın alma iptal edilebilir.
+
+Daha az deneyimli nesne yönelimli geliştiriciler, tüm iş kurallarını, genellikle "OrderManager" veya "OrderService" olarak adlandırılan bir nesneye sarmaya karar verebilir. Bu tasarımlarda, `Order`, `Customer` ve `Item`, kayıt türlerinden biraz daha fazlası olarak ele alınır. Tüm mantık, sınıflardan ayrılır ve çok sayıda dahili *if-then-else* yapısıyla büyük, prosedürel bir yöntemle birbirine bağlanır. Bu yöntemler kolayca bozulur ve bakımı neredeyse imkansızdır. Sebep? Kapsülleme bozuldu.
+
+Sonuç olarak, kapsüllemeyi bozmayın ve onu korumak için programlama dilinizin gücünü kullanın.
+
+[Einar Landre](http://programmer.97things.oreilly.com/wiki/index.php/Einar_Landre) Tarafından

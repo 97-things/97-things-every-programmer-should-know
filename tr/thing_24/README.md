@@ -1,0 +1,13 @@
+# Bir Şeyleri Kırmaktan Korkma
+
+Sektör deneyimi olan herkes, kod tabanının en iyi ihtimalle güvencesiz olduğu bir projede yüksek bir ihtimalle çalışmıştır. Sistem zayıf bir şekilde çarpanlara ayrılmıştır ve bir şeyi değiştirmek her zaman başka bir alakasız özelliği bozmayı başarır. Bir modül eklendiğinde, kodlayıcının amacı mümkün olduğunca az değişiklik yapmak ve her sürümde nefesini tutmaktır. Bu, bir gökdelendeki kirişlerle Jenga oynamaya eşdeğer yazılımdır ve felakete mahkumdur.
+
+Değişiklik yapmanın bu kadar sinir bozucu olmasının nedeni, sistemin hasta olmasıdır. Bir doktora ihtiyacı var, aksi takdirde durumu daha da kötüleşecek. Sisteminizde neyin yanlış olduğunu zaten biliyorsunuz ama omletinizi yapmak için yumurtaları kırmaktan korkuyorsunuz. Yetenekli bir cerrah ameliyat için kesi yapılması gerektiğini bilir, ancak yetenekli cerrah kesilerin geçici olduğunu ve iyileşeceğini de bilir. Ameliyatın sonucu ilk acıya değer ve hasta ameliyattan önceki halinden daha iyi bir duruma gelmelidir.
+
+Kodunuzdan korkmayın. Bir şeyleri hareket ettirirken bir şeylerin geçici olarak kırılması kimin umurunda? Başlangıçta projenizi bu duruma getiren şey, felç edici bir değişim korkusudur. Yeniden düzenlemeye zaman ayırmak, projenizin yaşam döngüsü boyunca birkaç kez kendini amorti etmesine yetecektir. Ek bir fayda da, ekibinizin hastalıklı sistemle ilgili deneyiminin sizi sistemin nasıl *çalışması* gerektiği konusunda uzman yapmasıdır. Bu bilgiyi ona kızmak yerine uygulayın. Nefret ettiğiniz bir sistem üzerinde çalışmak, kimsenin zamanını harcaması gerektiği gibi değil.
+
+Dahili arayüzleri yeniden tanımlayın, modülleri yeniden yapılandırın, kopyala-yapıştır kodu yeniden yapılandırın ve bağımlılıkları azaltarak tasarımınızı basitleştirin. Genellikle yanlış bağlanmış özelliklerden kaynaklanan köşe durumlarını ortadan kaldırarak kod karmaşıklığını önemli ölçüde azaltabilirsiniz. Yol boyunca test ederek eski yapıyı yavaşça yenisine geçirin. "Bir büyük sorun" içinde büyük bir yeniden düzenleme yapmaya çalışmak, tüm çabayı yarıda bırakmayı düşünmenizi sağlayacak kadar soruna neden olacaktır.
+
+İyileşmeye yer açmak için hastalıklı parçaları kesmekten korkmayan cerrah olun. Bu tavır bulaşıcıdır ve başkalarına erteledikleri temizlik projeleri üzerinde çalışmaya başlamaları için ilham verecektir. Projenin genel iyiliği için ekibin değerli olduğunu düşündüğü görevlerin bir "hijyen" listesini tutun. Yönetimi, bu görevlerin görünür sonuçlar vermese bile, masrafları azaltacağına ve gelecekteki sürümleri hızlandıracağına ikna edin. Kodun genel "sağlığını" önemsemeyi asla bırakmayın.
+
+[Mike Lewis](http://programmer.97things.oreilly.com/wiki/index.php/Mike_Lewis) Tarafından

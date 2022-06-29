@@ -1,0 +1,15 @@
+# Yapıyı Temiz Tutun
+
+Hiç kötü kodlama üzerine bir makalenin uzunluğu hakkında bir derleyici uyarısı listesine bakıp ve kendi kendinize düşündünüz mü: "Biliyorsunuz, bu konuda gerçekten bir şeyler yapmalıyım... ama şu anda zamanım yok?" Öte yandan, bir derlemede yeni ortaya çıkan ve onu düzelten yalnız bir uyarıya hiç baktınız mı?
+
+Sıfırdan yeni bir projeye başladığımda hiçbir uyarı, dağınıklık, sorun yok. Ancak kod tabanı büyüdükçe, dikkat etmezsem, dağınıklık, boşluk, uyarılar ve sorunlar birikmeye başlayabilir. Çok fazla gürültü olduğunda, umursamadığım yüzlerce uyarı arasında gerçekten okumak istediğim uyarıyı bulmak çok daha zor.
+
+Uyarıları tekrar kullanışlı hale getirmek için yapıdan gelen uyarılar için sıfır tolerans politikası kullanmaya çalışıyorum. Uyarı önemli olmasa bile, onunla ilgilenirim. Kritik değilse, ancak yine de alakalıysa, düzeltirim. Derleyici potansiyel bir boş gösterici istisnası hakkında uyarırsa, nedeni düzeltirim, sorunun üretimde asla ortaya çıkmayacağını "bilsem" bile. Gömülü belgeler (Javadoc veya benzeri), kaldırılmış veya yeniden adlandırılmış parametrelere atıfta bulunuyorsa, belgeleri temizlerim.
+
+Gerçekten umurumda olmayan bir şeyse ve bu gerçekten önemli değilse, ekibe uyarı politikamızı değiştirip değiştiremeyeceğimizi soruyorum. Örneğin, birçok durumda bir yöntemin parametrelerini ve dönüş değerini belgelemenin herhangi bir değer eklemediğini görüyorum, bu nedenle eksiklerse bir uyarı olmamalıdır. Veya, programlama dilinin yeni bir sürümüne yükseltmek, daha önce uygun olan kodun şimdi uyarı vermesine neden olabilir. Örneğin, Java 5 generic leri tanıttığında, generic tür parametresini belirtmeyen tüm eski kodlar bir uyarı verirdi. Bu, hakkında rahatsız edilmek istemediğim bir tür uyarı (en azından henüz değil). Gerçeğe uymayan bir dizi uyarıya sahip olmak kimseye fayda sağlamaz.
+
+Yapının her zaman temiz olduğundan emin olarak, her karşılaştığımda bir uyarının alakasız olduğuna karar vermek zorunda kalmayacağım. Bir şeyleri görmezden gelmek zihinsel iş ve yapabileceğim tüm gereksiz zihinsel çalışmalardan kurtulmam gerekiyor. Temiz bir yapıya sahip olmak, bir başkasının işimi devralmasını da kolaylaştırıyor. Uyarıları bırakırsam, bir başkasının neyin alakalı olup neyin olmadığını gözden geçirmesi gerekecek. Veya daha büyük olasılıkla, önemli olanlar da dahil olmak üzere tüm uyarıları görmezden gelin.
+ 
+Yapınızdan gelen uyarılar faydalıdır. Onları fark etmeye başlamak için sadece gürültüden kurtulmanız gerekir. Büyük bir temizlik için beklemeyin. Görmek istemediğiniz bir şey göründüğünde, hemen onunla ilgilenin. Ya uyarının kaynağını düzeltin, bu uyarıyı bastırın ya da aracınızın uyarı ilkelerini düzeltin. Derlemeyi temiz tutmak yalnızca derleme hatalarından veya test hatalarından uzak tutmakla ilgili değildir: Uyarılar da kod hijyeninin önemli ve kritik bir parçasıdır.
+
+[Johannes Brodwall](http://programmer.97things.oreilly.com/wiki/index.php/Johannes_Brodwall) Tarafından

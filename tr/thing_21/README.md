@@ -1,0 +1,17 @@
+# İş İstisnalarını Tekniklerden Ayırın
+
+Çalışma zamanında işlerin ters gitmesinin temelde iki nedeni vardır: uygulamayı kullanmamızı engelleyen teknik sorunlar ve uygulamayı yanlış kullanmamızı engelleyen iş mantığı. LISP, Java, Smalltalk ve C# gibi çoğu modern dil, bu iki durumu belirtmek için istisnalar kullanır. Bununla birlikte, iki durum o kadar farklıdır ki, dikkatlice ayrı tutulmaları gerekir. Her ikisini de aynı istisna hiyerarşisini kullanarak temsil etmek, aynı istisna sınıfından bahsetmemek, olası bir karışıklık kaynağıdır.
+
+Bir programlama hatası olduğunda çözülemeyen bir teknik sorun ortaya çıkabilir. Örneğin, 17 boyutundaki bir diziden 83 numaralı öğeye erişmeye çalışırsanız, program açıkça yoldan çıkar ve bazı istisnalar ortaya çıkmalıdır. Daha ince sürüm, uygun olmayan argümanlarla bazı kütüphane kodlarını çağırıyor ve aynı duruma kütüphanenin içinde neden oluyor.
+
+Kendi başınıza sebep olduğunuz bu durumları çözmeye çalışmak hata olur. Bunun yerine, istisnanın en yüksek mimari düzeye çıkmasına izin veriyoruz ve bir işlemi geri alma, günlüğe kaydetme ve yönetimi uyarma ve geri raporlama gibi sistemin güvenli bir durumda olmasını sağlamak için bazı genel istisna işleme mekanizmalarının elinden geleni yapmasına izin veriyoruz ( kibarca) kullanıcıya.
+
+Bu durumun bir çeşidi, "kütüphane durumunda" olduğunuzda ve bir arayan, örneğin tamamen tuhaf bir argüman ileterek veya bağımlı bir nesneyi düzgün bir şekilde ayarlayamayarak, yönteminizin sözleşmesini bozduğunda ortaya çıkar. Bu, 17'den 83. öğeye erişimle aynı düzeydedir: arayan kişinin kontrol etmesi gerekirdi; bunu yapmamak, istemci tarafında bir programcı hatasıdır. Uygun yanıt, teknik bir istisna oluşturmaktır.
+
+Yanıt vermeyen bir veritabanı gibi yürütme ortamındaki bir sorun nedeniyle programın devam edememesi farklı ancak yine de teknik bir durumdur. Bu durumda, altyapının durumu çözmek için elinden geleni yaptığını, bağlantıları onararak ve makul sayıda yeniden deneme yaptığını ve başarısız olduğunu varsaymalısınız. Sebep farklı olsa bile, çağıran kodun durumu benzerdir: bu konuda yapabileceği çok az şey vardır. Bu nedenle, genel istisna işleme mekanizmasına kadar artmasına izin verdiğimiz bir istisna aracılığıyla durumu işaret ederiz.
+
+Bunların aksine, etki alanı mantıksal bir nedenle aramayı tamamlayamayacağınız bir durumumuz var. Bu durumda, bir istisna olan, yani olağandışı ve istenmeyen, ancak tuhaf olmayan veya programatik olarak hatalı olmayan bir durumla karşılaştık. Örneğin, yeterli bakiyesi olmayan bir hesaptan para çekmeye çalışırsam. Başka bir deyişle, bu tür bir durum sözleşmenin bir parçasıdır ve bir istisna atmak, yalnızca modelin bir parçası olan ve müşterinin bilmesi ve işlemeye hazır olması gereken *alternatif bir dönüş yolu*dur. Bu durumlar için, müşterinin durumu kendi şartlarında ele alabilmesi için belirli bir istisna veya ayrı bir istisna hiyerarşisi oluşturmak uygundur.
+
+Teknik istisnaları ve iş istisnalarını aynı hiyerarşide karıştırmak, ayrımı bulanıklaştırır ve arayanın yöntem sözleşmesinin ne olduğu, çağrıdan önce hangi koşulların sağlanması gerektiği ve hangi durumları ele alması gerektiği konusunda kafasını karıştırır. Vakaları ayırmak netlik sağlar ve teknik istisnaların bazı uygulama çerçeveleri tarafından ele alınma şansını artırırken, iş alanı istisnaları aslında müşteri kodu tarafından değerlendirilir ve işlenir.
+
+[Dan Bergh Johnsson](http://programmer.97things.oreilly.com/wiki/index.php/Dan_Bergh_Johnsson) Tarafından
