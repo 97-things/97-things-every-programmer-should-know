@@ -1,0 +1,17 @@
+# Her Şeyi Sürüm Kontrolü Altına Alın
+
+Tüm projelerinizdeki her şeyi sürüm kontrolü altına alın. İhtiyacınız olan kaynaklar burada: Subversion, Git, Mercurial ve CVS gibi ücretsiz araçlar; bol disk alanı; ucuz ve güçlü sunucular; her yerde ağ; ve hatta proje barındırma hizmetleri. Sürüm kontrol yazılımını kurduktan sonra, çalışmanızı onun deposuna koymak için ihtiyacınız olan tek şey, kodunuzu içeren temiz bir dizinde uygun komutu vermektir. Ve öğrenilecek yalnızca iki yeni temel işlem var: kod değişikliklerinizi depoya *commit* ve projenin çalışma sürümünü deponun sürümüyle güncelliyorsunuz.
+
+Projeniz sürüm kontrolü altında olduğunda, geçmişini açıkça takip edebilir, kimin hangi kodu yazdığını görebilir ve benzersiz bir tanımlayıcı aracılığıyla bir dosyaya veya proje sürümüne başvurabilirsiniz. Daha da önemlisi, korkmadan cesur kod değişiklikleri yapabilirsiniz. Eski sürüm depoda güvenli bir şekilde bulunduğundan, gelecekte ihtiyaç duymanız durumunda artık yorumlanmış kod yok. Gelecekte müşterinizin çalıştırdığı yazılımın tam sürümünü kolayca yeniden ziyaret edebilmeniz için bir yazılım sürümünü sembolik bir adla etiketleyebilirsiniz (ve gerekir). Paralel geliştirme dalları oluşturabilirsiniz: Çoğu projede etkin bir geliştirme dalı ve yayınlanmış sürümler için aktif olarak desteklenen bir veya daha fazla bakım dalı bulunur.
+
+Sürüm kontrol sistemi, geliştiriciler arasındaki sürtüşmeyi en aza indirir. Programcılar bağımsız yazılım parçaları üzerinde çalıştıklarında, bunlar neredeyse sihirle bütünleşir. Birbirlerinin ayağına bastıklarında sistem bunu fark eder ve çatışmaları çözmelerine izin verir. Bazı ek kurulumlarla sistem, projenin ilerleyişi hakkında ortak bir anlayış oluşturarak, taahhüt edilen her değişiklik için tüm geliştiricileri bilgilendirebilir.
+
+Projenizi kurarken cimri olmayın: projenin *tüm* varlıklarını sürüm kontrolü altına alın. Kaynak kodun yanı sıra belgeleri, araçları, derleme komut dosyalarını, test senaryolarını, çizimleri ve hatta kitaplıkları dahil edin. Projenin tamamı (düzenli olarak yedeklenen) depoya güvenli bir şekilde yerleştirildiğinde, disk veya verilerinizi kaybetmenin zararı en aza indirilir. Geliştirme için yeni bir makine kurmak, projeyi depodan kontrol etmeyi içerir. Bu, kodun farklı platformlarda dağıtılmasını, oluşturulmasını ve test edilmesini kolaylaştırır: Her makinede tek bir güncelleme komutu, yazılımın güncel sürüm olmasını sağlar.
+
+Bir sürüm kontrol sistemiyle çalışmanın güzelliğini gördükten sonra, birkaç kuralı takip etmek sizi ve ekibinizi daha da etkili hale getirecektir:
+
+- Her mantıksal değişikliği ayrı bir işlemde gerçekleştirin. Birçok değişikliği tek bir işlemde bir araya getirmek, gelecekte bunları çözmeyi zorlaştıracaktır. Bu, diğer değişiklikleri kolayca gizleyebilecek proje çapında yeniden düzenleme veya stil değişiklikleri yaptığınızda özellikle önemlidir.
+- Her işleme açıklayıcı bir mesajla eşlik edin. En azından neyi değiştirdiğinizi kısaca açıklayın, ancak değişikliğin mantığını da kaydetmek istiyorsanız, onu saklamak için en iyi yer burasıdır.
+- Son olarak, bir projenin yapısını bozacak kodlar kullanmaktan kaçının, aksi takdirde projenin diğer geliştiricileri arasında popüler olmazsınız.
+
+[Diomidis Spinellis](http://programmer.97things.oreilly.com/wiki/index.php/Diomidis_Spinellis) Tarafından
