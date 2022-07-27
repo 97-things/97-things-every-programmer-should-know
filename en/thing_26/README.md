@@ -33,7 +33,7 @@ Not handling errors leads to:
 
 - **Brittle code.** Code that's filled with exciting, hard-to-find bugs.
 - **Insecure code.** Crackers often exploit poor error handling to break into software systems.
-- **Poor structure.** If there are errors from your code that are tedious to deal with continually, you have probably have a poor interface. Express it so that the errors are less intrusive and the their handling is less onerous.
+- **Poor structure.** If there are errors from your code that are tedious to deal with continually, you probably have a poor interface. Express it so that the errors are less intrusive and the their handling is less onerous.
 
 Just as you should check all potential errors in your code, you need to expose all potentially erroneous conditions in your interfaces. Do not hide them, pretending that your services will always work.
 
