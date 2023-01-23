@@ -1,11 +1,11 @@
 97 چیزی که هر برنامه نویس باید بداند
 ======
 
-*Pearls of wisdom for programmers collected from leading practitioners.*
+*مروارید حکمت برای برنامه نویسان جمع آوری شده از تمرین کنندگان برجسته.*
 
 
-This is a [GitBook](https://www.gitbook.io) version of the ['97 Things Every Programmer Should Know' project](http://programmer.97things.oreilly.com/wiki/index.php/97_Things_Every_Programmer_Should_Know).
+این یک [گیت بوک](https://www.gitbook.io) بر اساس کتاب [97 Things Every Programmer Should Know project](http://programmer.97things.oreilly.com/wiki/index.php/97_Things_Every_Programmer_Should_Know) است.
 
-All content is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license](http://creativecommons.org/licenses/by-nc-sa/3.0/). Print versions of the book are available on [Amazon.com](http://www.amazon.com/Things-Every-Programmer-Should-Know/dp/0596809484).
+[فهرست](fr-IR/SUMMARY.md)
 
-If you find any mistakes or have any suggestions, you can [create an issue](https://github.com/97-things/97-things-every-programmer-should-know/issues) or [file a pull request](https://github.com/97-things/97-things-every-programmer-should-know/pulls) to the [repository](https://github.com/97-things/97-things-every-programmer-should-know).
+همه محتوا تحت مجوز [Creative Commons Attribution Non Commercial Share Alike 3.0 license](http://creativecommons.org/licenses/by-nc-sa/3.0/) است. نسخه های چاپی کتاب را میتوانید در [Amazon.com](http://www.amazon.com/Things-Every-Programmer-Should-Know/dp/0596809484) بیابید.
