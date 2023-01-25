@@ -1,20 +1,37 @@
-# Automate Your Coding Standard
+#  استاندارهای کدنویسی
+استاندارهای کدنویسی یا Coding Standards یکی از چیزهایی است که هر برنامه نویسی که قصد دارد لیبل حرفه‌ای رویش بخورد می بایست دنبال کند. پیروی از استانداردهای کدنویسی کار خیلی آسانی هم نیست و گاهی اوقات خیلی خسته‌کننده می‌شود اما واقعیت امر این است که در پروژه های نسبتاً بزرگ اعضای تیم نیاز دارند تا از یکسری قوانین تبعیت کنند.
 
-You've probably been there too. At the beginning of a project, everybody has lots of good intentions — call them "new project's resolutions." Quite often, many of these resolutions are written down in documents. The ones about code end up in the project's coding standard. During the kick-off meeting, the lead developer goes through the document and, in the best case, everybody agrees that they will try to follow them. Once the project gets underway, though, these good intentions are abandoned, one at a time. When the project is finally delivered the code looks like a mess, and nobody seems to know how it came to be this way.
+توجه داشته باشیم زمانی که یک سری قوانین کدنویسی -مثلا تعداد اسپیس هایی که می بایست در کدها استفاده کرد- را وضع می کنیم، تمامی اعضای تیم می بایست قبول کنند که از آن قوانین تبعیت کنند که در غیر این صورت، یک برنامه نویس خاطی می‌تواند هر چه سایر برنامه نویسان رشته کرده‌اند را پنبه کند! برای اعمال استانداردهای کدنویسی می‌توان از یکسری ابزارها هم استفاده کرد که فرایند استاندارد سازی را تا حد قابل توجهی برای برنامه نویس سهل و آسان می سازند که این ابزارها بسته به IDEیی که استفاده می کنیم می توانند از خصوصیات مختلفی برخوردار باشند.
 
-When did things go wrong? Probably already at the kick-off meeting. Some of the project members didn't pay attention. Others didn't understand the point. Worse, some disagreed and were already planning their coding standard rebellion. Finally, some got the point and agreed but, when the pressure in the project got too high, they had to let something go. Well-formatted code doesn't earn you points with a customer that wants more functionality. Furthermore, following a coding standard can be quite a boring task if it isn't automated. Just try to indent a messy class by hand to find out for yourself.
+به عنوان نمونه، می‌توان زبان برنامه نویسی پی اچ پی را مثال زد. سایتی تحت عنوان php-fig.org استانداردی تحت عنوان PSR که مخفف واژگان PHP Standard Recommendation است را برای برنامه نویسان پی اچ پی طراحی کرده که علاقمندان با استفاده از این استانداردها می توانند از کدهایی برخوردار شوند که سایر برنامه نویسان پی اچ پی با نگاه کردن به کدهای ایشان کمتر دچار سردرگمی شوند.
 
-But if it's such a problem, why is that we want to have a coding standard in the first place? One reason to format the code in a uniform way is so that nobody can "own" a piece of code just by formatting it in his or her private way. We may want to prevent developers using certain anti-patterns, in order to avoid some common bugs. In all, a coding standard should make it easier to work in the project, and maintain development speed from the beginning to the end. It follows then that everybody should agree on the coding standard too — it does not help if one developer uses three spaces to indent code, and another one four.
+به طور مثال، کدی که در زیر مشاهده می کنید بر اساس استاندارد PSR نوشته شده است:
 
-There exists a wealth of tools that can be used to produce code quality reports and to document and maintain the coding standard, but that isn't the whole solution. It should be automated and enforced where possible. Here are a few examples:
+```
+<?php
+namespace Vendor\Package;
 
-- Make sure code formatting is part of the build process, so that everybody runs it automatically every time they compile the code.
-- Use static code analysis tools to scan the code for unwanted anti-patterns. If any are found, break the build.
-- Learn to configure those tools so that you can scan for your own, project-specific anti-patterns.
-- Do not only measure test coverage, but automatically check the results too. Again, break the build if test coverage is too low.
+use FooInterface;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
 
-Try to do this for everything that you consider important. You won't be able to automate everything you really care about. As for the things that you can't automatically flag or fix, consider them to be a set of guidelines supplementary to the coding standard that is automated, but accept that you and your colleagues may not follow them as diligently.
+class Foo extends Bar implements FooInterface
+{
+    public function sampleFunction($a, $b = null)
+    {
+        if ($a === $b) {
+            bar();
+        } elseif ($a > $b) {
+            $foo->bar($arg1);
+        } else {
+            BazClass::bar($arg2, $arg3);
+        }
+    }
 
-Finally, the coding standard should be dynamic rather than static. As the project evolves, the needs of the project change, and what may have seemed smart in the beginning, isn't necessarily smart a few months later.
-
-By [Filip van Laenen](http://programmer.97things.oreilly.com/wiki/index.php/Filip_van_Laenen)
+    final public static function bar()
+    {
+        // method body
+    }
+}
+```
+در واقع، در کد بالا پس از namespace و دستورات use یک اینتر قرار گرفته است و یا این که علامت } مرتبط با کلاس Foo در خط بعد نوشته شده است. به عنوان مثالی دیگر، آرگومان های متد sampleFunction با یک کاما و اسپیس از یکدیگر مجزا شده اند و این در حالی است که کاما به آرگومان اول چسبیده، سپس یک فاصله قرار گرفته و در نهایت آرگومان دوم نوشته شده است.
