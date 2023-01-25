@@ -1,21 +1,9 @@
-# Beware the Share
+# نظافت را رعایت کنید!
 
-It was my first project at the company. I'd just finished my degree and was anxious to prove myself, staying late every day going through the existing code. As I worked through my first feature I took extra care to put in place everything I had learned — commenting, logging, pulling out shared code into libraries where possible, the works. The code review that I had felt so ready for came as a rude awakening — reuse was frowned upon!
+برخی از آدم‌های متشخص هستند که وقتی زباله ای را روی زمین مشاهده می کنند، بدون توجه به این که چه کسی آن را روی زمین انداخته، زباله را برداشته و در جایگاه مخصوص به آن می اندازند (البته این قضیه بیشتر در کشورهای جهان اول مشاهده می گردد!) به عبارت دیگر، چنین افراد خیر خواهی، فضایی تمیز برای سایر افرادی که در آن محیط حضور خواهند داشت آماده می سازند. جمله‌ای وجود دارد با این مضمون که «دنیا را برای نسل ها آتی به مکان بهتری نسبت به آنچه تحویل شما داده شده مبدل سازید.»
 
-How could this be? All through college reuse was held up as the epitome of quality software engineering. All the articles I had read, the textbooks, the seasoned software professionals who taught me. Was it all wrong?
+یک برنامه نویس خوب کسی است که وقتی کدهای یک برنامه نویس دیگر را تحویل می‌گیرد -فارغ از این که برنامه نویس قبلی چه کسی بوده- تمام تلاش خود را به کار خواهد بست تا کدها را بهبود بخشد و این در حالی است که این بهبود کار می‌تواند هم در زمینه بهبود راندمان کدها بوده و یا حتی در زمینه کامنت گذاری باشد. به نظر شما در چنین شرایطی نتیجه نهایی چه خواهد شد؟
 
-It turns out that I was missing something critical.
+به نظر می‌رسد که اگر برنامه نویسان دنباله رو چنین رویکردی باشند، روز به روز کیفیت کدهایی که نوشته می‌شوند بیشتر خواهد شد تا جایی که وجود باگ در کدها به یک امر انتزاعی مبدل خواهد شد. حال ممکن است این سؤال برای شما پیش بیاید که اگر برنامه نویس قبلی به جای کدنویسی، … بود چه؟ در پاسخ به چنین سؤالی بایستی گفت که اصلاً نیاز نیست تا شما تمامی بخش‌های کد را بهبود ببخشید بلکه صرفاً نیاز است تا هر آنچه که از دست شما بر می‌آید را انجام دهید و یا حداقل کدهایی که به ماژول قبلی می افزایید را سعی کنید تمیز و مرتب بنویسید. این تمیز نویسی کدها می‌تواند به نام گذاری صحیح توابع و متغیرها، رعایت فاصله ها و … ختم گردد.
 
-Context.
-
-The fact that two wildly different parts of the system performed some logic in the same way meant less than I thought. Up until I had pulled out those libraries of shared code, these parts were not dependent on each other. Each could evolve independently. Each could change its logic to suit the needs of the system's changing business environment. Those four lines of similar code were accidental — a temporal anomaly, a coincidence. That is, until I came along.
-
-The libraries of shared code I created tied the shoelaces of each foot to each other. Steps by one business domain could not be made without first synchronizing with the other. Maintenance costs in those independent functions used to be negligible, but the common library required an order of magnitude more testing.
-
-While I'd decreased the absolute number of lines of code in the system, I had increased the number of dependencies. The context of these dependencies is critical — had they been localized, it may have been justified and had some positive value. When these dependencies aren't held in check, their tendrils entangle the larger concerns of the system even though the code itself looks just fine.
-
-These mistakes are insidious in that, at their core, they sound like a good idea. When applied in the right context, these techniques are valuable. In the wrong context, they increase cost rather than value. When coming into an existing code base with no knowledge of the context where the various parts will be used, I'm much more careful these days about what is shared.
-
-Beware the share. Check your context. Only then, proceed.
-
-By [Udi Dahan](http://programmer.97things.oreilly.com/wiki/index.php/Udi_Dahan)
+در تیم های برنامه نویسی می بایست پس از اتخاذ رویکردی همچون آنچه در بالا به آن اشاره شد، فضایی ایجاد گردد که حتی اگر یکی از اعضای تیم خواست تا کدنویسی نامرتبی انجام دهد از سایر اعضای تیم خجالت کشیده و خود را اصلاح کند دقیقاً شبیه به شرایطی که در یک مهمانی مجلل اتفاق می افتد: آیا کسی رویش می‌شود که پس از خوردن خیار، پوست آن را روی پارکت پرتاب کند؟ هرگز.
