@@ -1,22 +1,30 @@
-# Check Your Code First before Looking to Blame Others
+# انتخاب ابزار مناسب
 
-Developers — all of us! — often have trouble believing our own code is broken. It is just so improbable that, for once, it must be the compiler that's broken.
+بسیاری از نرم‌افزارها و اپلیکیشن هایی که ما امروزه می‌بینیم و به موفقیت‌های نسبتاً خوبی هم دست پیدا کرده‌اند هرگز کدنویسی آن‌ها از صفر شروع نشده است بلکه این دست نرم‌افزارها با استفاده از ابزارهای موجود -در اینجا منظور از ابزار کامپوننت ها، کتابخانه ها، فریم ورک ها و … است- ساخته شده اند. در همین راستا، زمانی که قصد شروع پروژه ای را داریم حتماً می بایست مناسب‌ترین ابزارها را برای پروژه خود انتخاب کنیم و هرچه پروژه ما بزرگ‌تر باشد، لزوم تحقیق در این زمینه نیز بیشتر خواهد شد.
 
-Yet in truth it is very (very) unusual that code is broken by a bug in the compiler, interpreter, OS, app server, database, memory manager, or any other piece of system software. Yes, these bugs exist, but they are far less common than we might like to believe.
+در ارتباط با دلایلی که چرا برخی از پروژه ها از صفر کدنویسی نمی‌شوند و در آن‌ها از کامپوننت ها و کتابخانه‌های موجود استفاده می شود، می‌توان موارد زیر اشاره کرد:
 
-I once had a genuine problem with a compiler bug optimizing away a loop variable, but I have imagined my compiler or OS had a bug many more times. I have wasted a lot of my time, support time, and management time in the process only to feel a little foolish each time it turned out to be my mistake after all.
+1- نرم‌افزارها و اپلیکیشن ها در طول زمان رشد می کنند، پیچیده‌تر می‌شود و در نهایت نسبت به نسخه بتای خود به مراتب حرفه‌ای تر می‌شوند و این در حالی است که زمان اختصاص یافته برای توسعه این دست نرم‌افزارها و اپلیکیشن ها محدود و محدودتر می گردد. منطقی‌تر به نظر می‌رسد اگر برنامه نویسان بیشتر از آن که روی کدنویسی زیرساخت پروژه زمان صرف کنند (که در اکثر پروژه ها این زیرساخت تاحدودی مشابه است)، تمرکز خود را روی کدنویسی بخش‌های اختصاصی پروژه شان متمرکز سازند.
 
-Assuming the tools are widely used, mature, and employed in various technology stacks, there is little reason to doubt the quality. Of course, if the tool is an early release, or used by only a few people worldwide, or a piece of seldom downloaded, version 0.1, Open Source Software, there may be good reason to suspect the software. (Equally, an alpha version of commercial software might be suspect.)
+2- کامپوننت ها و فریم ورک هایی که در سرتاسر دنیا مورد استفاده قرار می‌گیرند به مراتب دارای باگ های کمتری نسبت به کدهایی هستند که یک برنامه نویس فریلنسر در اتاق کارش می نویسد!
 
-Given how rare compiler bugs are, you are far better putting your time and energy into finding the error in your code than proving the compiler is wrong. All the usual debugging advice applies, so isolate the problem, stub out calls, surround it with tests; check calling conventions, shared libraries, and version numbers; explain it to someone else; look out for stack corruption and variable type mismatches; try the code on different machines and different build configurations, such as debug and release.
+3- بسیاری از فریم ورک های موجود در بازار به صورت رایگان در اختیار توسعه دهندگان قرار می‌گیرد و همین مسأله حاکی از آن است که هزینه‌های مرتبط با توسعه یک پروژه به مراتب کاهش خواهد یافت.
 
-Question your own assumptions and the assumptions of others. Tools from different vendors might have different assumptions built into them — so too might different tools from the same vendor.
-When someone else is reporting a problem you cannot duplicate, go and see what they are doing. They may be doing something you never thought of or are doing something in a different order.
+4- توسعه زیرساخت پروژه در زمینه‌های مختلف مثل امنیت، راندمان و … کاری حساس، دقیق، زمان بر و پرهزینه است اما اگر شما از کامپوننت های متن باز و رایگان استفاده کنید، می توانید از به روزرسانی به هنگام و ساختاری پروژه خود اطمینان حاصل کنید.
 
-As a personal rule if I have a bug I can't pin down, and I'm starting to think it's the compiler, then it's time to look for stack corruption. This is especially true if adding trace code makes the problem move around.
+به خاطر داشته باشید
+توجه داشته باشیم که شرکت فیسبوک ابتدا برای برنامه نویسی این شبکه ی اجتماعی از زبان برنامه نویسی PHP استفاده کرد اما پس از آن که این شبکه جای خود را در میان کاربران باز کرد و به درآمدزایی هنگفتی دست یافت، مدیران این شرکت تصمیم گرفتند زبان اختصاصی این شرکت تحت عنوان Hack را توسعه داده و شبکه ی اجتماعی فیسبوک را روی آن بنا کنند.
 
-Multi-threaded problems are another source of bugs to turn hair gray and induce screaming at the machine. All the recommendations to favor simple code are multiplied when a system is multi-threaded. Debugging and unit tests cannot be relied on to find such bugs with any consistency, so simplicity of design is paramount.
+آنچه مسلم است این که انتخاب ترکیبی از ابزارهای موجود برای توسعه اپلیکیشن خود کاری حساس بوده و نیازمند برخورداری از تجربه در این زمینه است. برای همین منظور، راه کارهایی را در ادامه برای شما آورده‌ایم که می‌تواند به شما در انتخاب ابزار مد نظرتان کمک شایانی کند:
 
-So before you rush to blame the compiler, remember Sherlock Holmes' advice, "Once you eliminate the impossible, whatever remains, no matter how improbable, must be the truth," and prefer it to Dirk Gently's, "Once you eliminate the improbable, whatever remains, no matter how impossible, must be the truth."
+*- هر ابزاری در یک بستر خاص بهترین اثربخشی را خواهد داشت. منظور ما در اینجا از بستر عبارت است از ساختار دیتابیس، پروتوکل های ارتباطی، سرور،‌ وب سرویس، ای پی آی و … پس این احتمال وجود دارد ابزاری که شما انتخاب کرده‌اید با بستر توسعه نرم افزاری تان همخوانی نداشته باشد و همین مسأله منجر به پیچیده‌تر شدن پروژه شما خواهد شد.
 
-By [Allan Kelly](http://programmer.97things.oreilly.com/wiki/index.php/Allan_Kelly)
+*- ابزارهایی که امروزه مشاهده می‌کنیم از عمر مشخصی برخوردارند و زمانی که آپدیتی برای آن‌ها به بازار عرضه می‌شود و یا نسخه جدیدی از آن‌ها در دسترس توسعه دهندگان قرار می گیرد، ممکن است -اگر نگوییم حتماً همین‌طور است- شاهد تغییرات بسیاری نسبت به نسخه قدیمی باشیم که گاهی اوقات نسخه های جدید از یک ابزار خاص -مثلا یک فریم ورک برنامه نویسی- دارای تغییرات ساختاری زیادی نسبت به نسخه قبلی است که آن ها را اصلا غیر قابل مقایسه می کند. به طور مثال، فریم ورک برنامه نویسی تحت وب لاراول، در نسخه ۵ خود کاملاً ساختار این فریم ورک را تغییر داده و این در حالی است که اگر شما از نسخه ۴ این فریم ورک استفاده می‌کرده اید و حال قصد مهاجرت به آخرین نسخه را دارید، کل پروژه شما دستخوش تغییر خواهد شد (توجه داشته باشیم که هرچه تعداد فریم ورک ها و ابزارهای استفاده شده در پروژه ما بیشتر باشد، عمق این فاجعه هم بیشتر خواهد شد!)
+
+*- برخی از ابزارهای موجود نیازمند کانفیگ یا تنظیم کردن هستند که مسأله تنظیم کردن آن‌ها شاید نیازمند صرف وقت و هزینه قابل توجهی باشد.
+
+*- برخی از ابزارهای به اصطلاح رایگان آن طور که باید و شاید Free نیستند. در ابتدا ما تصور می‌کنیم که ابزار مد نظر ما کاملاً رایگان است و شروع به استفاده از آن می‌کنیم اما وقتی پروژه به جاهای حساس خود می‌رسد و نیازمند استفاده از کامپوننت های خاصی است، کاشف به عمل خواهد آمد که می بایست بخشی از سورس کد را از توسعه‌دهنده اصلی خریداری کنیم و همین مسأله می‌تواند آینده نرم‌افزار ما را تحت الشعاع قرار دهد.
+
+*- برخی از ابزارها پس از توسعه نرم‌افزار با آن‌ها برای ما محدودیت ایجاد می کنند. به طور مثال، برخی از لایسنس های نرم افزاری هستند که توسعه دهندگانی که از آن‌ها استفاده می‌کنند را ملزم به انتشار نرم افزارشان به علاوه سورس کد آن به صورت کاملا باز و رایگان می‌کنند که چنین محدودیتی مسلما برای خیلی از توسعه دهندگان خوشایند نخواهد بود!
+
+آنچه مسلم است این که تصمیم گیرنده نهایی خود شما خواهید بود لذا می بایست تا حد ممکن کدهایی که مرتبط با زیرساخت پروژه می‌شوند را با استفاده از بهترین ابزار یا فریم ورک موجود توسعه داده و کدهای مرتبط با ماژول اختصاصی پروژه خود را شخصاً کدنویسی کنید.
