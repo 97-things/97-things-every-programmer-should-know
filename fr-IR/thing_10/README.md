@@ -1,29 +1,13 @@
-# Choose Your Tools with Care
+# برنامه های خود را به زبان مشتریان بنویسید!
 
-Modern applications are very rarely built from scratch. They are assembled using existing tools — components, libraries, and frameworks — for a number of good reasons:
+به عنوان یک برنامه نویس احتمالاً صاحبان صنایع و مشاغل مختلف به شما مراجعه می کنند و به شما سفارش کار می دهند. برای انجام این سفارشات که مربوط به فرآیند های کاری مشتریان می باشند، شما می توانید با استفاده از قابلیت های زبان های برنامه نویسی مختلف، آن فرآیند ها را مدل سازی کنید. به طور مثال ممکن است صاحب یک فروشگاه به شما سفارش برنامه ای برای کنترل کالاهای موجود در انبار فروشگاه بدهد. بنابراین شما باید یک انبار را مدل سازی کنید که کالاهای خریداری و ذخیره شده در آن ثبت شوند و بتوان وضعیت آن ها را تا زمانی که در انبار موجود باشند پیگیری کرد. توصیه ای که ما به شما داریم این است که در این موارد برنامه ی خود را به زبان مشتری سفارش دهنده بنویسید.
 
-- Applications grow in size, complexity, and sophistication, while the time available to develop them grows shorter. It makes better use of developers' time and intelligence if they can concentrate on writing more business-domain code and less infrastructure code.
+منظور از این که برنامه ی سفارشی خود را به زبان مشتری بنویسید این است که در کدهای برنامه از اصطلاحات کسب و کار مشتری استفاده کنید و روابط و رویه های کاری او را در برنامه پیاده سازی کنید. بگذارید با مثال هایی موضوع را شفاف تر سازیم. مثال فروشگاه را در نظر بگیرید. برای مدل سازی کالاهای خریداری شده، باید متغیری تعریف کنیم که نام کالای جدید را در آن ذخیره کنیم تا بعداً در بخش های دیگر برنامه از آن استفاده شود. می دانیم که برای تعریف هر متغیر یا Variable در برنامه نویسی، نیاز به یک اسم داریم. بهترین کار این است که به جای استفاده از یک نام بی معنی، مثلاً x، نامی را انتخاب کنیم که معرف این باشد که قرار است چه چیزی در متغیر مد نظرمان ذخیره شده و در عین حال برای مشتری هم شناخته شده باشد. به طور مثال این متغیر را new_product_name نام گذاری کنیم و با ورود هر کالای جدید آن را در این متغیر ذخیره کنیم،
+```
+new_product_name = "Icecream"
+// or
+new_product_name = "Pen"
+```
+در مورد رویه ها نیز به همین ترتیب عمل کنیم. مثلاً این طور نیست که کارکنان انبار تمام اجناس خریداری شده را در یک قسمت نگه داری کنند، بلکه متناسب با نوع محصول، آن ها را در بخش های مختلف انبار می کنند. مواد غذایی فاسد شدنی را در سردخانه، کرم ها را در بخش لوازم بهداشتی، پارچه ها را در بخش منسوجات و  . . .  وقتی نوبت به شما می رسد تا این رویه را مدل سازی کنید، شاید با خود فکر کنید در این مدل مجازی کنار هم قرار دادن کالاهایی مثل مواد غذایی، لوازم بهداشتی، و غیره تأثیری روی آن ها نمی گذارد. بنابراین به جای آن که با صرف زمان بیش تر و نوشتن کدهای بیش تر، نام این محصولات را در جداول جداگانه ای در دیتابیس قرار دهید، تصمیم می گیرید تمام آن ها را در یک جدول قرار داده تا در زمانی که بخواهید وضعیت یک محصول را بررسی کنید، کدهای برنامه به جای چند جدول دیتابیس، یک جدول را بیش تر در دیتابیس نگردند. شاید این کار برای شما راحت باشد، اما این نکته را در نظر داشته باشید که این برنامه برای صاحب فروشگاه است، نه شما!
 
-- Widely used components and frameworks are likely to have fewer bugs than the ones developed in-house.
-
-- There is a lot of high-quality software available on the web for free, which means lower development costs and greater likelihood of finding developers with the necessary interest and expertise.
-
-- Software production and maintenance is human-intensive work, so buying may be cheaper than building.
-
-However, choosing the right mix of tools for your application can be a tricky business requiring some thought. In fact when making a choice, there are a few things you should keep in mind:
-
-- Different tools may rely on different assumptions about their context — e.g., surrounding infrastructure, control model, data model, communication protocols, etc. — which can lead to an architectural mismatch between the application and the tools. Such a mismatch leads to hacks and workarounds that will make the code more complex than necessary.
-
-- Different tools have different lifecycles, and upgrading one of them may become an extremely difficult and time-consuming task since the new functionality, design changes, or even bug fixes may cause incompatibilities with the other tools. The greater the number tools the worse the problem can become.
-
-- Some tools require quite a bit of configuration, often by means of one or more XML files, which can grow out of control very quickly. The application may end up looking as if it was all written in XML plus a few odd lines of code in some programming language. The configurational complexity will make the application difficult to maintain and to extend.
-
-- Vendor lock-in occurs when code that depends heavily on specific vendor products ends up being constrained by them on several counts: maintainability, performances, ability to evolve, price, etc.
-
-- If you plan to use free software, you may discover that it's not so free after all. You may need to buy commercial support, which is not necessarily going to be cheap.
-
-- Licensing terms matter, even for free software. For example, in some companies it is not acceptable to use software licensed under the GNU license terms because of its viral nature — i.e., software developed with it must be distributed along with its source code.
-
-My personal strategy to mitigate these problems is to start small by using only the tools that are absolutely necessary. Usually the initial focus is on removing the need to engage in low-level infrastructure programming (and problems), e.g., by using some middleware instead of using raw sockets for distributed applications. And then add more if needed. I also tend to isolate the external tools from my business domain objects by means of interfaces and layering, so that I can change the tool if I have to with just a small amount of pain. A positive side effect of this approach is that I generally end up with a smaller application that uses fewer external tools than originally forecast.
-
-By [Giovanni Asproni](http://programmer.97things.oreilly.com/wiki/index.php/Giovanni_Asproni)
+بهتر است که کدهای شما صریحاً رویه های ذخیره سازی در انبار را شبیه سازی کنند. مزیت این نوع کدنویسی صریح و مطابق با روال های کاری مشتری آن است که اولاً، تصحیح خطاها و تغییرات مورد نیاز در برنامه را برای شما راحت تر می کند (حتی اگر فراموش کنید هر قطعه از کد شما چه طور و برای چه منظوری کار می کند، می توانید به رویه های کاری مشتری رجوع کنید و الگوریتم آن را رمز گشایی کنید) ثانیاً، اگر برنامه نویس دیگری جایگزین شما شود تا سیستم موجود را به روز رسانی کند، از طریق آشنایی با این رویه های کاری، منظور کدهای شما را به راحتی درک می کند و نیازی نیست که به شما مراجعه کند تا آن ها را تفسیر کنید یا این که بخواهد برنامه ی جدیدی که برای خودش قابل فهم باشد را بازنویسی کند!
