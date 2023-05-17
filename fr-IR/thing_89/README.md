@@ -1,37 +1,24 @@
-# Use the Right Algorithm and Data Structure
+# استفادهٔ درست از الگوریتم‌ها و دیتا استراکچرها
 
-> A big bank with many branch offices complained that the new computers it had bought for the tellers were too slow. This was in the time before everyone used electronic banking and ATMs were not as widespread as they are now. People would visit the bank far more often, and the slow computers were making the people queue up. Consequently, the bank threatened to break its contract with the vendor.
+زمانی که استفاده از کامپیوترهای تجاری تازه فراگیر شده بودند، بانکی معروف با شعب مختلف که به تازگی استفاده از سیستم‌های کامپیوتری را در دستور کار قرار داده بود، از پرفورمنس سیستم‌هایش به شرکت نرم‌افزار شکایت کرده و تهدید کرده بود که اگر سرعت نرم‌افزاری که منجر به ایجاد صف‌های طولانی مشتریان می‌شد را بهبود نبخشند، قرارداد را فسخ خواهد کرد.
 
-> The vendor sent a performance analysis and tuning specialist to determine the cause of the delays. He soon found one specific program running on the terminal consuming almost all the CPU capacity. Using a profiling tool, he zoomed in on the program and he could see the function that was the culprit. The source code read:
-
-> ```
-> for (i=0; i<strlen(s); ++i) {
->   if (... s[i] ...) ...
-> }
-> ```
-
-> And string s was, on average, thousands of characters long. The code (written by the bank) was quickly changed, and the bank tellers lived happily ever after....
-
-Shouldn't the programmer have done better than to use code that needlessly scaled quadratically?
-Each call to strlen traversed every one of the many thousand characters in the string to find its terminating null character. The string, however, never changed. By determining its length in advance, the programmer could have saved thousands of calls to strlen (and millions of loop executions):
-
-```
-n=strlen(s);
-for (i=0; i<n; ++i) {
-  if (... s[i] ...) ...
+شرکت‌ نرم‌افزاری هم چند متخصص و تحلیلگر به شعبه‌ٔ مرکزی بانک مذکور فرستاد تا ریشهٔ مشکل را بیابند و چیزی نگذشت که دریافتند کدی توسط مدیر آی‌تی خود بانک روی سیستم نوشته شده بود که در بک‌گراند به صورت کامندلاینی اجرا می‌شد و تقریباً می‌شود گفت تمام پتانسیل CPU را استفاده می‌کرد:
+```C
+for (i=0; i < strlen(s); ++i) {
+if (... s[i] ...) ...
 }
 ```
+در واقع، در تحلیل کد فوق بایستی گفت که استرینگ s به طور میانگین حاوی هزاران کاراکتر بود و با ایجاد یکسری تغییر در کد، مشکل بانک به سادگی حل شد! به عبارت دیگر، فراخوانی متد ()strlen تک‌تک هزاران کاراکتر موجود در s را شامل می‌شد و این در حالی بود که اگر دولوپر این کد از قبل طول این استرینگ را مشخص می‌کرد، می‌توانست هزاران فراخوانی متد ()strlen و بالتبع میلیون‌ها اجرای لوپ را از سیستم حذف کند. کد فوق به صورت زیر به سادگی بهینه شد:
+```C
+n = strlen(s);
+for (i=0; i < n; ++i) {
+if (... s[i] ...) ...
+}
+```
+برخی دولوپرها بر این باورند که استراتژی «اول کدی بنویس که کار کند، سپس آن را بهینه کن» خیلی عالی است اما می‌بینیم که گاهی‌اوقات -همچون مثال فوق- چنین ایده‌ای اصلاً کار نمی‌کند و سیستم را با مشکل مواجه می‌سازد. اینجا است که اهمیت استفاده از یک الگوریتم مناسب دوچندان می‌گردد.
 
-Everyone knows the adage "first make it work, then make it work fast" to avoid the pitfalls of micro-optimization. But the example above would almost make you believe that the programmer followed the Machiavellian adagio "first make it work slowly."
+علاوه بر به‌کارگیری الگوریتم درست، دیتا استراکچر مناسب نیز می‌تواند پرفورمنس سیستم را به طرز قابل‌توجهی افزایش دهد. برای روشن‌تر شدن این مسأله مثالی می‌زنیم. فرض کنیم که قصد داریم اطلاعات کاربران خود شامل نام و نام خانوادگی، سن، جنسیت، شهر محل سکونت، تحصیلات و غیره را ذخیره ساخته تا در مواقع مختلف بر اساس معیارهای خاصی همچون سن، جنسیت، محل سکونت و غیره نوتیفیکیشن‌هایی را برای ایشان ارسال کنیم.
 
-This thoughtlessness is something you may come across more than once. And it is not just a "don't reinvent the wheel" thing. Sometimes novice programmers just start typing away without really thinking and suddenly they have 'invented' bubble sort. They may even be bragging about it.
+مسلماً در چنین شرایطی استفاده از دیتا استراکچر مناسب نتیجهٔ بسیار مطلوبی برایمان در بر خواهد شد. به عبارت دیگر، استفاده از جدولی که در آن داده‌های مرتبط با کاربران به صورت اصطلاحاً Serialized شده ذخیره گردد اصلاً بهینه نبوده بلکه در عوض نیاز به جدولی خواهیم داشت که ستون‌های مورد نیاز به خوبی در آن ایندکس شده باشند.
 
-The other side of choosing the right algorithm is the choice of data structure. It can make a big difference: Using a linked list for a collection of a million items you want to search through — compared to a hashed data structure or a binary tree — will have a big impact on the user's appreciation of your programming.
-
-Programmers should not reinvent the wheel, and should use existing libraries where possible. But to be able to avoid problems like the bank's, they should also be educated about algorithms and how they scale. Is it just the eye candy in modern text editors that make them just as slow as old-school programs like WordStar in the 1980s? Many say reuse in programming is paramount. Above all, however, programmers should know when, what, and how to reuse. To be able to do that they should have knowledge of the problem domain and of algorithms and data structures.
-
-A good programmer should also know when to use an abominable algorithm. For example, if the problem domain dictates there can never be more than five items (like the number of dice in a Yahtzee game), you know that you *always* have to sort at most five items. In that case, bubble sort might actually be the most efficient way to sort the items. Every dog has its day.
-
-So, read some good books — and make sure you understand them. And if you really read Donald Knuth's *the Art of Computer Programming* well, you might even be lucky: Find a mistake by the author and earn one of Don Knuth's hexadecimal dollar ($2.56) checks.
-
-By [JC van Winkel](http://programmer.97things.oreilly.com/wiki/index.php/JC_van_Winkel)
+برخی بر این باروند که مهم‌ترین استراتژی در کدنویسی استفاده از کدهایی است که قبلاً نوشته شده است اما نکتهٔ مهم اینجا است که ما به عنوان یک دولوپر حرفه‌ای می‌بایست بدانیم که چه چیزی را چگونه و در چه زمانی استفاده کنیم (شاید مدیر آی‌تی بانک مذکور کد فوق را از داخل پروژه‌ای دیگر برداشته باشد که قرار بوده صرفاً تعداد کاراکتر معدودی به فانکشن ()strlen پاس داده شود که مسلماً در چنین شرایطی کد به خوبی کار می‌کرده است).
