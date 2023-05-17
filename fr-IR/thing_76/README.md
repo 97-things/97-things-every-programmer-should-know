@@ -1,41 +1,40 @@
-# The Single Responsibility Principle
+# آشنایی با قانون Single Responsibility
 
-One of the most foundational principles of good design is:
+یکی از خصیصه‌های معماری نرم‌افزاری خوب این است که «چیزهایی که ماهیت مشابهی داشته، به دلایل یکسانی دستخوش تغییر می‌شوند و در یک کلام، به یک خانواده تعلق دارند را باید در کنار یکدیگر قرار داد و الباقی را مجزا ساخت.»
 
-> Gather together those things that change for the same reason, and separate those things that change for different reasons.
-
-This principle is often known as the *Single Responsibility Principle* or SRP. In short, it says that a subsystem, module, class, or even a function, should not have more than one reason to change. The classic example is a class that has methods that deal with business rules, reports, and database:
-
-```
-public class Employee {
-  public Money calculatePay() ...
-  public String reportHours() ...
-  public void save() ...
+از دید فنی، به چنین قابلیتی Single Responsibility Principle (اصل تک وظیفه‌ای) یا به طور خلاصه SRP گفته می‌شود. به عبارت دیگر، این اصل حاکی از آن است که یک ماژول، کلاس، فانکشن یا هر چیزی می‌بایست وظیفه‌ای واحد داشته، متمرکز بر یک تسک بوده و صرفاً به یک دلیل تغییر یابند نه اینکه به محض مواجه با یک نیاز در هر بخشی از نرم‌افزار، نیاز داشته باشیم تا آن را دستخوش تغییر سازیم. برای روشن‌تر شدن این مسأله، کلاسی فرضی تحت عنوان Employee که دارای ۳ فانکش مختلف است را در نظر می‌گیریم:
+``` C#
+public class Employee
+{
+    public function calculatePayment();
+    public function reportHours();
+    public function save();
 }
 ```
+برخی برنامه‌نویسان بر این باورند از آنجا که این ۳ فانکشن به نوعی مرتبط با یکدیگر هستند، می‌بایست در قالب یک کلاس تعریف شوند اما این در حالی است که طبق قانون SRP، این ۳ فانکشن بنا به دلایلی کاملاً متفاوت ممکن است نیاز به تغییر کردن داشته باشند. برای مثال، فانکشن ()calculatePayment زمانی می‌بایست تغییر یابد که حقوق و مزیا کم‌ و زیاد شوند، فانکشن ()reportHours هم زمانی تغییر خواهد یافت که نحوهٔ گزارش‌دهی به مدیران تغییر کند و فانکشن ()save هم هر موقع که دیتابیس یا اسکمای برخی جداول تغییر یابد باید ریفکتور شود.
 
-Some programmers might think that putting these three functions together in the same class is perfectly appropriate. After all, classes are supposed to be collections of functions that operate on common variables. However, the problem is that the three functions change for entirely different reasons. The `calculatePay` function will change whenever the business rules for calculating pay change. The `reportHours` function will change whenever someone wants a different format for the report. The save function will change whenever the DBAs change the database schema. These three reasons to change combine to make `Employee` very volatile. It will change for any of those reasons. More importantly, any classes that depend upon `Employee` will be affected by those changes.
+می‌بینیم که ۳ دلیل مختلف برای تغییر یافتن فانکشن‌ها پیش‌ روی ما است و این باعث می‌گردد که کلاس Employee بنا به هر دلیلی و به خاطر تغییر در سیاست‌های مرتبط با هر یک از ۳ فانکشن زیرشاخه‌اش دستخوش تغییر قرار گیرد و نکتهٔ مهم‌تر اینکه اگر در دیگر بخش‌های کد وابستگی به این کلاس وجود داشته باشد و کلاس‌های دیگری از این کلاس ارث‌بری کرده باشند، آنها هم دستخوش تغییر خواهند شد!
 
-Good system design means that we separate the system into components that can be independently deployed. Independent deployment means that if we change one component we do not have to redeploy any of the others. However, if `Employee` is heavily used by many other classes in other components, then every change to Employee is likely to cause the other components to be redeployed; thus negating a major benefit of component design (or SOA if you prefer the more trendy name).
+یک معماری نرم‌افزاری خوب آن است که ما سورس‌کد را به بخش‌های مجزایی تقسیم‌بندی کنیم که بتوان هر یک از آن‌ها را به‌ طور مجزا و بدون وابستگی به سایر بخش‌ها مورد استفاده قرار داد. به عبارت دیگر، اگر ما بخشی را تغییر دادیم، دیگر بخش‌ها نیاز به هیچ‌گونه تغییری نداشته باشند.
 
+اگر بخواهیم مجدد به مثال فوق بازگردیم، چنانچه کلاس Employee توسط دیگر کلاس‌های ماژول‌های مختلف پروژه استفاده شده باشد، بنابراین اعمال هرگونه تغییر در این کلاس، کلاس‌های دیگر را تحت‌الشعاع خود قرار خواهد داد که در بسیاری از مواقع منجر به ایجاد باگ می‌شود. حال اگر بخواهیم کلاس فوق را بر اساس قانون SRP ریفکتور کنیم، خواهیم داشت:
+```C#
+public class Employee
+{
+   public function calculatePayment(); 
+}
+
+public class EmployeeReporter
+{
+   public function reportHours(); 
+}
+
+public class EmployeeRepository
+{
+   public function save(); 
+}
 ```
-public class Employee {
-  public Money calculatePay() ...
-}
+می‌بینیم که در کد فوق دارای ۳ کلاس مجزا از یکدیگر هستیم که هر کدام از آن‌ها متمرکز بر تسکی اختصاصی هستند. به عبارت دیگر، تمامی فانکشن‌های مرتبط با گزارش‌دهی را می‌توان در کلاس EmployeeReporter قرار داد، تمامی فانکشن‌های مرتبط با دیتابیس را در کلاس EmployeeRepository نوشت و هر آنچه که مرتبط با Business Rules (قوانین کاری) است را در کلاس Employee.
 
-public class EmployeeReporter {
-  public String reportHours(Employee e) ...
-}
+پیاده‌سازی اصولی SRP می‌تواند ضامن معماری‌های نرم‌افزاری خوبی باشد که در آن‌ها میزان Dependency (وابستگی) به صورت حداقلی بوده و اعمال یک تغییر در کد، منجر به ایجاد باگ در سایر بخش‌ها نخواهد شد.
 
-public class EmployeeRepository {
-  public void save(Employee e) ...
-}
-```
-
-The simple partitioning shown above resolves the issues. Each of these classes can be placed in a component of its own. Or rather, all the reporting classes can go into the reporting component. All the database related classes can go into the repository component. And all the business rules can go into the business rule component.
-
-The astute reader will see that there are still dependencies in the above solution. That `Employee` is still depended upon by the other classes. So if `Employee` is modified, the other classes will likely have to be recompiled and redeployed. Thus, `Employee` cannot be modified and then independently deployed. However, the other classes can be modified and independently deployed. No modification of one of them can force any of the others to be recompiled or redeployed. Even `Employee` could be independently deployed through a careful use of the *Dependency Inversion Principle* (DIP), but that's a topic for a [different book](http://www.amazon.com/dp/0135974445/).
-
-Careful application of the SRP, separating things that change for different reasons, is one of the keys to creating designs that have an independently deployable component structure.
-
-by [Uncle Bob](http://programmer.97things.oreilly.com/wiki/index.php/Uncle_Bob)
