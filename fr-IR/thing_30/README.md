@@ -1,27 +1,23 @@
-# Don't Repeat Yourself
+# آشنایی با قانون DRY
 
-Of all the principles of programming, Don't Repeat Yourself (DRY) is perhaps one of the most fundamental. The principle was formulated by Andy Hunt and Dave Thomas in *The Pragmatic Programmer*, and underlies many other well-known software development best practices and design patterns. The developer who learns to recognize duplication, and understands how to eliminate it through appropriate practice and proper abstraction, can produce much cleaner code than one who continuously infects the application with unnecessary repetition.
+در حوزه ی توسعه ی نرم افزار، اصول و قواعد بسیاری وجود دارد که گاها یکی از دیگری مهم‌تر جلوه می‌کند اما یکی از اساسی‌ترین قواعد برنامه نویسی، قانون DRY است که مخفف واژگان Don't Repeat Yourself به معنی«دوباره کاری نکن» است!
 
-Duplication is waste
----
+این قانون توسط دو توسعه‌دهنده به نام های Andy Hunt و Dave Thomas ابداع شد که بسیاری از دیزاین پترن های معروف برنامه نویسی، ریشه در این قانون دارند.
 
-Every line of code that goes into an application must be maintained, and is a potential source of future bugs. Duplication needlessly bloats the codebase, resulting in more opportunities for bugs and adding accidental complexity to the system. The bloat that duplication adds to the system also makes it more difficult for developers working with the system to fully understand the entire system, or to be certain that changes made in one location do not also need to be made in other places that duplicate the logic they are working on. DRY requires that "every piece of knowledge must have a single, unambiguous, authoritative representation within a system."
+برنامه نویسی که بتواند تشخیص دهد کدام بخش‌های کد اصطلاحاً Duplicate یا «مشابه» هستند و تمام تلاش خود را به کار بندد تا با استفاده از کلاس‌ها و فانکشن های مختلف، میزان استفاده از کدهای تکراری در سراسر برنامه را به حداقل برساند، در نهایت سورس کد تمیز تری تحویل خواهد داد که در آینده نگهداری چنین پروژه یی به مراتب راحت‌تر از سورس کدی است که پر است از کدهای مشابه!
 
-Repetition in process calls for automation
----
+هرچه میزان کدهای دوپلیکیت در سورس کد شما بیشتر باشد، احتمال ایجاد باگ در آینده به مراتب بیشتر خواهد شد؛ علاوه بر این، اگر روزی بخواهید بخشی از کد خود را ریفکتور کنید یا تغییر دهید، به جای یک بخش، می بایست چندین بخش را ریفکتور کنید که این کاری بس زمان گیر است.
 
-Many processes in software development are repetitive and easily automated. The DRY principle applies in these contexts as well as in the source code of the application. Manual testing is slow, error-prone, and difficult to repeat, so automated test suites should be used, if possible. Integrating software can be time consuming and error-prone if done manually, so a build process should be run as frequently as possible, ideally with every check-in. Wherever painful manual processes exist that can be automated, they should be automated and standardized. The goal is to ensure there is only one way of accomplishing the task, and it is as painless as possible.
+در فرایند توسعه ی نرم افزار، بخش‌های بسیاری از کد را می‌توان دید که تکراری هستند و قانون DRY دقیقاً برای چنین موقعیت هایی است. شما به عنوان یک توسعه‌دهنده ی حرفه یی، همواره باید این ذهنیت را داشته باشید که در نرم افزاری که می نویسید -خواه یک اپ موبایل باشد و خواه یک سایت- صرفاً از یک راه باید بتوان کار خاصی را انجام داد (مثلاً ارتباط با دیتابیس) و این راه‌کار باید تا حد ممکن ساده، ایمن و اثربخش باشد.
 
-Repetition in logic calls for abstraction
----
+دوپلیکیت شدن در منطق نرم‌افزار می‌تواند به اشکال مختلفی جلوه کند که از جمله ی رایج ترین آن‌ها می‌توان به آبجکت هایی که از روی کلاس خاصی ساخته می‌شوند اشاره کرد و اینجا است که بسیاری از دیزاین پترن ها به داد توسعه دهندگان می آیند. در واقع، ابداع دیزاین پترن ها یا «الگوهای طراحی» جلوگیری از استفاده از کدهای مشابه است. 
 
-Repetition in logic can take many forms. Copy-and-paste *if-then* or *switch-case* logic is among the easiest to detect and correct. Many design patterns have the explicit goal of reducing or eliminating duplication in logic within an application. If an object typically requires several things to happen before it can be used, this can be accomplished with an Abstract Factory or a Factory Method. If an object has many possible variations in its behavior, these behaviors can be injected using the Strategy pattern rather than large *if-then* structures. In fact, the formulation of design patterns themselves is an attempt to reduce the duplication of effort required to solve common problems and discuss such solutions. In addition, DRY can be applied to structures, such as database schema, resulting in normalization.
+به طور مثال، اگر آبجکتی داریم که «عملکردها و رفتارهای» متنوعی از آن انتظار می رود، به جای استفاده از دستورات شرطی if برای هندل کردن چنین موقعیت هایی، چنین عملکردها و رفتارهایی را می‌توان با استفاده از دیزاین پترن Strategy عملی ساخت. 
 
-A Matter of principle
----
+علاوه بر دیزاین پترن ها، یکسری اصول کدنویسی که تحت عنوان SOLID شناخته می‌شوند نیز بر پایه ی اصل DRY هستند (برای آشنایی بیشتر با مفهوم SOLID، به آموزش آشنایی با قوانین پنج گانهٔ SOLID مراجعه نمایید.) به طور مثال، حرف S در ابتدای SOLID به اصطلاح Single Responsibility اشاره دارد. به عبارت دیگر، هر کلاسی که در پروژه ی خود ایجاد می‌کنیم فقط و فقط باید مسئول یک کار باشد و در صورت نیاز به اعمال تغییرات در کلاس مد نظر، فقط و فقط باید یک دلیل برای ایجاد آن تغییر وجود داشته باشد نه اینکه کلاس مد نظر در جای جای نرم‌افزار برای کارهای مختلفی استفاده شده باشد و به هر دلیلی، نیاز به اعمال تغییرات در آن کلاس داشته باشیم.
 
-Other software principles are also related to DRY. The Once and Only Once principle, which applies only to the functional behavior of code, can be thought of as a subset of DRY. The Open/Closed Principle, which states that "software entities should be open for extension, but closed for modification," only works in practice when DRY is followed. Likewise, the well-known Single Responsibility Principle requires that a class have "only one reason to change," relies on DRY.
+به عنوان مثالی دیگر، حرف O در SOLID به اصلی تحت عنوان Open/Closed Principle اشاره دارد. این اصل حاکی از آن است که کدی که می نویسید باید «امکان توسعه یافتن را به برنامه نویسان دیگر بدهد اما تحت هیچ عنوان امکان ایجاد تغییر در کدهای قبلی را ندهد.» چنین اصلی این تضمین را ایجاد می‌کند که نرم‌افزار در فرایند توسعه و تکمیل با این مشکل مواجه نخواهد شد که برنامه نویس دیگری بیاید، بخش‌هایی را تغییر دهد غافل از اینکه این اعمال تغییرات، منجر به ایجاد خرابی در سایر بخش‌های نرم‌افزار شده است.
 
-When followed with regard to structure, logic, process, and function, the DRY principle provides fundamental guidance to software developers and aids the creation of simpler, more maintainable, higher-quality applications. While there are scenarios where repetition can be necessary to meet performance or other requirements (e.g., data denormalization in a database), it should be used only where it directly addresses an actual rather than an imagined problem.
+به طور کلی، مد نظر داشتن قانون DRY در توسعه ی نرم افزار، راه‌کاری است که از آن طریق می‌توان برنامه‌هایی اصولی تر، ساده تر، بدون باگ تر، قابل نگهداری تر و مهم‌تر از همه، باکیفیت تر نوشت؛ البته هرگز فراموش نکنیم که گاهی اوقات شرایطی برای توسعه‌دهنده پیش می‌آید که مجبور به تکرار کد است -مثلا در فرایند Denormalization دیتابیس- که در چنین شرایطی دوباره کاری اصلاً مشکلی ندارد!
 
-By [Steve Smith](http://programmer.97things.oreilly.com/wiki/index.php/Steve_Smith)
+به خاطر داشته باشید در کار با دیتابیس یا پایگاه داده، Denormalization به فرایندی گفته می‌شود که از آن طریق توسعه‌دهنده سعی می‌کند پرفورمنس یا عملکرد فراخوانی داده‌ها از دیتابیس را با اضافه کردن داده‌های تکراری یا اضافی و همچنین گروه بندی کردن داده‌ها ارتقاء بخشد. نقطه ی مقابل این فرایند، Normalization قرار دارد که تمرکزش بر کاهش هرچه تمام تر داده‌های اضافی و تکراری در دیتابیس است.
