@@ -1,23 +1,15 @@
-# Start from Yes
+# همه‌ چیز با یک آری شروع می‌شود!
 
-Recently I was at a grocery store searching high and low for "edamame" (which I only vaguely knew was some kind of a vegetable). I wasn't sure whether this was something I'd find in the vegetable section, the frozen section, or in a can. I gave up and tracked down an employee to help me out. She didn't know either!
+از یک دید کلی می‌توان پرسنل فروشگاه‌های را به ۲ گروه مختلف تقسیم‌بندی کرد: گروهی از فروشندگان که نیمهٔ پر لیوان را می‌بینند و گروه مقابل که صرفاً روی نیمهٔ خالی متمرکز هستند! به نظر می‌رسد که برای روشن‌تر شدن این مسأله، باید از یک مثال روزمره کمک گرفت.
 
-The employee could have responded in many different ways. She could have made me feel ignorant for not knowing where to look, or given me vague possibilities, or even just told me they didn't have the item. But instead she treated the request as an opportunity to find a solution and help a customer. She called other employees and within minutes had guided me to the exact item, nestled in the frozen section.
+وقتی که به یک فروشگاه زنجیره‌ای برای خرید می‌رویم، برخی فروشندگان هستند که وقتی سؤالی عجیب و غریب از ایشان می‌پرسیم، مثلاً نوعی شربت که بسیار کم‌مصرف است و فقط تعدادی فروشگاه خاص آن را عرضه می‌کنند، درخواست ما به عنوان یک مشتری را هرگز رد نکرده و فوراً با گفتن جمله‌ای همچون «خیر. متأسفانه ما این محصول را نداریم!» به قضیه فیصله نمی‌‌دهند بلکه این درخواست در ظاهر عجیب و غریب ما را به عنوان یک فرصت نگاه کرده،‌ اگر هم خودشان در این رابطه اطلاعی نداشته باشند از سایر همکارانشان کمک گرفته تا بلکه ایشان بتوانند راهنمایی کنند و در نهایت هم اگر کمکی از دست هیچ‌کس برنیاید، نام و مشخصات محصول مد نظرتان را گرفته تا برایتان تهیه کنند.
 
-The employee in this case looked at a request and started from the premise that we would solve the problem and satisfy the request. She started from *yes* instead of starting from no.
+در نقطهٔ مقابل این دست فروشندگان، گروهی دیگر قرار دارند که اصلاً مشتری‌مدار نیستند و صرفاً با گفتن جمله‌ای همچون «خیر. نداریم!» خود را خلاص می‌کنند.
 
-When I was first placed in a technical leadership role, I felt that my job was to protect my beautiful software from the ridiculous stream of demands coming from product managers and business analysts. I started most conversations seeing a request as something to defeat, not something to grant.
+پس از این مقایسه، حال قصد داریم نگاهی به رویکرد دولوپرها در تعامل با دیگر همکارانشان بیندازیم. در واقع، از یک دید کلی هم می‌توان دولوپرها را به گروه‌بندی مشابهی همانند آنچه در فروشگاه‌های زنجیره‌ای وجود دارد تقسیم کرد. برخی دولوپرها هرگونه پیشنهاد، اعمال ویژگی جدید و به طور کلی هر درخواستی را به عنوان دردسر می‌بینند و تمام تلاش خود را به کار می‌بندند تا آن را در نطفه خفه کنند!
 
-At some point, I had an epiphany that maybe there was a different way to work that merely involved shifting my perspective from starting at no to starting at *yes*. In fact, I've come to believe that starting from *yes* is actually an essential part of being a technical leader.
+در مقابل، برخی دولوپرها رویکردی به مراتب حرفه‌ای‌تر اتخاذ کرده و هرگونه پیشنهاد و درخواستی را به منزلهٔ فرصتی برای بهینه‌تر کردن نرم‌افزار یا اپلیکیشن و بهبود تجربه‌ٔ کاربری‌اش می‌بینند و این همان ویژگی‌ای است که یک دولوپر تمام عیار می‌بایست داشته باشد.
 
-This simple change radically altered how I approached my job. As it turns out, there are a lot of ways to say *yes*. When someone says to you "Hey, this app would really be the bees knees if we made all the windows round and translucent!" you could reject it as ridiculous. But it's often better to start with "Why?" instead. Often there is some actual and compelling reason why that person is asking for round translucent windows in the first place. For example, you may be just about to sign a big new customer with a standards committee that mandates round translucent windows.
+خیلی از اوقات با بله گفتن به درخواست‌هایی که از طرف مدیرعامل، مدیر محصول، مدیر پروژه، مشتری و یا حتی کاربران می‌آیند، اصلاً نیازی به کدزنی قابل‌توجهی نیست بلکه با چند تغییر کوچک، می‌توان به درخواست ارسال شده جامعهٔ عمل پوشید.
 
-Usually you'll find that when you known the context of the request, new possibilities open up. It's common for the request to be accomplished with the existing product in some other way allowing you to say *yes* with no work at all: "Actually, in the user preferences you can download the round translucent windows skin and turn it on."
-
-Sometimes the other person will simply have an idea that you find incompatible with your view of the product. I find it's usually helpful to turn that "Why?" on yourself. Sometimes the act of voicing the reason will make it clear that your first reaction doesn't make sense. If not, you might need to kick it up a notch and bring in other key decision makers. Remember, the goal of all of this is to say *yes* to the other person and try to make it work, not just for him but for you and your team as well.
-
-If you can voice a compelling explanation as to why the feature request is incompatible with the existing product, then you are likely to have a productive conversation about whether you are building the right product. Regardless of how that conversation concludes, everyone will focus more sharply on what the product is, and what it is not.
-
-Starting from *yes* means working with your colleagues, not against them.
-
-By [Alex Miller](http://programmer.97things.oreilly.com/wiki/index.php/Alex_Miller)
+حال گاهی‌اوقات ممکن است با درخواست‌هایی مواجه شویم که در تضاد با استراتژی‌های توسعهٔ نرم‌افزار موجود است. اگر شما جزو آن دسته از دولوپرهایی هستید که ابتدا به ساکن کلمهٔ نه از زبانتان بیرون می‌آید، در چنین مواقعی سعی کنید سریع پاسخ ندادن را تمرین کنید و در صورت امکان، در حین فرایند تصمیم‌گیری به غیر از خودتان از دیگر اعضای تیم توسعهٔ نرم‌افزار هم بخواهید تا حضور داشته باشند تا بلکه بتوانند موضع‌گیری شما را تا حدی خنثی کنند و یا پاسخی منطقی در ارتباط با عدم امکان پیاده‌سازی قابلیت‌ مد نظر به طرف مقابل ارائه گردد.
