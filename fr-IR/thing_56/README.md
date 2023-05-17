@@ -1,19 +1,17 @@
-# Make the Invisible More Visible
+# تا حد ممکن همه‌ چیز را شفاف‌سازی کنید
 
-Many aspects of invisibility are rightly lauded as software principles to uphold. Our terminology is rich in invisibility metaphors — mechanism transparency and information hiding, to name but two. Software and the process of developing it can be, to paraphrase Douglas Adams, *mostly invisible*:
+یکی از مشکلاتی که همواره مدیران پروژه و دولوپرها با آن دست‌وپنجه نرم‌ می‌کنند، ددلاین (ضرب‌العجل) هایی است که به حقیقت نمی‌پیوندند! به‌عبارت دیگر، مدیر پروژه قولی را به مشتری می‌دهد که مثلاً پروژه‌ای در تایم مشخصی تکمیل خواهد شد و یا دولوپر به مدیر پروژه قول می‌دهد که فلان ماژول پروژه ظرف مثلاً ۱ هفته به اتمام خواهد رسید اما این درحالی است که هیچ‌کدام از این قول و قرارها به واقعیت تبدیل نمی‌‌شوند!
 
-- Source code has no innate presence, no innate behavior, and doesn't obey the laws of physics. It's visible when you load it into an editor, but close the editor and it's gone. Think about it too long and, like the tree falling down with no one to hear it, you start to wonder if it exists at all.
-- A running application has presence and behavior, but reveals nothing of the source code it was built from. Google's home page is pleasingly minimal; the goings on behind it are surely substantial.
-- If you're 90% done and endlessly stuck trying to debug your way through the last 10% then you're not 90% done, are you? Fixing bugs is not making progress. You aren't paid to debug. Debugging is waste. It's good to make waste more visible so you can see it for what it is and start thinking about trying not to create it in the first place.
-- If your project is apparently on track and one week later it's six months late you have problems, the biggest of which is probably not that it's six months late, but the invisibility force fields powerful enough to hide six months of lateness! Lack of visible progress is synonymous with lack of progress.
+یکی از دلایل چنین معضلی این است که روند پیشرفت پروژه شفاف نیست؛ درواقع،‌ وقتی که ما فرایند پیشرفت پروژه را به‌صورت لحظه‌ای رصد کنیم، اگر مشکلات پیش‌رو به اندازه‌ای باشند که ما را از رسیدن به ددلاین مدنظر باز دارند، پیش از آن که بدقول شویم می‌توانیم سیاست دیگری اتخاذ کنیم (مثلاً یا تعداد دولوپرهای پروژه را افزایش دهیم و یا به مذاکره برای گرفتن زمان بیشتر بپردازیم).
 
-Invisibility can be dangerous. You think more clearly when you have something concrete to tie your thinking to. You manage things better when you can see them and see them constantly changing:
+به‌طورکلی، بااستفاده از استیک‌نوت‌ها می‌توان فرایند تکمیل پروژه را دائماً در معرض دید خود و سایر اعضای تیم قرار داد بدین شکل که از عناوینی همچون «شروع نشده»، «در دست اقدام» و «تکمیل شده» برای نشان دادن روند انجام کار استفاده کرد.
 
-- Writing unit tests provides evidence about how easy the code unit is to unit test. It helps reveal the presence (or absence) of developmental qualities you'd like the code to exhibit; qualities such as low coupling and high cohesion.
-- Running unit tests provides evidence about the code's behavior. It helps reveal the presence (or absence) of runtime of qualities you'd like the application to exhibit; qualities such as robustness and correctness.
-- Using bulletin boards and cards makes progress visible and concrete. Tasks can be seen as *Not Started*, *In Progress*, or *Done* without reference to a hidden project management tool and without having to chase programmers for fictional status reports.
-- Doing incremental development increases the visibility of development progress (or lack of it) by increasing the frequency of development evidence. Completion of releasable software reveals reality; estimates do not.
+شفاف‌سازی فقط در ارتباط با زمان تکمیل پروژه حائز اهمیت نیست بلکه شفاف‌سازی چیزی است که در تمامی مراحل توسعه‌‌ٔ نرم‌افزار می‌بایست مدنظر قرار داده شود که در ادامه به برخی چیزهایی که منجر به شفاف‌تر شدن کار می‌شوند خواهیم پرداخت:
 
-It's best to develop software with plenty of regular visible evidence. Visibility gives confidence that progress is genuine and not an illusion, deliberate and not unintentional, repeatable and not accidental.
+- مستندسازی پروژه: نیاز به توضیح نیست که کامنت‌گذاری بخش‌های کلیدی نرم‌افزار امری حیاتی است که درنهایت منجر به شفاف‌تر شدن سورس‌کد می‌شود (البته به‌خاطر داشته باشیم که کامنت‌گذاری بیش از اندازه هم اصلاً کار درستی نیست).
 
-By [Jon Jagger](http://programmer.97things.oreilly.com/wiki/index.php/Jon_Jagger)
+- یونیت تست: تست کردن صحت عملکرد نرم‌افزار از طریق Unit Testها چیز دیگری است که منجر به شفاف‌تر شدن پروژه می‌شود؛ به‌عبارت دیگر، یونیت تست‌ به دولوپرها کمک می‌‌کنند تا کاملاً با وابستگی‌های پروژه آشنا شده و درصورت اعمال تغییر در یکی از بخش‌های پروژه، متوجه شوند که کدام‌یک از سایر بخش‌ها نیز دستخوش تغییر خواهند شد.
+
+- دیپلوی کردن سریع: چنانچه بتوان یک پروژهٔ نرم‌افزاری به را بخش‌های کوچک و مجزا از یکدیگر تقسیم‌بندی نمود و سپس با تکمیل هر بخش آن‌را دیپلوی (منتشر) کرد، به‌طور شفاف می‌توان خروجی کار را دید.
+
+به‌طورکلی، شفافیت در فرایند توسعه‌ٔ نرم‌افزار بسیار ويژگی خوبی است چراکه درنهایت منجر به بهبود خروجی کار می‌شود؛ وقتی همه‌چیز شفاف، صریح و قابل‌اندازه‌گیری باشد، اعضای تیم هم بهتر تکلیف خود را خواهند دانست و درنهایت پروژه به شکل بهتری به پیش خواهد رفت.
