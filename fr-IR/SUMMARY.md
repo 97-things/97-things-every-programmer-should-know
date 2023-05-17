@@ -64,7 +64,7 @@
 1. [همواره یک نسخه از نرم‌افزار برای ریلیس داشته باشید](thing_61/README.md)
 1. [فقط کد حقیقت را می گوید](thing_62/README.md)
 1. [فقط کد نزنید بلکه Build Process را نیز مدنظر قرار دهید](thing_63/README.md)
-1. [Pair Program and Feel the Flow](thing_64/README.md)
+1. [اهمیت برنامه‌نویسی دونفره](thing_64/README.md)
 1. [Prefer Domain-Specific Types to Primitive Types](thing_65/README.md)
 1. [جلوگیری از خطاها](thing_66/README.md)
 1. [برنامه نویس حرفه ای](thing_67/README.md)
