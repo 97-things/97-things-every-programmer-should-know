@@ -91,7 +91,7 @@
 1. [ ابزارهای یونیکسی دوست دولوپرها هستند!](thing_88/README.md)
 1. [استفادهٔ درست از الگوریتم‌ها و دیتا استراکچرها](thing_89/README.md)
 1. [با لاگ‌گیری Verbose دچار دردسر خواهید شد!](thing_90/README.md)
-1. [WET Dilutes Performance Bottlenecks](thing_91/README.md)
+1. [درک تفاوت مفاهیم DRY و WET در کدنویسی بهینه](thing_91/README.md)
 1. [زمانی که برنامه نویسان و تسترها با هم همکاری کنند!](thing_92/README.md)
 1. [طوری کد بنویسید که انگار باید تا آخر عمر برای آن پشتیبانی بدهید](thing_93/README.md)
 1. [Write Small Functions Using Examples](thing_94/README.md)
