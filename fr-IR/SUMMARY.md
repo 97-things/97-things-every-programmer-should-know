@@ -94,7 +94,7 @@
 1. [درک تفاوت مفاهیم DRY و WET در کدنویسی بهینه](thing_91/README.md)
 1. [زمانی که برنامه نویسان و تسترها با هم همکاری کنند!](thing_92/README.md)
 1. [طوری کد بنویسید که انگار باید تا آخر عمر برای آن پشتیبانی بدهید](thing_93/README.md)
-1. [Write Small Functions Using Examples](thing_94/README.md)
+1. [تا حد ممکن فانکشن‌های کوچک بنویسید](thing_94/README.md)
 1. [برای دیگران هم تست بنویسید](thing_95/README.md)
 1. [به کدهایتان اهمیت بدهید](thing_96/README.md)
 1. [منظور مشتریان شما چیزی نیست که می گویند!](thing_97/README.md)
