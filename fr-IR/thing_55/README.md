@@ -1,16 +1,62 @@
-# Make Interfaces Easy to Use Correctly and Hard to Use Incorrectly
+# استفادهٔ نادرست از اینترفیس‌ها را غیرممکن سازید
 
-One of the most common tasks in software development is interface specification. Interfaces occur at the highest level of abstraction (user interfaces), at the lowest (function interfaces), and at levels in between (class interfaces, library interfaces, etc.). Regardless of whether you work with end users to specify how they'll interact with a system, collaborate with developers to specify an API, or declare functions private to a class, interface design is an important part of your job. If you do it well, your interfaces will be a pleasure to use and will boost others' productivity. If you do it poorly, your interfaces will be a source of frustration and errors.
+در برنامه‌نویسی شیٔ‌گرا به‌خصوص در مبحث Abstraction (انتزاع)، یکی از کارهای رایج ایجاد Interface است؛ اینترفیس‌ها بخشی لاینفک از فرایند کدنویسی حرفه‌ای هستند و این درحالی است که اگر شما به‌عنوان یک دولوپر به‌خوبی از عهدهٔ این‌کار برآیید، از یک سو استفاده از اینترفیس‌ها فرایند کدنویسی را بسیار لذت‌بخش خواهد ساخت و از سوی دیگر، سرعت کدنویسی تک‌تک‌ اعضای تیم افزایش می‌یابد اما درعین‌حال اگر طراحی اینترفیس‌ها به‌درستی صورت نپذیرد، به یک عامل مهم در ایجاد مشکلات پس از پیشروی پروژه مبدل شده و بیش از آن که منجر به سرعت کدنویسی اعضای تیم شود، بیشتر به یک گلوگاه مبدل خواهد شد!
 
-Good interfaces are:
+اینترفیس چیست؟
+اگر خیلی غیرفنی بخواهیم توضیح دهیم، در برنامه‌نویسی شیٔ‌گرایی (OOP) منظور از Interface مجموعه فانکشن‌ها و قابلیت‌هایی است که یک آبجکت می‌بایست داشته باشد تا بتواند تسک‌های مورد انتظار را به انجام برساند. حال اگر بخواهیم کمی فنی‌تر صحبت کنیم، منظور از یک اینترفیس، یک Abstract Class (کلاس انتزاعی) است حاوی یکسری فانکشن و دیگر ویژگی‌ها اما این درحالی است که این فانکشن‌ها تسک خاصی را انجام نمی‌دهند بلکه صرفاً مشخص‌کنندهٔ قابلیتی‌ هستند که یک کلاس می‌تواند داشته باشد و این وظیفهٔ کلاس است تا عملکرد خاصی را برای آن فانکشن‌ها تعریف نماید.  
 
-- **Easy to use correctly.** People using a well-designed interface almost always use the interface correctly, because that's the path of least resistance. In a GUI, they almost always click on the right icon, button, or menu entry, because it's the obvious and easy thing to do. In an API, they almost always pass the correct parameters with the correct values, because that's what's most natural. With interfaces that are easy to use correctly, *things just work.*
-- **Hard to use incorrectly.** Good interfaces anticipate mistakes people might make and make them difficult — ideally impossible — to commit. A GUI might disable or remove commands that make no sense in the current context, for example, or an API might eliminate argument-ordering problems by allowing parameters to be passed in any order.
+به‌طورکلی، یک اینترفیس خوب اینترفیسی است که اولاً استفادهٔ درست از آن آسان باشد، ثانیاً استفادهٔ نادرست از آن غیرممکن -یا حداقل مشکل- باشد!
 
-A good way to design interfaces that are easy to use correctly is to exercise them before they exist. Mock up a GUI — possibly on a whiteboard or using index cards on a table — and play with it before any underlying code has been created. Write calls to an API before the functions have been declared. Walk through common use cases and specify how you *want* the interface to behave. What do you *want* to be able to click on? What do you *want* to be able to pass? Easy to use interfaces seem natural, because they let you do what you want to do. You're more likely to come up with such interfaces if you develop them from a user's point of view. (This perspective is one of the strengths of test-first programming.)
+استفادهٔ درست از اینترفیس می‌بایست آسان باشد
+وقتی اینترفیسی جهان‌شمول و خوب طراحی شده باشد، دولوپرها همواره تمام تلاش خود را به کار می‌گیرند تا از آن استفاده کنند چراکه می‌دانند در آینده کمتر به مشکل برخواهند خورد.
 
-Making interfaces hard to use incorrectly requires two things. First, you must anticipate errors users might make and find ways to prevent them. Second, you must observe how an interface is misused during early release and modify the interface — yes, modify the interface! — to prevent such errors. The best way to prevent incorrect use is to make such use impossible. If users keep wanting to undo an irrevocable action, try to make the action revocable. If they keep passing the wrong value to an API, do your best to modify the API to take the values that users want to pass.
+به‌طورمثال، استفاده از اینترفیس‌های اصولی در طراحی API منجر به این خواهد گشت تا دولوپرها همواره مجبور باشند پارامترهای درستی را به‌همراه مقادیر درست به فانکشن‌های مورد استفادهٔ خود پاس دهند. به‌عبارت دیگر، اینترفیس‌هایی که استفاده از آن‌ها آسان است، منجر به انجام طبیعی فرایندهای مورد انتظار از نرم‌افزار می‌شوند.
 
-Above all, remember that interfaces exist for the convenience of their users, not their implementers.
+استفادهٔ نادرست از اینترفیس می‌بایست دشوار باشد
+اینترفیس‌های خوب و اصولی اشتباهات احتمالی کاربران را پیش‌بینی کرده و بروز چنین اشتباهاتی را غیرممکن -یا حداقل دشوار- می‌سازند. اگر مجدد به مثال API فوق‌الذکر بازگردیم، یک اینترفیس غیراصولی استفاده شده در یک API این امکان را به کاربر می‌دهد تا پارامتری که صرفاً می‌بایست Integer باشد را با هر دیتاتایپی ارسال کند که این اصلاً خوب نیست.
 
-By [Scott Meyers](http://programmer.97things.oreilly.com/wiki/index.php/Scott_Meyers)
+چگونه اینترفیس‌هایی طراحی کنیم که استفادهٔ درست از آن‌ها آسان باشد؟
+در پاسخ به سؤال فوق بایستی گفت که یک راه مناسب برای طراحی اینترفیس‌های اصولی این است که پیش از ایجادشان، اقدام به استفاده از آن‌ها نماییم! از آنجا که ممکن است کمی گیج شده باشید، با ذکر مثالی به بررسی این موضوع می‌پردازیم.
+
+پیش از هر چیز، خود را جای دیگر دولوپرها بگذارید و از نگاه ایشان به فرایند کدنویسی پروژه‌ٔ‌تان نگاه کنید؛ سپس پیش از آن که دست‌به‌کد شوید، سناریوهای مختلف را روی کاغذ نوشته و به بررسی آن‌ها بپردازید.
+
+به‌عبارت دیگر، اگر فرضاً شما یکی از کاربران APIیی بودید که در طراحی آن از اینترفیسی استفاده شده است، دوست داشتید اینترفیس مدنظر تا چه اندازه دست شما با باز بگذارد تا به ساده‌ترین شکل ممکن بتوانید اقدام به استفاده از آن API نمایید.
+
+چگونه اینترفیس‌هایی طراحی کنیم که استفادهٔ نادرست از آن‌ها دشوار باشد؟
+برای به‌دست آوردن چنین قابلیتی، می‌بایست ۲ نکته را مدنظر قرار دهیم: اول این که باید ارورهایی که کاربران ممکن است مرتکب شوند را پیش‌بینی کرده و به هر شکلی که شده جلوی آن‌ها را بگیرید و دوم این که در ماه‌های ابتدایی عرضهٔ‌ اینترفیس می‌بایست کاربری‌های اشتباهش را رصد کرده و در صورت بروز کاربری‌های اشتباه، دست به ریفکتور کردن اینترفیس بزنید (مثلاً اگر مشاهده می‌کنید کاربرانی که از اینترفیس شما استفاده می‌کنند بارها‌وبارها اقدام به پاس دادن پارامترهای اشتباه به فانکشن X می‌کنند، سعی کنید کدها را به شکلی ریفکتور کنید که هم‌راستا با نیازهای کاربران باشد و فانکشن X موجب دردسر کاربران نشود).
+
+مثالی کاربردی از اینترفیس‌ها در زبان برنامه‌نویسی PHP
+در زبان برنامه‌نویسی PHP همچون دیگر زبان‌های برنامه‌نویسی، اینترفیس‌ها این امکان را به دولوپر می‌دهند تا ساختاری واحد برای کلاس‌های مورد استفاده در پروژه تعریف کرده و کلیهٔ آبجکت‌ها از ساختاری استاندارد بهره‌مند گردند. علاوه‌بر این، زمانی‌که شما می‌دانید یک کلاس می‌بایست حاوی چه متدهایی باشد اما در مورد جزئیات داخل متدها مطمئن نیستید، استفاده از اینترفیس‌ها لازم می‌گردد.
+
+در زبان PHP تعریف کردن اینترفیس دقیقاً شبیه‌ به کلاس‌ها است با این تفاوت که به‌جای کلیدواژهٔ class می‌بایست از کلیدواژهٔ interface استفاده نمود و کلاس‌هایی که قرار است از یک اینترفیس بهره‌مند گردند نیز بااستفاده از کلیدواژهٔ implements به چنین قابلیتی دست خواهند یافت.
+
+در ادامه اینترفیسی خواهیم ساخت به‌نام Car که حاوی ۲ فانکشن انتزاعی تحت‌عناوین ()setModel و ()getModel است:
+``` C
+interface Car { 
+    public function setModel($name);
+  
+    public function getModel();
+}
+```
+همان‌طور که می‌بینیم، یکی از فانکشن‌ها شامل یک پارامتر ورودی نیز هست؛ حال کلاسی می‌سازیم تحت‌عنوان MyCar که قرار است حاوی ویژگی‌های انتزاعی اینترفیسی باشد که پیش از این نوشتیم:
+``` C
+class MyCar implements Car {
+    private $model; 
+   
+    public function setModel($name)
+    { 
+        $this->model = $name; 
+    }
+  
+    public function getModel()
+    {
+        return $this->model; 
+    }
+}
+```
+همان‌طور که می‌بینیم، کلاس MyCar بااستفاده از کلیدواژهٔ implements کلیهٔ ویژگی‌های اینترفیس Car را به‌دست آورده است.
+
+به خاطر داشته باشید وقتی کلاسی از یک اینترفیس implements می‌کند، می‌بایست کلیهٔ فانکشن‌های نوشته شده در اینترفیس در کلاس مدنظر نیز تعریف شوند حتی اگر مورد استفاده قرار نخواهند گرفت که در غیر این‌صورت با ارور مفسر پی‌اچ‌پی مواجه خواهیم شد.
+حال اگر بخواهیم کلاس دیگری مثلاً تحت‌عنوان YourCar داشته باشیم، می‌توانیم این کلاس را نیز از اینترفیس Car بهره‌مند گردانده تا این اطمینان حاصل شود که کلیهٔ کلاس‌های مدنظر -همچون MyCar و YourCar و غیره- و بالتبع آبجکت‌های ساخته شده از روی آن‌ها دارای استاندارد واحدی هستند.
+
+در پایان هم به‌خاطر داشته باشیم که فلسفهٔ وجودی Interface سهولت دولوپرهایی یا کاربرانی است که از آن استفاده می‌کنند نه سهولت دولوپرهایی که اقدام به طراحیش نموده‌اند!
