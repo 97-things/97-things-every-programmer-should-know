@@ -1,31 +1,28 @@
-# Learn to Estimate
+# خود را با مهارت تخمین زدن تجهیز کنید!
 
-As a programmer you need to be able to provide estimates to your managers, colleagues, and users for the tasks you need to perform, so that they will have a reasonably accurate idea of the time, costs, technology, and other resources needed to achieve their goals.
+به‌عنوان یک دولوپر، گاهی‌اوقات نیاز است تا در مورد چیزهای مختلف همچون زمان تکمیل یک تسک و غیره به مدیران، همکاران و حتی گاهی هم کاربران سرویسی که درحال توسعهٔ آن هستند تخمین بزنید تا ایشان به‌راحتی بتوانند در مورد زمان، هزینه‌های جاری، فناوری‌ و دیگر منابع مورد نیاز برای دستیایی به اهدافشان تصمیم‌گیری کنند.
 
-To be able to estimate well it is obviously important to learn some estimation techniques. First of all, however, it is fundamental to learn what estimates are, and what they should be used for — as strange as it may seem, many developers and managers don't really know this.
+تخمین زدن چیزهای مختلف، یک مهارت است که می‌بایست تکنیک‌هایی برای هرچه بهتر انجام دادن این کار آموخت؛ پیش از هرچیز، باید بدانیم که اصلاً «تخمین زدن» به چه معنا است و برای «چه کارهایی» می‌بایست از آمار و ارقام تخمینی استفاده کرد. اجازه دهید برای روشن‌تر شدن این مسأله، مکالمه‌ای فرضی مابین یک مدیر پروژه و یکی از دولوپرهای تیم نرم‌افزاری‌اش را در ادامه مدنظر قرار می‌دهیم:
 
-The following exchange between a project manager and a programmer is not untypical:
+مدیر پروژه: می‌تونی یک زمان تخمینی از تکمیل فیچر X بدی؟
+دولوپر: ۱ ماه
 
-> *Project Manager:* Can you give me an estimate of the time necessary to develop feature *xyz*?
+مدیر پروژه: خیلی طولانیه! ما فقط ۱ هفته زمان داریم.
+دولوپر: حداقل ۳ هفته زمان نیاز دارم تا بتونم چنین چیزی رو بنویسم.
 
-> *Programmer:* One month.
+مدیر پروژه: بیش از ۲ هفته برام راه نداره.
+دولوپر: اوکی مشکلی نیست.
 
-> *Project Manager:* That's far too long! We've only got one week.
+در پایان این مذاکره، دولوپر به تخمینی از انجام فیچر X دست پیدا می‌کند که مطلوب مدیر پروژه است؛ اما از آنجا که قبول ضرب‌العجل ۲ هفته‌ای از طرف دولوپر به‌نوعی زمان تخمینی مورد تأیید وی نیز محسوب می‌شود، هرگونه مسئولیتی درصورت نرسیدن به این ضرب‌العجل متوجه دولوپر خواهد بود و وی باید پاسخگو باشد. برای این که به درک درستی از چیزی که در این مکالمه اشتباه است برسیم، می‌بایست معنا و مفهوم ۳ چیز مختلف را به‌خوبی درک کنیم: تخمین، هدف و تعهد.
 
-> *Programmer:* I need at least three.
+1 - تخمین (Estimate) یک محاسبهٔ تقریبی یا قضاوت کردن در مورد کیفیت یا کمیت چیزی است؛ چنین تعریفی حاکی از آن است تخمین چیزی است که براساس تجربیات گذشته و دیتایی که در دسترس داریم صورت می‌گیرد و این درحالی است که احساسات و آمال و آرزوها در تخمین زدن همواره می‌بایست مدنظر قرار داده نشوند. تعریفی که از تخمین به‌دست می‌آید همچنین حاکی از آن است یک تخمین هرگز دقیق نیست (مثلاً نمی‌شود گفت که تکمیل فلان تسک برنامه‌نویسی، ۳ روز کاری کامل و ۵ ساعت ۳۰ دقیقه به‌طول خواهد انجامید.)
 
-> *Project Manager:* I can give you two at most.
+2 - هدف (Target) در کسب‌وکار به نقطه‌ای اشاره دارد که پس از رسیدن به آن نقطه، نتیجه‌ای دلخواه نصیبمان می‌شود (مثلاً در یک پروژهٔ نرم‌افزاری این هدف را داریم تا پس از انجام یک تسک، اپلیکیشن بتواند در آن واحد هم‌زمان ۱۰۰۰ کاربر را بدون کمبود در منابع سخت‌افزاری و نرم‌افزاری ساپورت کند).
 
-> *Programmer:* Deal!
+3 - تعهد (Commitment) قولی است که یکی از طرفین به دیگری می‌دهد تا تسک خواسته شده را در زمان مقرر با کیفیت مدنظر طرف مقابل به‌صورت مشخصی که روی آن از قبل توافق شده تحویل دهد (به‌طور مثال، در یک پروژهٔ طراحی سایت می‌توان گفت که افزودن شدن قابلیت سرچ به سایت در نسخهٔ ۲.۰ تعهدی است که دولوپر به مشتری می‌دهد).
 
-The programmer, at the end, comes up with an "estimate" that matches what is acceptable for the manager. But since it is seen to be the programmer's estimate, the manager will hold the programmer accountable to it. To understand what is wrong with this conversation we need three definitions — estimate, target, and commitment:
+گرچه تخمین، هدف و تعهد مجزا از یکدیگر می‌باشند، اما این درحالی است که اهداف و تعهدات می‌بایست براساس تخمین‌های درستی صورت گیرند؛ به‌عبارت دیگر، هدف اصلی از تخمین زدن در فرایند توسعهٔ نرم‌افزار این نیست که خروجی یک پروژه را پیش‌بینی کنیم بلکه هدف اصلی آن است که مشخص کنیم آیا اهداف پروژه به‌اندازهٔ کافی واقع‌گرایانه هستند تا بر آن اساس بتوان مدیریت و برنامه‌ریزی درستی انجام داد یا خیر تا درنهایت بتوان به تعهدات قول داده شده دست یافت.
 
-- An *estimate* is an approximate calculation or judgement of the value, number, quantity, or extent of something. This definition implies that an estimate is a factual measure based on hard data and previous experience — hopes and wishes must be ignored when calculating it. The definition also implies that, being approximate, an estimate cannot be precise, e.g., a development task cannot be estimated to last 234.14 days.
-- A *target* is a statement of a desirable business objective, e.g., "The system must support at least 400 concurrent users."
-- A *commitment* is a promise to deliver specified functionality at a certain level of quality by a certain date or event. One example could be "The search functionality will be available in the next release of the product."
+اگر مجدد به مکالمهٔ صورت گرفته مابین مدیر پروژه و دولوپرش باز گردیم، می‌بینیم که این مدیر قصد داشت تا براساس هدفی نادرست که در ذهنش داشت، دولوپر را مجبور کند متعهد به انجام تسک X شود و در این مکالمه اصلاً منظور مدیر پروژه گرفتن یک زمان تخمینی از دولوپر نبود!
 
-Estimates, targets, and commitments are independent from each other, but targets and commitments should be based on sound estimates. As Steve McConnell notes, "The primary purpose of software estimation is not to predict a project's outcome; it is to determine whether a project's targets are realistic enough to allow the project to be controlled to meet them." Thus, the purpose of estimation is to make proper project management and planning possible, allowing the project stakeholders to make commitments based on realistic targets.
-
-What the manager in the conversation above was really asking the programmer was to make a commitment based on an unstated target that the manager had in mind, not to provide an estimate. The next time you are asked to provide an estimate make sure everybody involved knows what they are talking about, and your projects will have a better chance of succeeding. Now it's time to learn some techniques....
-
-By [Giovanni Asproni](http://programmer.97things.oreilly.com/wiki/index.php/Giovanni_Asproni)
+در پایان هم یادآوری یک نکته ضروری است که هروقت از شما خواسته شد تا به‌عنوان یک برنامه‌نویس در مورد چیزی تخمین بزنید، اطمینان حاصل کنید که از تمامی جنبه‌های کار آگاهی دارید، پس از تخمین زدن و وسط کار از شما تکمیل تسک‌های جانبی خواسته نمی‌شود، تمامی ابزارها و حداقل شرایط لازم برای به انجام رساندن تسک خواسته شده را دارید و از همه مهم‌تر، کلیهٔ شرایط پیش‌روی شما واقع‌گرایانه هستند.
