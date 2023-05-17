@@ -1,13 +1,20 @@
-# Read Code
+# کدخوانی کنید!
 
-We programmers are weird creatures. We love writing code. But when it comes to reading it we usually shy away. After all, writing code is so much more fun, and reading code is hard — sometimes almost impossible. Reading other people's code is particularly hard. Not necessarily because other people's code is bad, but because they probably think and solve problems in a different way to you. But did you ever consider that reading someone else's code could improve your own?
+اکثر دولوپرها از کدزنی لذت می‌برند اما زمانی‌که پای کدخوانی به میان می‌آید، کمتر کسی را می‌توان یافت که از این کار لذت ببرد! از آنجا که کدزنی به‌مراتب لذت‌بخش‌تر از کدخوانی است و همچنین فرایند کدخوانی کاری سخت، طاقت‌فرسا و گاهی‌اوقات غیرممکن است، دولوپرها معمولاً تمایلی به انجام این کار ندارند مگر آن‌که مجبور شوند!
 
-The next time you read some code, stop and think for a moment. Is the code easy or hard to read? If it is hard to read, why is that? Is the formatting poor? Is naming inconsistent or illogical? Are several concerns mixed together in the same piece of code? Perhaps the choice of language prohibits the code from being readable? Try to learn from other people's mistakes, so that your code won't contain the same ones. You may receive a few surprises. For example, dependency-breaking techniques may be good for low coupling, but they can sometimes also make code harder to read. And what some people call *elegant code*, others call *unreadable*.
+به‌عنوان یک قانون کلی، معمولاً خواندن کدهایی که توسط دیگر دولوپرها نوشته شده است سخت است البته این بدان معنا نیست که دیگر دولوپرها کار خود را بلد نیستند بلکه این سختی بدین دلیل است که هیچ ۲ دولوپری همچون یکدیگر به یک Problem (مسأله) به شکلی یکسان نگاه نکرده و مشابه یکدیگر آن‌را حل نمی‌کنند.
 
-If the code is easy to read, stop to see if there is something useful you can learn from it. Maybe there's a design pattern in use that you don't know about, or had previously struggled to implement. Perhaps the methods are shorter and their names more expressive than yours. Some open source projects are full of good examples of how to write brilliant, readable code — while others serve as examples of the exact opposite! Check out some of their code and take a look.
+آیا کدخوانی منجر به بهبود کدنویسی می‌شود؟
+وقتی سورس‌کدی را می‌خوانید، همواره این سؤال را از خود بپرسید که آیا این فرایند راحت است یا دشوار؟ اگر پاسخ به چنین سؤالی «دشوار» بود،‌ بایستی بیابید که دلیل اصلی دشواری کدخوانی چیست، آیا فرمت‌ سورس‌کد مناسب نیست یا نامگذاری کلاس‌ها، متدها، متغیرها و … نامناسب است و یا این که زبان برنامه‌نویسی مدنظر به‌طورکلی دارای سینتکسی دشوار است!
 
-Reading your own old code, from a project you are not currently working on, can also be an enlightening experience. Start with some of your oldest code and work your way forward to the present. You will probably find that it is not at all as easy to read as when you wrote it. Your early code may also have a certain embarrassing entertainment value, kind of in the same way as being reminded of all the things you said when you were drinking in the pub last night. Look at how you have developed your skills over the years — it can be truly motivating. Observe what areas of the code are hard to read, and consider whether you are still writing code in the same way today.
+در چنین شرایطی می‌توان از اشتباهات دیگر دولوپرها درس گرفت به‌طوری‌که درحین کدنویسی، هرگز آن اشتباهات را مرتکب نشویم تا درنهایت سورس‌کدی که تحویل دیگر دولوپرها می‌دهیم، از دید ایشان سورس‌کدی حرفه‌ای، خوانا و قابل‌فهم باشد.
 
-So the next time you feel the need to improve your programming skills, don't read another book. Read code.
+اگر هم خواندن سورس‌کدی را «راحت» یافتیم، بازهم درس‌هایی می‌توان از آن آموخت. شاید از دیزاین پترنی استفاده شده که تاکنون از آن مطلع نبوده‌اید، شاید فانکشن‌ها کوتاه‌تر به‌همراه نامگذاری بهینه‌تری هستند و چیزهایی از این دست.
 
-by [Karianne Berg](http://programmer.97things.oreilly.com/wiki/index.php/Karianne_Berg)
+به‌طورکلی، پروژه‌های اپن‌سورس فراوانی را در گیت‌هاب و دیگر پلتفرم‌ها می‌توان یافت که نمونه‌های خوبی از کدنویسی حرفه‌ای هستند که با دنبال کردن استراتژی‌های چنین دولوپرهایی، می‌توانیم خود را به یک Role Model برای دیگر دولوپرهای تازه‌کار مبدل سازیم.
+
+جالب است بدانید کدخوانی سورس‌کدهایی که چندین سال پیش نوشته‌ایم نیز می‌تواند درس‌های بسیاری برایمان به‌ ارمغان آورد بدین شکل که متوجه خواهید شد قدیمی‌ترین کدهایی که نوشته‌اید تحت هیچ عنوان مورد پسند شما -با استانداردهای کدنویسی کنونی‌تان- نیستند و گاهی‌اوقات هم اصلاً خوانا و قابل‌فهم نیستند!
+
+مشاهدهٔ چنین سیر پیشرفتی می‌تواند انگیزهٔ شما را دوچندان سازد و اگر هم می‌بینید که همان استانداردهای کدنویسی نامطلوبی که در گذشته استفاده می‌کرده‌اید درحال‌حاضر هم در کدهای شما موجود است، این زنگ خطری است که باید خیلی به آن توجه کنید.
+
+در یک کلام، هرموقع که تمایل داشتید مهارت‌های کدنویسی خود را ارتقاء بخشید، به‌جای شروع به خواندن یک کتاب آموزشی یا مراجعه به یک وب‌سایت آموزشی مرتبط با برنامه‌نویسی، می‌توانید شروع به خواندن سورس‌کد دیگر دولوپرهای حرفه‌ای نمایید.
