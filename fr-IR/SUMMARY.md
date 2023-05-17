@@ -77,7 +77,7 @@
 1. [وابستگی‌های زیاد دشمن ریفکتورینگ هستند!](thing_74/README.md)
 1. [سادگی از اختصار می آید(کم گوی و گزیده گوی!)](thing_75/README.md)
 1. [The Single Responsibility Principle](thing_76/README.md)
-1. [با بله هم میتوانید شروع کنید!](thing_77/README.md)
+1. [همه‌ چیز با یک آری شروع می‌شود!](thing_77/README.md)
 1. [گامی به عقب و خودکارسازی، خودکارسازی، خودکارسازی](thing_78/README.md)
 1. [از مزایای ابزارهای تحلیل کد بهره ببرید](thing_79/README.md)
 1. [Test for Required Behavior, not Incidental Behavior](thing_80/README.md)
