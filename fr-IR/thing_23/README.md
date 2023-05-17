@@ -1,15 +1,37 @@
-# Domain-Specific Languages
+# مفهوم DSL چیست و چرا آشنایی با آن در حوزهٔ برنامه‌نویسی اهمیت دارد؟
 
-Whenever you listen to a discussion by experts in any domain, be it chess players, kindergarten teachers, or insurance agents, you'll notice that their vocabulary is quite different from everyday language. That's part of what domain-specific languages (DSLs) are about: A specific domain has a specialized vocabulary to describe the things that are particular to that domain.
+منظور ازDSL که مخفف واژگان Domain-Specific Language به معنی «زبان اختصاصی هر حوزه ی کاری» می باشد، یکسری زبان‌های برنامه نویسی است که به صورت تخصصی برای یکسری کارهای خاص در یکسری حوزه های خاص مورد استفاده قرار می‌گیرند. برای درک بهتر دی اس ال ها، می‌توان آن‌ها را همچون زبان‌های برنامه نویسی کوچکی تلقی کرد که برای انجام یکسری کارهای خاص در یک سیستم مورد استفاده قرار می‌گیرند و از جمله حوزه های خاصی که از دی اس ال ها در آن‌ها استفاده می شود، می‌توان به صنعت بیمه، صنعت هواپیمایی، پتروشیمی و … اشاره کرد.
 
-In the world of software, DSLs are about executable expressions in a language specific to a domain with limited vocabulary and grammar that is readable, understandable, and — hopefully — writable by domain experts. DSLs targeted at software developers or scientists have been around for a long time. For example, the Unix 'little languages' found in configuration files and the languages created with the power of LISP macros are some of the older examples.
+یکی از دلایلی که دی اس ال ها بوجود آمدند این بود که زبان‌های رایج و همه منظوره برای یکسری ابزارها، سیستم ها، پلتفرم ها و حتی صنایع آن طور که باید و شاید اثربخش نبودند و همین شد که این گروه از زبان‌های برنامه نویسی کوچک اما در عین حال کاربری ابداع شدند.
 
-DSLs are commonly classified as either *internal* or *external*:
+بر خلاف زبان‌های برنامه نویسی همه منظوره ای همچون جاوا، پایتون، پرل و غیره، حوزه ای که از دی اس ال ها می‌توان در آن استفاده کرد محدود است اما این در حالی است که در آن حوزه ی خاص، دی اس ال ها با سرعت بیشتر و عملکرد به مراتب بهتری نسبت به زبان‌های همه منظور عمل خواهند کرد.
 
-- **Internal DSLs** are written in a general purpose programming language whose syntax has been bent to look much more like natural language. This is easier for languages that offer more syntactic sugar and formatting possibilities (e.g., Ruby and Scala) than it is for others that do not (e.g., Java). Most internal DSLs wrap existing APIs, libraries, or business code and provide a wrapper for less mind-bending access to the functionality. They are directly executable by just running them. Depending on the implementation and the domain, they are used to build data structures, define dependencies, run processes or tasks, communicate with other systems, or validate user input. The syntax of an internal DSL is constrained by the host language. There are many patterns — e.g., expression builder, method chaining, and annotation — that can help you to bend the host language to your DSL. If the host language doesn't require recompilation, an internal DSL can be developed quite quickly working side by side with a domain expert.
+در ضمن، به نوعی می‌توان گفت که دی اس ال ها برای حوزه ی خاصی که طراحی می‌شوند فوق‌العاده خوب هستند اما برای حوزه هایی که خارج از ساختار از پیش تعریف شده ی دی اس ال باشند فوق‌العاده بد هستند.
 
-- **External DSLs** are textual or graphical expressions of the language — although textual DSLs tend to be more common than graphical ones. Textual expressions can be processed by a tool chain that includes lexer, parser, model transformer, generators, and any other type of post-processing. External DSLs are mostly read into internal models which form the basis for further processing. It is helpful to define a grammar (e.g., in EBNF). A grammar provides the starting point for generating parts of the tool chain (e.g., editor, visualizer, parser generator). For simple DSLs, a handmade parser may be sufficient — using, for instance, regular expressions. Custom parsers can become unwieldy if too much is asked of them, so it makes sense to look at tools designed specifically for working with language grammars and DSLs — e.g., openArchitectureWare, ANTlr, SableCC, AndroMDA. Defining external DSLs as XML dialects is also quite common, although readability is often an issue — especially for non-technical readers.
+نکته توجه داشته باشیم که ما با استفاده از دی اس ال ها نخواهیم توانست یک برنامه ی کامل و جامع بنویسیم بلکه صرفاً به منظور انجام کارهای کوچکی که به سرعت می بایست انجام شوند می‌توان از این زبان‌های برنامه نویسی کوچک استفاده کرد.
+از جمله دی اس ال های رایج می‌توان به CSS, Ant و SQL اشاره کرد. به یاد داشته باشید که از برخی زبان‌های General Purpose یا «چند منظوره» همچون سی شارپ، اسکالا، روبی و … می‌توان به منظور ساخت یک DSL استفاده کرد. مثلاً از زبان اسکالا -که خود این زبان برگرفته از زبان برنامه نویسی جاوا است- می‌توان برای ساخت DSL هایی برای صنایع بسیار حساس همچون صنعت نفت استفاده کرد.
 
-You must always take the target audience of your DSL into account. Are they developers, managers, business customers, or end users? You have to adapt the technical level of the language, the available tools, syntax help (e.g., intellisense), early validation, visualization, and representation to the intended audience. By hiding technical details, DSLs can empower users by giving them the ability to adapt systems to their needs without requiring the help of developers. It can also speed up development because of the potential distribution of work after the initial language framework is in place. The language can be evolved gradually. There are also different migration paths for existing expressions and grammars available.
+انواع DSL ها
+به طور کلی، زبان‌های دی اس ال را می‌توان به دو دسته ی Internal (اینترنال یا داخلی) و External (اکسترنال یا خارجی) تقسیم‌بندی کرد.
 
-By [Michael Hunger](http://programmer.97things.oreilly.com/wiki/index.php/Michael_Hunger)
+دی اس ال های اینترنال به گروهی از زبان‌های برنامه نویسی گفته می‌شود که بر پایه زبان‌های برنامه نویسی همه منظوره ای همچون سی شارپ، جاوا، اسکالا، روبی و … بوده و این در حالی است که بسیاری از قابلیت‌های این زبان‌های مادر در DSL هایی که بر پایه ی آن‌ها نوشته شده‌اند مشهود است که به عنوان مثال می‌توان به سینتکس -نحوه ی نوشتار- این زبان‌ها اشاره کرد. از زبان‌های دی اس ال اینترنال در جامعه ی توسعه دهندگان زبان برنامه نویسی Lisp به کرات استفاده می شود.
+
+در مقابل، دی اس ال های اکسترنال قرار دارند که خود توسعه‌دهنده می‌تواند تصمیم بگیرد که از چه نشانه ها، سینتکس و ساختاری برای زبان مد نظرش استفاده کند. دی اس ال های اکسترنال تا حد بسیار زیادی دست شما را باز می‌گذارند اما این در حالی است که طراحی این دست زبان‌ها به مراتب دشوارتر بوده و مستلزم صرف زمان نسبتاً زیادی برای توسعه ی آن‌ها است چرا که شما می بایست کامپایلر اختصاصی دی اس ال را به منظور اجرای سینتکسی که مد نظر شماست را نیز طراحی کنید. در توسعه ی سیستم عامل های مبتنی بر Unix از زبان‌های دی اس ال اسکترنال به کرات استفاده می شود.
+
+در زمان طراحی DSL ها، همواره می بایست مخاطب را مد نظر قرار داد و دید که مخاطبین این زبان برنامه نویسی جدید چه گروهی از کاربران هستند؛ آیا توسعه‌دهنده اند یا جزو مدیران و تیم اجرایی یک شرکت محسوب می شوند. پس از آن که مخاطبین زبان مشخص شدند، می بایست بر اساس نیاز و تخصص ایشان اقدام به طراحی سینتکس، سطح فنی مورد نیاز زبان، ابزارهای مورد نیاز و نحوه ی به کارگیری زبان کرد. با پنهان سازی جزئیات فنی در زبان‌های دی اس ال، می‌توان کاربران هدف را به ابزاری تجهیز کرد که بدون نیاز به کمک توسعه دهندگان، بتوانند نیازهای خود را مرتفع سازند.
+
+مزایای DSL ها
+به طور کلی، مزایای طراحی زبان های دی اس ال را می توان به صورت زیر خلاصه کرد:
+- برخلاف زبان های همه منظوره، دی اس ال ها بهترین گزینه برای نیازهای خاص هستند.
+- کسانی که با برنامه نویسی هم آشنایی نداشته باشند به سادگی قادر خواهند بود تا یک دید کلی نسبت به آن ها پیدا کنند.
+- این امکان وجود خواهد داشت تا با طراحی یک GUI یا «رابط گرافیکی کاربری» فرایند استفاده از دی اس ال را ساده تر نمود.
+- امکان ساخت Prototype (پروتوتایپ یا نمونه ی اولیه) یک نرم افزار یا اپلیکیشن با استفاده از دی اس ال ها به مراتب راحت تر صورت می گیرد.
+
+یکی از بهترین نمونه های دی اس ال، CSS است که مخفف واژگان Cascading Style Sheets به معنی «الگوی های آبشاری» می باشد. به طور کلی، کدهای سی اس اس به طراحان سایت اجازه می دهند تا به عناصر تشکیل دهنده ی یک صفحه ی وب شکل و ساختار دهند. برای مثال، کدهای سی اس اس زیر رنگ بنده ی یک صفحه ی سایت را قرمز کرده، اندازه ی فونت را 16 پیکسل کرده و رنگ فونت را هم سفید می کنند:
+```Css
+body {
+    background: #F00
+    font-size: 16px;
+    color: #FFF
+}
+```
