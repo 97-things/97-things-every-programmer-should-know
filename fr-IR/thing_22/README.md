@@ -1,25 +1,27 @@
-# Do Lots of Deliberate Practice
+# پشت هر خط از کد شما می‌بایست یک منطق وجود داشته باشد!
+یکسری ابزارها در اختیار برنامه نویسان هستند که این امکان را به ایشان می‌دهند تا کدهایشان را به منظور عدم وجود هرگونه باگی چک کنند اما واقعیت امر آن است که این دست ابزارها همیشه کارآمد نیستند و نتیجه ی دلخواه را بوجود نمی آورند. در همین راستا، برنامه نویسان نیاز به رویکردی دارند تا از آن طریق بتوانند از درستی کدهای خود اطمینان حاصل کنند و این همان چیزی است که در این آموزش قصد داریم مورد بررسی قرار دهیم.
 
-Deliberate practice is not simply performing a task. If you ask yourself "Why am I performing this task?" and your answer is "To complete the task," then you're not doing deliberate practice.
+یک برنامه نویس حرفه‌ای کسی است که سورس کد پروژه ی خود را به بخش‌های کوچک تقسیم‌بندی کرده -خواه بخش‌های یک خطی مثل فراخوانی یک فانکشن، خواه بخش‌های مثلاً ده خطی- و از صحت کارکرد این بخش‌های سورس کد اطمینان حاصل کند. اگر شما بتوانید به اندازه‌ای از کارکرد سورس کد پروژه ی خود اطمینان داشته باشید که یکی از دوستان برنامه نویس شما -که نقش Devil`s Advocate را بازی می کند- نتواند به آن گیر دهد، کفایت می‌کند و شما به هدف خود دست یافته اید.
 
-You do deliberate practice to improve your ability to perform a task. It's about skill and technique. Deliberate practice means repetition. It means performing the task with the aim of increasing your mastery of one or more aspects of the task. It means repeating the repetition. Slowly, over and over again. Until you achieve your desired level of mastery. You do deliberate practice to master the task not to complete the task.
+به خاطر داشته باشید به طور کلی منظور از Devil`s Advocate یا «وکیل مدافع شیطان» کسی است که مهارت خاصی در ایراد بنی اسرائیلی گرفتن دارد و همواره نیمه ی خالی لیوان را نگاه می کند. ممکن است این تصور برای شما پیش بیاد که در شرکت های حرفه‌ای چنین افرادی اصلاً جایگاه خوبی ندارند اما این باور کاملاً اشتباه است. شرکت های تراز اول برای وکلای مدافع شیطان سر و دست می شکنند چرا که این افراد می‌توانند متضمن موفقیت یک محصول شوند.
+در بررسی تک تک خطوط سورس کد، می بایست همواره این نکته را مد نظر قرار دهیم که تا حد ممکن بلوک های کد مستقل از یکدیگر باشند و اصطلاحاً Dependency (دیپندنسی یا وابستگی) کمی مابین بخش‌های مختلف کد وجود داشته باشد چرا که در این صورت، بررسی سورس کد به مراتب راحت‌تر خواهد بود. به طور کلی، یکسری نکات هستند که اگر بتوانیم از آن‌ها در کدنویسی پیروی کنیم، تا حد قابل توجهی می‌توانند متضمن یک محصول نهایت بهینه گردند که عبارتند از:
 
-The principal aim of paid development is to finish a product whereas the principal aim of deliberate practice is to improve your performance. They are not the same. Ask yourself, how much of your time do you spend developing someone else's product? How much developing yourself?
+- تا حد ممکن از فانکشن هایی که ماهیت GoTo دارند اجتناب کنید. در اینجا منظور از GoTo، فانکشن هایی است که برای انجام کاری خاص نیاز به سایر فانکشن ها دارند و همین مسأله منجر ارتباط بین فانکشنی و در نهایت پیچیدگی بیشتر سورس کد می شود.
 
-How much deliberate practice does it take to acquire expertise?
+- تا حد ممکن از متغیرهای گلوبال که امکان تغییر مقادیر آن‌ها وجود دارد استفاده نکنید چرا که این دست متغیرها منجر به ایجاد وابستگی مابین بخش‌های مختلف کد می‌شوند (منظور از متغیرهای گلوبال، متغیرهایی است که در بدنه ی کلاس‌ها تعریف شده و به نوعی public هستند؛ یعنی از هر کجای برنامه می‌توان به آن‌ها دسترسی داشت.)
 
-- Peter Norvig [writes](http://norvig.com/21-days.html) that "It may be that 10,000 hours [...] is the magic number."
-- In *Leading Lean Software Development* Mary Poppendieck notes that "It takes elite performers a minimum of 10,000 hours of deliberate focused practice to become experts."
+- هر متغیر می بایست تا حد ممکن از Scope یا «حوزه ی» کوچکی برخوردار باشد. به عبارت دیگر، مثلاً به جای تعریف کردن متغیری تحت عنوان userAccountNumber که گلوبال است، بهتر است که این متغیر را داخل یک فانکشن تعریف کنیم و صرفاً داخل همان فانکشن به آن دسترسی داشته باشیم.
 
-The expertise arrives gradually over time — not all at once in the 10,000th hour! Nevertheless, 10,000 hours is a lot: about 20 hours per week for 10 years. Given this level of commitment you might be worrying that you're just not expert material. You are. Greatness is largely a matter of conscious choice. *Your choice.* Research over the last two decades has shown the main factor in acquiring expertise is time spent doing deliberate practice. Innate ability is *not* the main factor.
+- از فضاهای خالی به منظور خوانایی بیشتر کد استفاده کنید. به عبارت دیگر، بخش‌های مختلف سورس کد را با زدن اینتر مجزا کنید و در عین حال هم از Indentation های درست استفاده کنید (منظور از Indentation، اسپیس هایی است که از سمت چپ ویرایشگر کد تا ابتدای دستورات وجود دارند.) امروزه اکثر IDE ها دارای این قابلیت هستند تا به صورت خودکار، فواصل سورس کد را منظم کنند.
 
-- Mary: "There is broad consensus among researchers of expert performance that inborn talent does not account for much more than a threshold; you have to have a minimum amount of natural ability to get started in a sport or profession. After that, the people who excel are the ones who work the hardest."
+- کد خود را گویا کنید. به عبارت دیگر، نام هایی برای کلاس ها، فانکشن ها، متغیرها و … استفاده کنید که نیازی به کامنت گذاری نداشته و مثلاً نام یک فانکشن به خوبی نمایانگر ماهیت و کاری که آن فانکشن انجام می‌دهد باشد. به طور مثال، اگر فانکشی قرار است اطلاعات کاربر را از دیتابیس گرفته و در اختیار ما قرار دهد، نامی همچون fetchUserInfo مناسب است چرا که هم کوتاه است اما در عین حال گویای ماهیت این فانکشن نیز هست.
 
-There is little point deliberately practicing something you are already an expert at. Deliberate practice means practicing something you are not good at.
+- اگر منطق برنامه ی شما به گونه‌ای است که نیازمند بخش‌های تو در تو است، بهتر آن است که هر بخش را در قالب یک فانکشن کدنویسی کنید.
 
-- Peter: "The key [to developing expertise] is *deliberative* practice: not just doing it again and again, but challenging yourself with a task that is just beyond your current ability, trying it, analyzing your performance while and after doing it, and correcting any mistakes."
-- Mary: "Deliberate practice does not mean doing what you are good at; it means challenging yourself, doing what you are not good at. So it's not necessarily fun."
+- هر فانکشن می بایست فقط و فقط یک کار را انجام دهد و از نوشتن فانکشن های «همه کاره» شدیدا خودداری کنید. گفته می‌شود که یک فانکشن خوب، فانکشنی است که در صفحه ی مانیتور، بدون نیاز به اسکرول کردن، ابتدا و انتهای آن معلوم باشد. یعنی چیزی در حدود 24 خط کد! (البته بسته به رزولوشن و اندازه ی مانتیور، این قانون برای برنامه نویسان مختلف نتایج کاملا متفاوتی دارد.)
 
-Deliberate practice is about learning. About learning that changes you; learning that changes your behavior. Good luck.
+- تعداد پارامترهای ورودی فانکشن ها می بایست محدود باشد (مثلاً 4 پارامتر ورودی به نظر محدودیت خوبی به نظر می آید) و در صورتی هم که تعداد پارامترهای ورودی مد نظر شما زیاد است -مثلا 12 پارامتر ورودی- می‌توانید پارامترهای مرتبط با یکدیگر را در قالب یک آبجکت تعریف کرده و از آن آبجکت به عنوان یکی از پارامترها استفاده نمایید.
 
-By [Jon Jagger](http://programmer.97things.oreilly.com/wiki/index.php/Jon_Jagger)
+علاوه بر موارد فوق الذکر، راه کارهای دیگر نیز هستند که با اعمال آن‌ها می‌توان درک بهتری از سورس کد پیدا کرد اما موارد مطروحه جزو مهم‌ترین چیزهایی هستند که به شما کمک خواهند کرد تا کدی تمیز، بدون باگ، بدون وابستگی، گویا و بهینه داشته باشید..
+
+ 
