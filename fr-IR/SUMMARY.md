@@ -26,7 +26,7 @@
 1. [مفهوم DSL چیست و چرا آشنایی با آن در حوزهٔ برنامه‌نویسی اهمیت دارد؟](thing_23/README.md)
 1. [از ساختارشکنی نترسید!](thing_24/README.md)
 1. [برای تست نرم‌افزار از دیتای واقعی استفاده کنید](thing_25/README.md)
-1. [](thing_26/README.md)
+1. [حتی یک ارور را هم نادیده نگیرید!](thing_26/README.md)
 1. [](thing_27/README.md)
 1. [](thing_28/README.md)
 1. [](thing_29/README.md)
