@@ -1,39 +1,23 @@
-# Learn to Say "Hello, World"
+# کدام یک؟ IDE یا Editor ، مسأله این است!
 
-Paul Lee, username leep, more commonly known as Hoppy, had a reputation as the local expert on programming issues. I needed help. I walked across to Hoppy's desk and asked, could he take a look at some code for me?
+یکی از نکاتی که در ۹۷ چیزی که هر برنامه‌نویسی باید بلد باشد پیش از این گفته شد، مسألهٔ «IDE خود را مثل موم در دست بگیرید» بود؛ در این آموزش گفتیم که یک دولوپر حرفه‌ای کسی است که آنقدر به IDE خود مسط باشد که به‌سادگی و بااستفاده از کلیدهای میانبر بتواند به‌بخش‌های نرم‌افزار مورداستفادهٔ خود دسترسی یافته و به‌سرعت کدنویسی کند.
 
-Sure, said Hoppy, pull up a chair. I took care not to topple the empty cola cans stacked in a pyramid behind him.
+به خاطر داشته باشید IDE مخفف واژگان Integrated Development Environment به‌معنی «محیط توسعهٔ یکپارچهٔ برنامه‌نویسی» است که از جمله IDEهای معروف و محبوب می‌توان به Eclipse ،Visual Studio و IntelliJ IDEA اشاره کرد.
+اما درعین‌حال، برخی متخصصین بر این باورند که IDEها -اگر نگوییم همیشه، اما در ابتدای راه فراگیری اصول کدنویسی- دولوپرها را به‌نوعی تنبل و وابسته می‌کنند. اجازه دهید برای روشن‌تر شدن دلیل چنین اتفاقی، چند مثال ساده بزنیم.
 
-What code?
+یکی از خصوصیات منحصربه‌فرد IDEها چیزی است تحت‌عنوان Code Completion؛ به‌عبارت دیگر، نرم‌افزار وقتی که شما ابتدای نام تابعی از پیش تعریف شده در زبان برنامه‌نویسی مدنظر خود را می‌نویسید، برای این که به فرایند کدنویسی شما سرعت بخشد پیشنهاداتی به شما داده و درنهایت کد تابع شما را تکمیل می‌کند.
 
-In a function in a file, I said.
+علاوه‌بر این، یکی دیگر از خصوصیات بسیار کاربردی IDEها برقرار ارتباط بین بخش‌های مختلف پروژه است؛ به‌عبارت دیگر، اگر مثلاً زبانی همچون PHP را درنظر بگیریم، وقتی که قصد داریم یک کلاس از یکی از ماژول‌های پروژه را در کلاسی در ماژولی دیگر مورد استفاده قرار دهیم، می‌بایست کلاس مدنظر را به‌اصطلاح use کنیم اما این درحالی است که نرم‌افزاری همچون اکلیپس این‌کار را به‌صورت خودکار برای برایمان انجام داده به‌طوری‌که اصلاً روحمان هم خبردار نخواهد شد که چنین اقدامی صورت‌ گرفته است!
 
-So let's take a look at this function. Hoppy moved aside a copy of K&R and slid his keyboard in front of me.
+این‌ها صرفاً ۲ مثال از صدها کاربرد اثربخش، مفید و منحصر‌به‌فرد IDEها است و اگر فقط‌وفقط به یک روی سکه نگاه کنیم، این ۲ مورد و صدها مورد دیگر را می‌توان به‌عنوان نقاط قوت یک IDE قلمداد کرد.
 
-Where's the IDE? Apparently Hoppy had no IDE running, just some editor which I couldn't operate. He grabbed back the keyboard. A few keystrokes later and we had the file open — it was quite a big file — and were looking at the function — it was quite a big function. He paged down to the conditional block I wanted to ask about.
+اما روی دیگر سکه چه‌طور؟
+برخی دولوپرها بر این باورند که روی دیگر سکه مادامی‌که برنامه‌نویسی مبتدی از یک IDE استفاده می‌کند را می‌توان به‌عنوان یک نقطهٔ ضعف قلمداد کرد. مجدد اجازه دهید برای روشن‌تر شدن این مسأله، به ۲ مثالی که در بالا بدان‌ها اشاره شد بازگردیم.
 
-What would this clause actually do if `x` is negative? I asked. Surely it's wrong.
+وقتی که ما از یک IDE استفاده می‌کنیم و این نرم‌افزار هم صرفاً قصد این را دارا است تا فرایند کدنویسی را برایمان لذت‌بخش‌تر سازد و مثلاً وقتی نام فانکشنی همچون explode در زبان پی‌اچ‌پی را می‌نویسیم، به‌صورت خودکار ادامهٔ نام این فانکشن را تکمیل کرده و حتی پارامترهای ورودی پیش‌فرض را نیز مدنظر قرار می‌دهد.
 
-I'd been trying all morning to find a way to force `x` to be negative, but the big function in the big file was part of a big project, and the cycle of recompiling *then* rerunning my experiments was wearing me down. Couldn't an expert like Hoppy just tell me the answer?
+نقطهٔ منفی چنین کاری این است که یک دولوپر -به‌خصوص زمانی‌که در ابتدای راه کدنویسی است- دیگر مبانی زبان مدنظرش در ذهنش نهادینه نشده و هموراه وابسته به نرم‌افزار برای تکمیل کدها است و اگر روزی قرار باشد تا با نرم‌افزاری مثلاً همچون Nodepad ویندوز، Gedit لینوکس و یا TextMate مکینتاش اقدام به ویرایش سورس‌کدی کند، به احتمال قریب‌به‌یقین در این رابطه به مشکل خواهد خورد.
 
-Hoppy admitted he wasn't sure. To my surprise, he didn't reach for K&R. Instead, he copied the code block into a new editor buffer, re-indented it, wrapped it up in a function. A short while later he'd coded up a main function that looped forever, prompting the user for input values, passing them to the function, printing out the result. He saved the buffer as a new file, tryit.c. All of this I could have done for myself, though perhaps not as quickly. But his next step was wonderfully simple and, at the time, quite foreign to my way of working:
+یا حتی وقتی که در مثال دوم گفتیم اکلیپس به‌صورت خودکار کلاس‌های مورد استفاده را اصطلاحاً use می‌کند، در دراز مدت ممکن است ما هرگز متوجهٔ بایدی بودن چنین کاری نشویم و از آنجا که همواره کلاس‌های use شده در بالای فایل هستند و معمولاً ما هم در بخش‌های پایینی یک فایل کدی را اضافه کرده و یا اقدام به ریفکتور کردن بخشی از کد می‌کنیم، هرگز متوجه نمی‌شویم که این کار باید صورت گیرد و مجدد اگر روزی قرار باشد تا با یک ادیتور ساده دست به ویرایش سورس‌کد بزنیم، ممکن است عدم توجه به این مسأله منجر به سردرگمی‌مان برای دقیقه‌های -و شاید ساعت‌های- متمادی گردد.
 
-```
-$ cc tryit.c && ./a.out
-```
-
-Look! His actual program, conceived just a few minutes earlier, was now up and running. We tried a few values and confirmed my suspicions (so I'd been right about something!) and then he cross-checked the relevant section of K&R. I thanked Hoppy and left, again taking care not to disturb his cola can pyramid.
-
-Back at my own desk, I closed down my IDE. I'd become so used to working on a big project within a big product I'd started to think that was what I should be doing. A general purpose computer can do little tasks too. I opened a text editor and began typing.
-
-```
-#include <stdio.h>
-
-int main()
-{
-    printf("Hello, World\n");
-    return 0;
-}
-```
-
-By [Thomas Guest](http://programmer.97things.oreilly.com/wiki/index.php/Thomas_Guest)
+در کل، IDEها بسیار خوب هست اما به‌نظر می‌رسد که در ابتدای راه کدنویسی،‌ بیش از آن‌که مفید باشند و در دراز مدت کمک برنامه‌نویس کنند، وی را تنبل و وابسته بار می‌آورند؛ لذا توصیه آن است که در حین یادگیری اصول کدنویسی و یا مبانی یک زبان برنامه‌نویسی، همواره از ادیتورهای ساده‌ای مثل موارد فوق‌الذکر استفاده نمایید تا اصول و زیروبم زبان مدنظر در ذهنتان نهادینه شود سپس زمانی‌که احساس کردید به‌خوبی می‌دانید که مثلاً فانکشن‌های مختلف به‌ چه شکلی نوشته می‌شوند، ارتباط بخش‌های مختلف یک زبان‌ برنامه‌نویسی خاص به چه شکل است و غیره، در آن موقع می‌توانید برای آن‌که سرعت کدنویسی خود را افزایش دهید -که خود این مسأله هم به‌نوعی حاکی از حرفه‌ای بودن است- می‌توانید به استفاده از یک IDE روی آورید.
