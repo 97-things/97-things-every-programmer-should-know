@@ -1,51 +1,66 @@
-# Missing Opportunities for Polymorphism
+# دولوپری که نداند Polymorphism چیست، دولوپر نیست!
 
-Polymorphism is one of the grand ideas that is fundamental to OO. The word, taken from Greek, means many (*poly*) forms (*morph*). In the context of programming polymorphism refers to many forms of a particular class of objects or method. But polymorphism isn't simply about alternate implementations. Used carefully, polymorphism creates tiny localized execution contexts that let us work without the need for verbose *if-then-else* blocks. Being in a context allows us to do the right thing directly, whereas being outside of that context forces us to reconstruct it so that we can then do the right thing. With careful use of alternate implementations, we can capture context that can help us produce less code that is more readable. This is best demonstrated with some code, such as the following (unrealistically) simple shopping cart:
+مفهوم Polymorphism (پالیمورفیزم یا چندشکلی) یکی از ستون‌های برنامه‌نویسی شیٔ‌گرایی است؛ این اصلاح ریشهٔ یونانی دارد که از ۲ بخش Poly به‌معنی «چند» و Morph به‌معنی «شکل» تشکیل شده است و این اصطلاح در برنامه‌نویسی شیٔ‌گرایی به الگویی اشاره دارد که بر آن اساس، کلاس‌های مختلف با عملکردهای مجزا از یکدیگر می‌توانند از ساختار و کاربری یکسانی بهره‌مند گردند.
 
-```
-public class ShoppingCart {
-    private ArrayList<Item> cart = new ArrayList<Item>();
-    public void add(Item item) { cart.add(item); }
-    public Item takeNext() { return cart.remove(0);  }
-    public boolean isEmpty() { return cart.isEmpty(); }
+پالیمورفیزم یا چندشکلی در برنامه‌نویسی مفهوم نسبتاً پیچده است که صرفاً با ذکر مثال می‌توان به‌خوبی مفهوم آن را درک کرد؛ لذا در ادامه سعی خواهیم کرد این مفهوم را بااستفاده از زبان PHP تشریح کنیم.
+
+فرض کنیم یکسری کلاس داریم که مسئول ایجاد اشکالی همچون، دایره، مستطیل و … هستند؛ هریک از این اشکال دارای شکل متفاوتی نسبت به بقیه هستند اما همگی در یک چیز مشترک هستند و آن‌هم این که همهٔ اشکال دارای مساحتی هستند که بااستفاده از یک فانکشن می‌توان آن‌را محاسبه کرد.
+
+مثلاً برای این‌کار می‌توان فانکشنی تحت‌عنوان ()calcArea درنظر گرفت که در تمامی کلاس‌ها وجود دارد، اما در کلاس دایره مساحت را به یک شکل (Morph) محاسبه می‌کند و در کلاس مستطیل به شکلی دیگر.
+
+چگونه پالیمورفیزم را پیاده‌سازی کنیم؟
+به‌منظور پیاده‌سازی این مفهوم در برنامه‌نویسی شیٔ‌گرایی، یا باید از Interfaceها استفاده نمود و یا از کلاس‌های به‌اصطلاح Abstract؛ که در ادامه استفاده از اینترفیس‌ها را با ذکر مثال توضیح خواهیم داد (جهت آشنایی بیشتر با مفهوم اینترفیس، به آموزش نود و هفت چیزی که هر برنامه‌نویسی باید بداند: استفادهٔ نادرست از اینترفیس‌ها را غیرممکن سازید مراجعه نمایید).
+
+همان‌طور که در ادامه مشاهده می‌کنید، اینترفیسی داریم تحت‌عنوان Shape که حاوی فانکشنی تحت‌عنوان ()calcArea است و هر کلاسی که از این اینترفیس استفاده کند، باید دارای چنین فانکشنی باشد:
+``` C
+interface Shape {
+    public function calcArea();
 }
-```
+حال اقدام به نوشتن کلاس مربوط به دایره می‌کنیم که اینترفیس فوق‌الذکر روی آن اعمال شده است:
 
-Let's say our webshop offers items that can be downloaded and items that need to be shipped. Let's build another object that supports these operations:
+class Circle implements Shape {
+    private $radius;
 
-```
-public class Shipping {
-    public boolean ship(Item item, SurfaceAddress address) { ... }
-    public boolean ship(Item item, EMailAddress address) { ... }
-}
-```
-
-When a client has completed checkout we need to ship the goods:
-
-```
-while (!cart.isEmpty()) {
-    shipping.ship(cart.takeNext(), ???);
-}
-```
-
-The *???* parameter isn't some new fancy elvis operator, it's asking should I email or snail-mail the item? The context needed to answer this question no longer exists. We have could captured the method of shipment in a boolean or enum and then use an *if-then-else* to fill in the missing parameter. Another solution would be create two classes that both extend Item. Let's call these DownloadableItem and SurfaceItem. Now let's write some code. I'll promote Item to be an interface that supports a single method, ship. To ship the contents of the cart, we will call `item.ship(shipper)`. Classes `DownloadableItem` and `SurfaceItem` will both implement ship.
-
-```
-public class DownloadableItem implements Item {
-    public boolean ship(Shipping shipper) {
-        shipper.ship(this, customer.getEmailAddress());
+    public function __construct($radius) {
+        $this->radius = $radius;
     }
-}
 
-public class SurfaceItem implements Item {
-    public boolean ship(Shipping shipper) {
-        shipper.ship(this, customer.getSurfaceAddress());
+    // calcArea calculates the area of circles 
+    public function calcArea() {
+        return $this->radius * $this->radius * pi();
     }
 }
 ```
+مجدد دست به ساخت کلاس دیگری این‌بار برای شکل مستطیل می‌زنیم که همانند کلاس مربوط به دایره است با این تفاوت که کدهای قرار گرفته داخل فانکش ()calcArea متفاوت است:
+``` C
+class Rectangle implements Shape {
+    private $width;
+    private $height;
 
-In this example we've delegated the responsibility of working with `Shipping` to each Item. Since each item knows hows it's best shipped, this arrangement allows us to get on with it without the need for an *if-then-else*. The code also demonstrates a use of two patterns that often play well together: Command and Double Dispatch. Effective use of these patterns relies on careful use of polymorphism. When that happens there will be a reduction in the number of *if-then-else* blocks in our code.
+    public function __construct($width, $height) {
+        $this->width = $width;
+        $this->height = $height;
+    }
 
-While there are cases where it's much more practical to use *if-then-else* instead of polymorphism, it is more often the case that a more polymorphic coding style will yield a smaller, more readable and less fragile code base. The number of missed opportunities is a simple count of the *if-then-else* statements in our code.
+    // calcArea calculates the area of rectangles   
+    public function calcArea() {
+        return $this->width * $this->height;
+    }
+}
+```
+حال اقدام به ساخت آبجکت‌هایی از روی این ۲ کلاس کرده سپس بااستفاده از فانکشن ()calcArea مساحت شکل را محاسبه می‌کنیم:
+``` C
+$circ = new Circle(3);
+echo $circ->calcArea();
 
-By [Kirk Pepperdine](http://programmer.97things.oreilly.com/wiki/index.php/Kirk_Pepperdine)
+$rect = new Rectangle(3, 4);
+echo $rect->calcArea();
+```
+خروجی کدهای فوق به‌صورت زیر خواهد بود:
+```
+28.274333882308
+12
+```
+در حقیقت، چندشکلی یا پالیمورفیزم این‌گونه تفسیر می‌شود که ما فانکشنی ثابت داریم تحت‌عنوان ()calcArea اما این درحالی است که این فانکشن بسته به این‌که در کدام کلاس قرار گرفته باشد، عملکردی متفاوت از خود نشان خواهد داد و به‌نوعی خود را در چند شکل مختلف عرضه می‌کند.
+
+وقتی دلوپرها با این مفهوم در OOP آشنا باشند، به‌سادگی به‌جای استفاده از دستورات شرطی مختلف و یا سوئیچ‌ها به‌منظور هندل کردن شرایط مختلف، می‌توانند با به‌کارگیری از مفاهیم اینترفیس و پالیمورفیزم، شرایط مختلفی که در کدنویسی با آن‌ها مواجه می‌شوند را با نوشتن حداقل میزان کد مدیریت کنند.
