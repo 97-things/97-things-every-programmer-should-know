@@ -1,17 +1,22 @@
-# Floating-point Numbers Aren't Real
+# اعداد اعشاری با خطای محاسباتی در کامپیوتر ذخیره می‌شوند
 
-Floating-point numbers are not "real numbers" in the mathematical sense, even though they are called *real* in some programming languages, such as Pascal and Fortran. Real numbers have infinite precision and are therefore continuous and non-lossy; floating-point numbers have limited precision, so they are finite, and they resemble "badly-behaved" integers, because they're not evenly spaced throughout their range.
+در این بخش می خواهیم در مورد اعداد اعشاری و نحوه ی ذخیره ی آن ها در کامپیوتر صحبت کنیم، بنابراین بهتر است در ابتدا تعریفی از این نوع اعداد با ذکر مثالی داشته باشیم. 
 
-To illustrate, assign 2147483647 (the largest signed 32-bit integer) to a 32-bit float variable (x, say), and print it. You'll see 2147483648. Now print `x - 64`. Still 2147483648. Now print `x - 65` and you'll get 2147483520! Why? Because the spacing between adjacent floats in that range is 128, and floating-point operations round to the nearest floating-point number.
+یک خط کش ۱۰ سانتی متری را در ذهن خود متصور شوید؛ حال عدد ۳/۶ را روی این خط کش فرضی در نظر بگیرید. این عدد از 3 بزرگتر و از 4 کوچکتر است. برای نشان دادن این که این عدد چقدر از 3 بزرگتر و از 4 کوچکتر است از علامت ممیز یا اعشار / استفاده می کنیم که به طور کلی، به این دست اعداد «اعداد اعشاری» می گوییم. بنابراین می توان گفت که یک عدد اعشاری بین دو عدد صحیح قرار دارد.
 
-IEEE floating-point numbers are fixed-precision numbers based on base-two scientific notation: 1.d<sub>1</sub>d<sub>2</sub>...d<sub>p-1</sub> × 2<sup>e</sup>, where *p* is the precision (24 for float, 53 for double). The spacing between two consecutive numbers is 2<sup>1-p+e</sup>, which can be safely approximated by ε|x|, where ε is the *machine epsilon* (2<sup>1-p</sup>).
+برای تعریف اعداد صحیح در کامپیوتر از استانداردهای IEEE استفاده می شود. بر اساس این استاندارد برای ذخیره ی هر عدد اعشاری سه فیلد در نظر گرفته می شود:
+- اعشار یا مانتیس
+- توان
+- علامت
 
-Knowing the spacing in the neighborhood of a floating-point number can help you avoid classic numerical blunders. For example, if you're performing an iterative calculation, such as searching for the root of an equation, there's no sense in asking for greater precision than the number system can give in the neighborhood of the answer. Make sure that the tolerance you request is no smaller than the spacing there; otherwise you'll loop forever.
+برای مثال، بر طبق این استاندارد داریم:
 
-Since floating-point numbers are approximations of real numbers, there is inevitably a little error present. This error, called *roundoff*, can lead to surprising results. When you subtract nearly equal numbers, for example, the most significant digits cancel each other out, so what was the least significant digit (where the roundoff error resides) gets promoted to the most significant position in the floating-point result, essentially contaminating any further related computations (a phenomenon known as *smearing*). You need to look closely at your algorithms to prevent such *catastrophic cancellation*. To illustrate, consider solving the equation *x<sup>2</sup> - 100000x + 1 = 0* with the quadratic formula. Since the operands in the expression *-b + sqrt(b<sup>2</sup> - 4)* are nearly equal in magnitude, you can instead compute the root *r<sub>1</sub> = -b + sqrt(b<sup>2</sup> - 4)*, and then obtain *r<sub>2</sub> = 1/r<sub>1</sub>*, since for any quadratic equation, ax2 + bx + c = 0, the roots satisfy *r<sub>1</sub>r<sub>2</sub> = c/a*.
+101 × 2.7495 = 27.495
 
-Smearing can occur in even more subtle ways. Suppose a library naively computes *e<sup>x</sup>* by the formula *1 + x + x<sup>2</sup>/2 + x<sup>3</sup>/3! + ...*. This works fine for positive *x*, but consider what happens when *x* is a large negative number. The even-powered terms result in large positive numbers, and subtracting the odd-powered magnitudes will not even affect the result. The problem here is that the roundoff in the large, positive terms is in a digit position of much greater significance than the true answer. The answer diverges toward positive infinity! The solution here is also simple: for negative *x*, compute *e<sup>x</sup> = 1/e<sup>|x|</sup>*.
+که 2.7495 مانتیس، 1 توان و علامت آن نیز مثبت است (البته اعداد در کامپیوتر در پایه ی 2 ذخیره می شوند نه پایه ی 10).
 
-It should go without saying that you shouldn't use floating-point numbers for financial applications — that's what decimal classes in languages like Python and C# are for. Floating-point numbers are intended for efficient scientific computation. But efficiency is worthless without accuracy, so remember the source of rounding errors and code accordingly!
+هر پیاده سازی اعداد اعشاری تعداد مشخصی بیت را برای مانتیس در نظر می گیرد، به عبارت دیگر تعداد اعداد قابل ذخیره سازی در کامپیوتر با محدودیت مواجه است. برای مثال برای ذخیره ی اعداد اعشاری در سیستم های ۳۲ بیتی، برای مانتیس ۲۳ بیت در نظر گرفته شده است. این موضوع باعث می شود که نتوانیم اعداد اعشاری که نمایش آن ها دارای تعداد رقم اعشاری متناهی نیست را به طور دقیق در کامپیوتر ذخیره کنیم.
 
-By [Chuck Allison](http://programmer.97things.oreilly.com/wiki/index.php/Chuck_Allison)
+برای ذخیره سازی هر عدد بسته به فضای اختصاص داده شده به مانتیس، ابتدا عدد مورد نظر گرد می شود و سپس در کامپیوتر ذخیره می شود؛ به همین دلیل ممکن است نمایش یک عدد اعشاری در کامپیوتر 32 بیتی با کامپیوتر 64 بیتی متفاوت باشد، چرا که فضای اختصاص داده شده به مانتیس در آن ها متفاوت است.
+
+بنابراین باید توجه داشته باشیم که امکان ذخیره سازی دقیق تمام اعداد حقیقی که بخش اعشاری آن ها دارای تعداد نامتناهی رقم است در کامپیوترها وجود ندارد و به دلیل این نوع ذخیره سازی در زمان کدنویسی و انجام محاسبات روی اعداد صحیح ممکن است با خطای گرد کردن یا Roundoff Error مواجه شویم و جواب های غیر قابل انتظار از محاسبات کامپیوتری دریافت کنیم. بنابراین می توان گفت که بهتر است در برنامه هایی که نیازمند محاسبات دقیق هستند تا حد امکان از اعداد اعشاری استفاده نکنیم.
