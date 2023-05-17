@@ -1,23 +1,33 @@
-# Don't Touch that Code!
+# شنایی با مراحل توسعهٔ نرم‌افزار
 
-It has happened to everyone of us at some point. Your code was rolled on to the staging server for system testing and the testing manager writes back that she has hit a problem. Your first reaction is "Quick, let me fix that — I know what's wrong."
+ه طور کلی، فرایند توسعه ی نرم‌افزار به‌خصوص وب اپلیکیشن ها به ۴ دسته ی زیر تقسیم‌بندی می‌شوند که یک توسعه‌دهنده باید به خوبی با ویژگی‌های هر کدام آشنا باشد که در این آموزش، به تفصیل در مورد خصوصیات هر مرحله توضیح خواهیم داد.
 
-In the bigger sense, though, what is wrong is that as a developer you think you should have access to the staging server.
+فرایند توسعه ی نرم‌افزار دارای مراحل مختلفی است که به هر کدام از آن‌ها اصطلاحاً Tier (تایر به معنی مرحله) گفته می شود. شرکت های کوچک دارای سه محیط Development و Stage و Production هستند اما شرکت های متوسط و بزرگ معمولاً یک محیط QA یا Quality Assurance به معنی «تضمین کیفیت» نیز می باشند.
 
-In most web-based development environments the architecture can be broken down like this:
+مفهوم Development: این محیط که به صورت خلاصه dev نامیده می شود، شامل کلیه ی سخت افزارها و نرم افزارهای مورد نیاز برای اجرای صحیح نرم‌افزار است که توسط توسعه‌دهنده مورد استفاده قرار می‌گیرد و معمولاً شامل آخرین تغییرات صورت گرفته روی نرم‌افزار است. توسعه‌دهنده تغییرات مد نظر خود را روی سورس کد اعمال کرده و آن‌ها را در محیط توسعه ی نرم‌افزار لوکال خود -مثلا لپ تاپش- تست می‌کند و از درست کار کردن کدها اطمینان حاصل می کند.
 
-- Local development and unit testing on the developer's machine
-- Development server where manual or automated integration testing is done
-- Staging server where the QA team and the users do acceptance testing
-- Production server
+لازم به ذکر است که این محیط توسعه ی نرم‌افزار کاملاً فردی است و تغییرات اعمال شده روی کد، عملکرد کدهای سایر توسعه دهندگان را تحت تأثیر خود قرار نخواهد داد. علاوه بر این، در محیط dev، توسعه‌دهنده از ابزارهای مختلفی برای توسعه ی نرم‌افزار استفاده می‌کند که از آن جمله می‌توان به ماشین‌های مجازی، لایبرری های مختلف، IDE های مختلف، کامپایلر و … اشاره کرد. با توجه به اینکه محیط توسعه ی dev یک محیط کاملاً فردی است و از توسعه‌دهنده یی به توسعه‌دهنده ی دیگر متفاوت است، این محیط را Local Environment یا Sandbox هم می نامند.
 
-Yes, there are other servers and services sprinkled in there, like source code control and ticketing, but you get the idea. Using this model, a developer — even a senior developer — should never have access beyond the development server. Most development is done on a developer's local machine using their favorite blend of IDEs, virtual machines, and an appropriate amount of black magic sprinkled over it for good luck.
+مفهوم Staging: این مرحله از توسعه ی نرم‌افزار که تحت عنوان Integration هم شناخته می شود، مرحله یی است که سایت یا اپلیکیشن در محیطی کاملاً شبیه به محیط Production تست می‌شود و Quality Assurance به معنی «تضمین کیفیت» که به طور خلاصه QA نامیده می‌شود نیز روی آن اعمال می گردد. کانفیگ سروری که برای این مرحله از کار استفاده می شود کاملاً مشابه سرور اصلی است. تیم های توسعه ی نرم‌افزار حرفه یی برای اپلیکیشن هایی که هزاران کاربر دارند را پیش از فرستادن روی سرور اصلی، حتماً روی Staging Server تست می کنند.
 
-Once checked into SCC, whether automatically or manually, it should be rolled over to the development server where it can be tested and tweaked if necessary to make sure everything works together. From this point on, though, the developer is a spectator to the process.
+مفهوم Production: این محیط که اصطلاحاً محیط Live نامیده می شود، همان سروری است که نرم‌افزار -مثلا وب سایت- روی آن پیاده‌سازی شده و کاربران نهایی می‌توانند از آن استفاده کنند و آخرین مرحله از فرایند توسعه ی نرم‌افزار است (سروری که هم اکنون سکان آکادمی روی آن پیاده سازی شده و شما قادرید این آموزش را مطالعه فرمایید یک محیط Production است.) اپلیکیشن پس از تست و اطمینال حاصل کردن از درست بودن همه چیز و Bug-free بودن آن، روی سرور Production فرستاده می شود.
 
-The staging manager should package and roll the code to the staging server for the QA team. Just like developers should have no need to access anything beyond the development server, the QA team and the users have no need to touch anything on the development server. If it's ready for acceptance testing, cut a release and roll, don't ask the user to "Just look at something real quick" on the development server. Remember, unless you are coding the project by yourself, other people have code there and they may not be ready for the user to see it. The release manager is the only person who should have access to both.
+نکته توجه داشته باشید که آپدیت کردن اپلیکیشن در مرحله ی Production باید در زمانی صورت گیرد که حداقل تعداد کاربران در حال استفاده از اپلیکیشن -مثلا وب سایت- باشند (مثلا ساعت ۳ نیمه شب). علاوه بر این، زمانی که آخرین تغییرات روی سرور Live اعمال می شوند، باید تمامی اعضای تیم از این قضیه مطلع باشند تا در صورت بروز هرگونه مشکلی، خیلی سریع بتوان آن را مرتفع ساخت.
 
-Under no circumstances — ever, at all — should a developer have access to a production server. If there is a problem, your support staff should either fix it or request that you fix it. After it's 
-checked into SCC they will roll a patch from there. Some of the biggest programming disasters I've been a part of have taken place because someone \**cough*\*me\**cough\** violated this last rule. If it's broke, production is not the place to fix it.
+در واقع Production Deployment شکل‌های مختلفی دارد که بسته به ماهیت اپلیکیشن، می‌توان یکی از آن‌ها را انتخاب کرد:
+- جایگزین -Override- کردن کدهای قدیمی با کدهای جدید از طریف اف تی پی
+- پیاده‌سازی نسخه یی جدید از اپلیکیشن روی سرور به موازات نسخه ی قبلی و هدایت کردن کاربران به نسخه ی جدید با تغییر کانفیگ سرور
+- استفاده از یک سرور کاملاً جدید حاوی آخرین ریلیس و ریدایرکت کردن ترافیک از سرور قدیمی به سرور جدید
 
-by [Cal Evans](http://programmer.97things.oreilly.com/wiki/index.php/Cal_Evans)
+چه موقع Rollback کنیم؟
+گاهی اوقات در فرایند توسعه نرم‌افزار پیش می‌آید که همه چیز به خوبی پیش نمی‌رود و بلافاصله پس از Deployment یا «فرستادن آخرین نسخه روی سرور اصلی» اپلیکیشن می ترکد! در چنین شرایطی ما نیاز به Rollback کردن داریم. به عبارت دیگر، اپلیکیشن خود را به آخرین ورژنی که به درستی کار می‌کرد باز گردانیم. گاهی اوقات با Rollback کردن نه تنها مشکل برطرف نمی شود، بلکه چندین مشکل دیگر نیز ایجاد می‌گردد؛ لذا در چنین شرایطی کاملاً باید با احتیاط عمل کنیم. زمانی که نیاز به رول بک پیدا کردید، پیش از هرگونه اقدامی، سؤالات زیر را از خود بپرسید؟
+
+آیا مشکل به خاطر کدی که Deploy کردید بوجود آمد یا دلیل دیگری وجود دارد؟ شما صرفاً زمانی می‌توانید رول بک کنید که مشکل بوجود آمده مرتبط با فایل‌هایی باشد که آپلود کرده‌اید و در غیر این صورت، رول بک کاری از پیش نخواهد برد! ممکن است دقیقا در زمانی که شما آخرین ریلیس را آپلود می کنید، یک مشکل سروری هم بوجود آید و شما فکر کنید که مشکل از آخرین آپدیت بوده و کاملا گمراه شوید.
+
+آیا رول بک کردن امکان‌پذیر است؟ هر Release یا نسخه یی از اپلیکیشن قابل رول بک کردن نیست؛ فرض کنید که آخرین ریلیس نرم‌افزار شما حاوی اسکمای متفاوتی از دیتابیس است که در چنین شرایطی رول بک کردن اوضاع را وخیم تر هم می کند.
+
+به هر حال، اگر پاسخ شما به دو سؤال فوق «آری» است، با خیال راحت می‌توانید رول بک کنید اما توجه داشته باشید که پاسخ آری دادن به دو سؤال بالا هرگز کاری آسان نیست.
+
+نکته ی دیگری که در ارتباط با ریلیس نسخه های جدید نرم‌افزار باید مد نظر قرار داد، مفهومی است تحت عنوان Automatic Deployments to Production که این اصطلاح حاکی از آن است که ما به صورت اتوماتیک، آخرین تغییرات را بلافاصله روی سرور اصلی آپلود کنیم. به طور مثال، می‌توان نرم‌افزار اف تی پی را به گونه یی تنظیم کرد که بلافاصله پس از مشاهده ی تغییری در هر فایلی، آن فایل را جایگزین فایل متناظر روی سرور کند (جهت آشنایی بیشتر با مفهوم اف تی پی، به آموزش اف تی پی چیست؟ مراجعه نمایید.)
+
+چنین کاری را می‌توان به عنوان یکی از پر ریسک ترین و خطرناک ترین کارها در فرایند توسعه ی نرم‌افزار قلمداد کرد و شدیدا باید از آن پرهیز کرد. فرض کنید توسعه‌دهنده یی به اشتباه کدی را تغییر می‌دهد و آن کد هم بلافاصله روی سرور آپلود می‌شود و فرایند اجرای صحیح نرم‌افزار دچار اختلال می شود.
