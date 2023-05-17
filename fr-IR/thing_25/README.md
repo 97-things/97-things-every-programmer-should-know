@@ -1,26 +1,11 @@
-# Don't Be Cute with Your Test Data
+# برای تست نرم‌افزار از دیتای واقعی استفاده کنید
 
-> *It was getting late. I was throwing in some placeholder data to test the page layout I'd been working on.*
+پیش از هر گونه توضیحی، سناریویی تعریف می‌کنیم تا ببینیم برای چند درصد از ما آشنایی دارد؛ نرم افزاری نوشته‌ایم -مثلا یک وب اپلیکیشن- حال نیاز است تا یکسری دیتای اولیه وارد دیتابیس کرده تا بتوانیم تست نهایی را انجام دهیم. پیش از هر چیز، چند یوزر می بایست تعریف کنیم؛ برای این کار، از نام کاربری‌هایی همچون ali1, ali2 و ali3 استفاده می کنیم. اکنون تک تک این یوزرها را می بایست به یک گروه کاربری ربط دهیم. مثلاً گروه‌های کاربری ادمین، کاربر معمولی و کاربر میهمان (در ضمن، برای ثبت نام در سایت، برای انتخاب نام کاربری حتماً می بایست هشت کاراکتر وارد کرد اما چون در مرحله ی تست است و قصد داریم برای ثبت نام و مهم‌تر از آن لاگین کردن، تعداد کاراکتر کمتری را وارد کنیم، بخشی از کد که مسئول چک کردن تعداد کاراکترهای نام کاربری است که کامنت می کنیم.)
 
-> *I appropriated the members of The Clash for the names of users. Company names? Song titles by the Sex Pistols would do. Now I needed some stock ticker symbols — just some four letter words in capital letters.*
+به علاوه این که آقا/خانم برنامه نویس برای تست یک اینپوت فرم -مثلا ناحیه یی برای وارد کردن نام خانوادگی- عبارت jfldjf'sdjfsjf یا چیزی شبیه به آن را وارد می کند! سناریو را بیش از این ادامه نمی‌دهیم اما پر واضح است که مثال‌های زیادی از این نوع رفتارهای توسعه دهندگان می‌توان زد به این صورت که از آنجا که ایشان فکر می‌کنند در مرحله ی تست هیچ‌ کس کد ایشان را نمی بیند، از دیتای غیر واقعی و … استفاده می کنند. 
 
-> *I used **those** four letter words.*
+وقتی ما به عنوان یک توسعه دهنده و گاهی اوقات هم تست کننده ی نرم افزار اقدام به تست می کنیم، تحت هیچ عنوان نمی بایست از نام های کاربری همانند آنچه در بالا گفته شد برای ثبت نام استفاده کنیم؛ علاوه بر این، برای تست کردن فرم ها و ... حتما می بایست دیتای واقعی وارد کنیم چرا که آدم های واقعی قرار است که این نرم افزار را مورد استفاده قرار دهند و در غیر این صورت، احتمال زیادی وجود دارد که به هدف نهایی خود که همان ارائه ی یک محصول باکیفیت و بدون باگ است نرسیم.
 
-> *It seemed harmless. Just something to amuse myself, and maybe the other developers the next day before I wired up the real data source.*
+خیلی از اوقات پیش می آید زمانی که برای تست نرم افزار خود بخشی از کد را کامنت می کنیم -از روی تنبلی- زمانی که می خواهیم محصول نهایی را Deploy (دیپلوی یا منتشر) کنیم، فراموش می کنیم که بخش مد نظر را از کامنت خارج کنیم و این می تواند تبعات بسیاری مخربی داشته باشد!
 
-> *The following morning, a project manager took some screenshots for a presentation.**
-
-Programming history is littered with these kinds of war stories. Things that developers and designers did "that no one else would see" which unexpectedly became visible.
-The leak type can vary but, when it happens, it can be deadly to the person, team, or company responsible. Examples include:
-
-- During a status meeting, a client clicks on an button which is as yet unimplemented. They are told: "Don't click that again, you moron."
-- A programmer maintaining a legacy system has been told to add an error dialog, and decides to use the output of existing behind-the-scenes logging to power it. Users are suddenly faced with messages such as "Holy database commit failure, Batman!" when something breaks.
-- Someone mixes up the test and live administration interfaces, and does some "funny" data entry. Customers spot a $1m "Bill Gates-shaped personal massager" on sale in your online store.
-
-To appropriate the old saying that "a lie can travel halfway around the world while the truth is putting on its shoes," in this day and age a screw-up can be Dugg, Twittered, and Flibflarbed before anyone in the developer's timezone is awake to do anything about it.
-
-Even your source code isn't necessarily free of scrutiny. In 2004, when a tarball of the Windows 2000 source code made its way onto file sharing networks, some folks merrily grepped through it for profanity, insults, and [other funny content](http://www.kuro5hin.org/story/2004/2/15/71552/7795). (The comment `// TERRIBLE HORRIBLE NO GOOD VERY BAD HACK` has, I will admit, become appropriated by me from time to time since!)
-
-In summary, when writing any text in your code — whether comments, logging, dialogs, or test data — always ask yourself how it will look if it becomes public. It will save some red faces all round.
-
-By [Rod Begbie](http://programmer.97things.oreilly.com/wiki/index.php/Rod_Begbie)
+خلاصه ی کلام این که تست کردن به این روش می‌تواند آینده ی اپلیکیشن را تحت الشعاع قرار دهد. همواره سعی کنید در فرایند تست محصول نهایی، از دیتای شبیه به واقعی استفاده کنید چرا که در بسیاری از مواقع، دیتای تستی -به صورت ناخواسته- منتشر شده و در اختیار End-user ها قرار می‌گیرد و نیاز به توضیح نیست که امروزه با وجود شبکه‌های اجتماعی، هر گونه «کم کاری» از طرف تیم برنامه نویسی شما می تواند در معرض دید هزاران کاربر بالقوه قرار گرفته و آبروی تیم برنامه نویسی شما را به کلی تحت تأثیر قرار دهد.
