@@ -81,7 +81,7 @@
 1. [تا حد ممکن همه‌ چیز را خودکار کنید](thing_78/README.md)
 1. [از مزایای ابزارهای تحلیل کد بهره ببرید](thing_79/README.md)
 1. [در تست نرم‌افزار فقط رفتار مورد انتظار را بسنجید](thing_80/README.md)
-1. [به طور دقیق و مشخص تست کنید](thing_81/README.md)
+1. [تست‌ها علاوه بر صحیح بودن، می‌بایست دقیق هم باشند](thing_81/README.md)
 1. [تست هنگام خواب (و آخر هفته ها)](thing_82/README.md)
 1. [Testing Is the Engineering Rigor of Software Development](thing_83/README.md)
 1. [Thinking in States](thing_84/README.md)
