@@ -1,23 +1,76 @@
-# A Message to the Future
+# یافتن راه‌کارهای ساده برای مشکلات سخت
 
-Maybe it's because most of them are smart people, but in all the years I've taught and worked side-by-side with programmers, it seems that most of them thought that since the problems they were struggling with were difficult that the solutions should be just as difficult for everyone (maybe even for themselves a few months after the code was written) to understand and maintain.
+برخی برنامه‌نویسان بر این باورند از آنجا که برخی مشکلات توسعهٔ نرم‌افزار که بسیار چالشی و دشوار هستند را می‌بایست با راه‌کارهای پیچیده مرتفع سازند به‌طوری که اگر سورس‌کد چند ماه پس از کدنویسی در اختیارشان قرار گیرد، به سختی قادر خواهند بود تا اولاً آن‌را درک نموده ثانیاً آن‌را توسعه دهند! برای روشن‌تر شدن این مسأله، قصد داریم مقایسه‌ای مابین حرفه‌ٔ نویسندگی و برنامه‌نویسی داشته باشیم.
 
-I remember one incident with Joe, a student in my data structures class, who had to come in to show me what he'd written. "Betcha can't guess what it does!" he crowed.
+در عصر حاضر کدام رمان‌نویس مشهوری را می‌شناسید که در نگارش رمانش از لغات سخت، پیچیده و تاریخ‌گذشته استفاده کند؟ مگر غیر از این است که رمان‌هایی که امروزه در بازار به چاپ صدم و بالاتر می‌رسند همگی از نثری ساده و قابل‌فهم -حتی برای گروه‌های سنی پایین- برخورداند. اصلاً منکر فاخر بودن گلستان سعدی نیستیم، اما بعید به‌نظر می‌رسد که نثر زیر به‌سادگی قابل درک باشد:
 
-"You're right," I agreed without spending too much time on his example and wondering how to get an important message across. "I'm sure you've been working hard on this. I wonder, though, if you haven't forgotten something important. Say, Joe, don't you have a younger brother?"
+یاد دارم که در ایام طفلی متعبد بودمی و شب‌خیز و مولع زهد و پرهیز. شبی در خدمت پدر -علیه الرحمه- نشسته بودم و همه شب دیده برهم نبسته و مُصحف عزیز در کنار گرفته و طایفه‌ای گرد ما خفته. پدر را گفتم یکی از اینان سر بر نمی‌دارد که دوگانه‌ای بگذارد و چنان خواب غفلت برده‌اند که گویی نخفته‌اند که مرده‌اند. گفت جان پدر! تو نیز اگر بخفتی به که در پوستین خلق افتی.
 
-"Yep. Sure do! Phil! He's in your Intro class. He's learning to program, too!" Joe announced proudly.
+حال به بخشی از کتاب دا نوشته سیده زهرا حسینی تحت‌عنوان «و بالاخره خرمشهر آزاد شد» نگاهی می‌اندازیم:
 
-"That's great," I replied. "I wonder if he could read this code."
+بالاخره ساعت ۲، روز سوم خرداد سال 1361 اعلام کردند خرمشهر آزاد شد؛ چه‌کسی می‌توانست حال‌و‌هوای ما را از شنیدن این خبر درک کند. توی ساختمان کوشک ولوله‌ای افتاد، همه یکدیگر را بغل کرده و از خوشحالی گریه می‌کردند. مردم و همسایه‌های تهرانی ما تبریک می‌گفتند؛ همه خوشحال بودند. از خوشحالی نمی‌دانستیم چه‌کار کنیم و رفتیم بیرون ساختمان؛ مردم و کارمندان اداره‌ها همه از شادی این خبر کارشان را رها کرده و به خیابان آمده بودند. همه‌جا پر از هیاهو و سر‌و‌صدا شده بود. همه‌جا شادی موج می‌زد و ...
 
-"No way!" said Joe. "This is hard stuff!"
+از مقایسهٔ این ۲ نثر می‌توان به‌ این نتیجه رسید که فارغ از ارزش ادبی هر کدام، نثر برگرفته از کتاب دا به‌مراتب قابل‌فهم‌تر است. به‌ یاد داشته باشیم که یک رمان‌نویس حرفه‌ای می‌داند که خوانندگان از خرید کتابش چند هدف دارند که مهم‌ترین آن‌ها عبارتند از:
+- گذران وقت
+- آشنایی با تاریخ
+- لذت بردن
+- ارتباط برقرار گرفتن با داستان
+- کسب تجربه
+- یادگیری و …
 
-"Just suppose," I suggested, "that this was real working code and that in a few years Phil was hired to make a maintenance update. What have you done for him?" Joe just stared at me blinking. "We know that Phil is really smart, right?" Joe nodded. "And I hate to say it, but I'm pretty smart, too!" Joe grinned. "So if I can't easily understand what you've done here and your very smart younger brother will likely puzzle over this, what does that mean about what you've written?" Joe looked at his code a little differently it seemed to me. "How about this," I suggested in my best 'I'm your friendly mentor' voice, "Think of every line of code you write as a message for someone in the future — someone who might be your younger brother. Pretend you're explaining to this smart person how to solve this tough problem.
+حال اگر هریک از پارامترهای فوق -و حتی دیگر ویژگی‌های یک رمان خوب- غايب باشند، احتمال فراگیر شدن رمان در بین خوانندگان کم‌رنگ و کم‌رنگ‌تر خواهد شد.
 
-"Is this what you'd like to imagine? That the smart programmer in the future would see your code and say, 'Wow! This is great! I can understand perfectly what's been done here and I'm amazed at what an elegant — no, wait — what a beautiful piece of code this is. I'm going to show the other folks on my team. This is a masterpiece!'
+در صنعت توسعهٔ نرم‌افزار هم دقیقاً با چنین مسأله‌ای روبه‌رو هستیم؛ به‌عبارت دیگر، یک دولوپر کاری شبیه به نویسندگان دارد با این تفاوت که به‌جای نگارش به زبان فارسی -یا دیگر زبان‌ها- با زبان برنامه‌نویسی مدنظرش و با سینتکس خاصی شروع به نوشتن می‌کند.
 
-"Joe, do you think you can write code that solves this difficult problem but will be so beautiful it will sing? Yes, just like a haunting melody. I think that anyone who can come up with the very difficult solution you have here could also write something beautiful. Hmm... I wonder if I should start grading on beauty? What do you think, Joe?"
+همان‌طور که یک نویسنده در نگارش یک رمان نباید هرگز دامنهٔ لغات و دستور زبانش را بااستفاده از ساختارهای متکلف و پیچیده به رخ خواننده بکشد، یک برنامه‌نویس خوب هم هرگز نباید آن‌قدر پیچیده کد بزند که در آینده دیگر دولوپرها با سورس‌کد خوانی گیج شوند.
 
-Joe picked up his work and looked at me, a little smile creeping across his face. "I got it, prof, I'm off to make the world better for Phil. Thanks."
+حال همان‌طور که ۲ نثر متکلف و ساده را در بالا با یکدیگر مقایسه کردیم، در ادامه قصد داریم برنامه‌ٔ معروف Hello World را به ۲ صورت پیچیده و ساده بااستفاده از زبان ++C بنویسیم؛ ابتدا با برنامه‌ٔ پیچیده شروع می‌کنیم:
 
-By [Linda Rising](http://programmer.97things.oreilly.com/wiki/index.php/Linda_Rising)
+``` C
+#include < iostream >
+
+    class AbstractHello {
+        public:
+            virtual~AbstractHello() {
+                std::cout << " World!";
+            }
+        void Prnt() {
+            std::cout << "Hello";
+        }
+
+
+    };
+
+class ChildHello: public AbstractHello {
+    public:
+        ~ChildHello() {
+            Prnt();
+        }
+};
+
+int main() {
+    ChildHello * Obj;
+    Obj = new ChildHello;
+    delete Obj;
+}
+```
+حال همین برنامه‌ را می‌توان با تعداد خطوط کد کمتر و درعین‌حال قابل‌فهم‌تر به‌صورت زیر نوشت:
+``` C
+#include < iostream >
+
+int main() {
+    std::cout << "Hello World!";
+}
+```
+به‌عنوان خروجی هر دو برنامه داریم:
+```
+Hello World!
+```
+به‌طور خلاصه، یک دولوپر خوب کسی است که کدی بنویسد که از ویژگی‌های زیر برخوردار باشد:
+- اسامی کلاس‌ها، فانکشن‌ها، متغیرها و … قابل‌فهم اما درعین‌حال ساده باشند.
+- ساختار فولدرها و فایل‌ها همگون و سرراست باشند.
+- استاندارد کدنویسی یکسانی در جای‌جای پروژه اعمال شده باشد.
+- به‌گونه‌ای کدنویسی کند که به‌جای کامنت‌گذاری، خود سورس‌کد گویای ماهیتش باشد.
+- و درنهایت کدنویسی‌اش طوری باشد که اگر یک برنامه‌نویس تازه‌کار هم به مرور سورس‌کد پرداخت، بتواند ارتباط بین اجزای مختلف کد را درک کند.
+
+هر برنامه‌ای -خواه کوچک باشد و خواه بزرگ- بالاخره روزی توسط دولوپری به غیر از دولوپر اولیه‌اش می‌بایست دیباگ، نگهداری و توسعه داده شود؛ به همین دلیل، در حین کدنویسی همواره این نکته را مدنظر داشته باشید که در آینده بالاخره روزی یکی از همکارانتان قرار است روی کدهایی که نوشته‌اید کار کند پس ضروری است تا به‌گونه‌ای کدنویسی کنید که دیگر دولوپرها تا حد ممکن کمتر دچار سردرگمی‌ شوند.
