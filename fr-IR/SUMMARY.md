@@ -20,7 +20,7 @@
 1. [همواره در حال یادگیری موضوعات جدید باشید](thing_17/README.md)
 1. [ویژگی‌های یک API با طراحی مناسب](thing_18/README.md)
 1. [از ابتدای کار توسعهٔ اپلیکیشن خود روی فرآیند نصب و دیپلوی آن به طور پیوسته کار کنید](thing_19/README.md)
-1. [](thing_20/README.md)
+1. [مدیریت اکسپشن‌ها](thing_20/README.md)
 1. [](thing_21/README.md)
 1. [](thing_22/README.md)
 1. [](thing_23/README.md)
