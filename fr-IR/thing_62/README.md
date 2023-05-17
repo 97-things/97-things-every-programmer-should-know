@@ -1,13 +1,18 @@
-# Only the Code Tells the Truth
+# فقط سورس‌کد است که حرف اول و آخر را می‌زند
 
-The ultimate semantics of a program is given by the running code. If this is in binary form only, it will be a difficult read! The source code should, however, be available if it is your program, any typical commercial software development, an open source project, or code in a dynamically interpreted language. Looking at the source code, the meaning of the program should be apparent. To know what a program does, the source is ultimately all you can be sure of looking at. Even the most accurate requirements document does not tell the whole truth: It does not contain the detailed story of what the program is actually doing, only the high-level intentions of the requirements analyst. A design document may capture a planned design, but it will lack the necessary detail of the implementation. These documents may be lost sync with the current implementation... or may simply have been lost. Or never written in the first place. The source code may be the only thing left.
+سورس‌کد باید آن‌قدر واضح و شفاف باشد که با نگاه کردن به آن، بتوان به ماهیت نرم‌افزار پی برد و این درحالی است که کامل‌ترین مستندات نرم‌افزار هم آن‌طور که بایدوشاید ماهیت نرم‌افزار را روشن نمی‌کنند و در این‌گونه مستندات صرفاً به یکسری کلیات بسنده می‌شود.
 
-With this in mind, ask yourself how clearly is your code telling you or any other programmer what it is doing?
+در همین راستا، در حین کدنویسی همواره این سؤال را از خود بپرسید که آیا سورس‌کدتان به‌وضوح کامل چند و چون نرم‌افزار را هم برای خودتان و هم برای دیگر دولوپرها بیان می‌کند؟
 
-You might say, "Oh, my comments will tell you everything you need to know." But keep in mind that comments are not running code. They can be just as wrong as other forms of documentation. There has been a tradition saying comments are unconditionally a good thing, so unquestioningly some programmers write more and more comments, even restating and explaining trivia already obvious in the code. This is the wrong way to clarify your code. If your code needs comments, consider refactoring it so it doesn't. Lengthy comments can clutter screen space and might even be hidden automatically by your IDE. If you need to explain a change, do so in the version control system check-in message and not in the code.
+در پاسخ به این سؤال ممکن است بگویید که کامنت‌های نوشته شده در جای‌جای سورس‌کد اطلاعات مورد نیاز را ارائه خواهند داد اما همواره به‌خاطر داشته باشید از آنجا که کامنت‌ها -همچون دیگر مستندات نرم‌افزار- در اجرای نرم‌افزار نقشی ندارند، می‌توانند حاوی اشتباهاتی باشند که ممکن است دولوپرها را گمراه سازند (این اشتباهات زمانی دوچندان می‌شوند که سورس‌کد ریفکتور شده، چیزی از آن کم شده و یا چیزی به آن افزوده گردیده اما درعین‌حال کامنت مدنظر آپدیت نشده است).
 
-What can you do to actually make your code tell the truth as clearly as possible? Strive for good names. Structure your code with respect to cohesive functionality, which also eases naming. Decouple your code to achieve orthogonality. Write automated tests explaining the intended behavior and check the interfaces. Refactor mercilessly when you learn how to code a simpler, better solution. Make your code as simple as possible to read and understand.
+کامنت‌ها اصلاً چیز خوبی برای شفاف‌سازی سورس‌کد نیستند!
+اگر کدی که می‌زنید نیاز به کامنت دارد، در اولین فرصت اقدام به ریفکتور کردن کدتان کنید به شکلی که دیگر کد برای نشان دادن ماهیتش نیاز به کامنت نداشته و خود سورس‌کد گویای کاری باشد که قرار است انجام دهد.
 
-Treat your code like any other composition, such as a poem, an essay, a public blog, or an important email. Craft what you express carefully, so that it does what it should and communicates as directly as possible what it is doing, so that it still communicates your intention when you are no longer around. Remember that useful code is used much longer than ever intended. Maintenance programmers will thank you. And, if you are a maintenance programmer and the code you are working on does not tell the truth easily, apply the guidelines above in a proactive manner. Establish some sanity in the code and keep your own sanity.
+برای انجام چنین کاری هم صرفاً نیاز به چند تغییر کوچک خواهید داشت؛ از نام‌های مناسب و بامسمی برای کلاس‌ها، فانکشن‌ها، متغیرها و … استفاده کنید. ساختار فولدرها را به‌گونه‌ای بچینید که هارمونی بین بخش‌های مختلف پروژه وجود داشته باشد. کد را به‌گونه‌ای ریفکتور کنید که خواندن آن ساده‌تر گردد و کارهایی از این دست.
 
-by [Peter Sommerlad](http://programmer.97things.oreilly.com/wiki/index.php/Peter_Sommerlad)
+همان‌طور که یک شاعر یا نویسنده به‌گونه‌ای اقدام به نوشتن یک شعر یا اثر ادبی می‌کند که سال‌ها پس از انتشار آن اثر -و حتی پس از مرگ پدید آورنده‌اش- بدون نیاز به هیچ‌‌گونه راهنما یا مفسری می‌توان آن اثر را درک کرد‌، یک دولوپر خوب هم به‌گونه‌ای کد می‌زند که خود سورس‌کد می‌تواند با دیگر دولوپرها ارتباط برقرار سازد.
+
+اگر چنین مواردی در کدنویسی رعایت شوند، زمانی‌که پروژه‌ٔ شما به‌اصطلاح Legacy می‌شود، دعای خیر دولوپرهایی که قرار است چنین پروژه‌ٔ قدیمی را مدیریت کنند همواره پشت‌ سر شما خواهد بود.
+
+نکته به‌طور‌کلی، منظور از سورس‌کدهای Legacy کدهایی است که خیلی قدیمی هستند و دیگر ساپورت نمی‌شوند.
