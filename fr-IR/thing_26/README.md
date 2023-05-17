@@ -1,47 +1,26 @@
-# Don't Ignore that Error!
+# حتی یک ارور را هم نادیده نگیرید!
 
-> *I was walking down the street one evening to meet some friends in a bar. We hadn't shared a beer in some time and I was looking forward to seeing them again. In my haste, I wasn't looking where I was going. I tripped over the edge of a curb and ended up flat on my face. Well, it serves me right for not paying attention, I guess.*
+پیش از هر چیز، ابتدا نیم نگاهی به داستانی فرضی داشته باشیم و در ادامه به بررسی ربط این داستان به ارورهای کدنویسی خواهیم پرداخت. فرض کنید که پس از فارغ التحصیلی از دانشگاه، چند سالی است که هم دانشکده یی های خود را ندیده اید و به لطف شبکه‌های اجتماعی، شما و همکلاسی هایتان همدیگر را می یابید. در یک کافه یا رستورانی قرار می‌گذارید تا یکدیگر را ملاقات کنید. زمان جلسه ساعت 5 بعد از ظهر است و اما شما تازه ساعت 4:30 از منزل بیرون رفته‌اید و از آنجا که اصلاً دوست ندارید پس از سال ها، آدم بدقولی جلوه کنید، با سرعت هرچه تمام تر به سوی محل قرار ملاقات پیش می روید.
 
-> *It hurt my leg, but I was in a hurry to meet my friends. So I pulled myself up and carried on. As I walked further the pain was getting worse. Although I'd initially dismissed it as shock, I rapidly realized there was something wrong.*
+از این تاکسی به اون تاکسی، از این اتوبوس به آن اتوبوس، جاهایی را هم از کوچه پس کوچه‌ها می‌روید که سریع‌تر به مقصد برسید. در حال عبور کردن از مقابل مغازه یی که صاحب آن داشت جلوی مغازه اش را آبپاشی می کرد، کمی تلو تلو می‌خورید و ناگهان نقش بر زمین می شوید!
 
-> *But I hurried on to the bar regardless. I was in agony by the time I arrived. I didn't have a great night out, because I was terribly distracted. In the morning I went to the doctor and found out I'd fractured my shin bone. Had I stopped when I felt the pain, I'd've prevented a lot of extra damage that I caused by walking on it. Probably the worst morning after of my life.*
+با توجه به این که خیلی عجله دارید، اول احساس درد زیادی نمی‌کنید و به سرعت بلند شده، لباس هایتان را می تکانید و مجدد به سرعت هرچه تمام تر به راه خود ادامه می‌دهید و در نهایت تقریبا به‌موقع به قرار ملاقات خود می رسید. در حین گپ و گفتگو با دوستان، باز هم کمی احساس درد می‌کنید که با خود می‌گویید که "خب زمین خودم ام و کمرم کمی کوفتگی پیدا کرده!" در طول کل جلسه، آن طور که باید و شاید از در کنار دوستان قدیمی خود بودن لذت نمی برید تا این که جلسه به پایان می‌رسد اما از آنجا که ثانیه به ثانیه به درد کمر شما افزوده می شود، مجبور می‌شوید که فردای آن روز به درمانگاه مراجعه کنید و می‌بینید که دیسک کمر شما آسیب دیده است.
 
-Too many programmers write code like my disastrous night out.
+واقعیت امر آن است که اگر به محض زمین خوردن، موضوع جدی گرفته می‌شد و به درمانگاه مراجعه می کردیم، شاید هرگز این آسیب دیدگی به دیسک های کمر کشیده نمی‌شد و صرفاً با چند روز استراحت و مراعات مشکل حل می شد! کدنویسی بسیاری از برنامه نویسان هم شبیه به داستان بالا است. چگونه؟ به این شکل که وقتی با اروری در کدهای خود مواجه می شوند، اگر آن ارور به گونه یی باشد که وی را از ادامه ی توسعه ی نرم افزارش نگاه ندارد، ارور را نادیده گرفته و به کار خود ادامه می‌دهند و همین مسأله منجر به بروز مشکلاتی گاها بسیار بزرگ در آینده ی نرم‌افزار می شوند. اگر بخواهیم به مسأله ی ارورها از این بعد نگاه کنیم، ارورهای نرم افزاری را می‌توان به دسته های زیر تقسیم‌بندی کرد:
 
-*Error, what error? It won't be serious. Honestly. I can ignore it.* This is not a winning strategy for solid code. In fact, it's just plain laziness. (The wrong sort.) No matter how unlikely you think an error is in your code, you should always check for it, and always handle it. Every time. You're not saving time if you don't: You're storing up potential problems for the future.
+- دستورات return: خیلی اوقات پیش می‌آید فانکشن هایی که می نویسیم، باید چیزی را اصطلاحاً ریترن کنند اما هرگز چک نمی‌کنیم که فانکشن مد نظر دقیقاً چه چیزی را ریترن کرده است چرا که گاهی اوقات پیش می‌آید که اگر فانکشن ما چیزی را ریترن نکند، ما در مراحل ابتدایی توسعه ی نرم‌افزار اصلاً متوجه آن نخواهیم شد. 
 
-We report errors in our code in a number of ways, including:
-
-- **Return codes** can be used as the resulting value of a function to mean "it didn't work." Error return codes are far too easy to ignore. You won't see anything in the code to highlight the problem. Indeed, it's become standard practice to ignore some standard C functions' return values. How often do you check the return value from printf?
-
-- **errno** is a curious C aberration, a separate global variable set to signal error. It's easy to ignore, hard to use, and leads to all sorts of nasty problems — for example, what happens when you have multiple threads calling the same function? Some platforms insulate you from pain here; others do not.
-
-- **Exceptions** are a more structured language-supported way of signaling and handling errors. And you can't possibly ignore them. Or can you? I've seen lots of code like this:
-
-```
+- اکسپشن ها: مدیریت Exception ها در بسیاری از زبان‌های برنامه نویسی سطح بالا دیده می‌شود و کار برنامه نویسان را ساده کرده است چرا که در صورت بروز چنین اکسپشن هایی، مفسر زبان برنامه نویسی مد نظر به ما هشدار خواهد داد. گاهی اوقات برنامه نویسانی را می‌بینیم که مثلاً در زبان برنامه نویسی پی اچ پی به شکل زیر از ساختار مدیریت اکسپشن ها استفاده می کنند:
+```C#
 try {
-    // ...do something...
-}
-catch (...) {} // ignore errors
+    // do something
+} catch() {} // ignoring catching any errors
 ```
+همان طور که در بلوک کد بالا مشاهده می شود، برنامه نویس به خوبی بخش try را هندل کرده است اما اگر به هر دلیلی این قسمت به مشکل برخورد، در بخش catch هیچ کدی برای گرفتن اکسپشن ها نوشته نشده است!
 
-The saving grace of this awful construct is that it highlights the fact you're doing something morally dubious.
+به طور خلاصه، باید بگوییم همان‌طور که بی توجه به درد کمر می‌تواند منجر به صدماتی جدی به دیسک های کمر شود، بی توجه به ارورها، هشدارها، اکسپشن ها و … در حین فرایند توسعه ی نرم‌افزار -خواه نرم‌افزار دسکتاپ باشد، خواه اپ موبایل یا وب اپلیکیشن- می‌تواند منجر به مشکلاتی جدی در مراحل تکمیلی توسعه ی نرم‌افزار گردد که از آن جمله می‌توان به موارد زیر اشاره کرد:
+- دشواری در یافتن باگ ها زمانی که برنامه بزرگ‌تر می شود.
+- ایجاد حفره های امنیتی در نرم‌افزار و بالا رفتن ضریب هک.
+- عدم تمایل سایر توسعه دهندگان به مشارکت در توسعه ی نرم‌افزار شما
 
-If you ignore an error, turn a blind eye, and pretend that nothing has gone wrong, you run great risks. Just as my leg ended up in a worse state than if I'd stopped walking on it immediately, plowing on regardless can lead to very complex failures. Deal with problems at the earliest opportunity. Keep a short account.
-
-Not handling errors leads to:
-
-- **Brittle code.** Code that's filled with exciting, hard-to-find bugs.
-- **Insecure code.** Crackers often exploit poor error handling to break into software systems.
-- **Poor structure.** If there are errors from your code that are tedious to deal with continually, you probably have a poor interface. Express it so that the errors are less intrusive and the their handling is less onerous.
-
-Just as you should check all potential errors in your code, you need to expose all potentially erroneous conditions in your interfaces. Do not hide them, pretending that your services will always work.
-
-Why don't we check for errors? There are a number of common excuses. Which of these do you agree with? How would you counter each one?
-
-- Error handling clutters up the flow of the code, making it harder to read, and harder to spot the "normal" flow of execution.
-- It's extra work and I have a deadline looming.
-- I know that this function call will *never* return an error (printf always works, malloc always returns new memory — if it fails we have bigger problems...).
-- It's only a toy program, and needn't be written to a production-worthy level.
-
-By [Pete Goodliffe](http://programmer.97things.oreilly.com/wiki/index.php/Pete_Goodliffe)
+لذا ضروری به نظر می رسد که به محض مواجهه با ارورهایی از هر نوع، فورا اقدام به رفع آن ها کرده و هرگز کار امروز را به فردا محول نکنیم. 
