@@ -1,23 +1,17 @@
-# You Gotta Care about the Code
+# مراقب سورس‌کد باشید!
 
-It doesn't take Sherlock Holmes to work out that good programmers write good code. Bad programmers... don't. They produce monstrosities that the rest of us have to clean up. You want to write the good stuff, right? You want to be a good programmer.
+بعید به نظر می‌رسد دولوپری را بتوان یافت که دوست نداشته باشد برچسب حرفه‌ای رویش بخورد. به طور کلی، به دولوپری می‌توان لقب حرفه‌ای داد که کدهای حرفه‌ای هم بنویسید؛ اگر هم بخواهیم کدی حرفه‌ای به نظر برسد، باید به نحوهٔ نوشتن آن توجه قابل‌توجهی کرد.
 
-Good code doesn't pop out of thin air. It isn't something that happens by luck when the planets align. To get good code you have to work at it. Hard. And you'll only get good code if you actually care about good code.
+کدنویسی حرفه‌ای و اصولی اصلاً ربطی به دانش فنی دولوپر ندارد. بسیار کسانی هستند که می‌توانند الگوریتم‌های بسیار پیچیده‌ای طراحی کنند اما زمانی که پای کدنویسی به میان می‌آید، کدهای بسیار زشتی می‌نویسند. به عبارت دیگر، درک، استفاده و ریفکتور کردن کدهای ایشان بسیار دشوار است. در مقابل، دولوپرهای تازه‌کار و حد متوسطی را هم می‌توان یافت که دانش فنی ایشان اصلاً به پای گروه فوق‌الذکر نمی‌رسد، اما کدهای ایشان در یک کلام عالی است.
 
-Good programming is not born from mere technical competence. I've seen highly intellectual programmers who can produce intense and impressive algorithms, who know their language standard by heart, but who write the most awful code. It's painful to read, painful to use, and painful to modify. I've seen more humble programmers who stick to very simple code, but who write elegant and expressive programs that are a joy to work with.
+به نوعی می‌توان گفت که یکی از وجوه تمایز دولوپرهای عالی با سایر دولوپرها،‌ نگرش ایشان به کار است. این گروه از دولوپرها به خوبی با ضرب‌العجل (ددلاین) تحویل پروژه، محدودیت‌های فنی و غیره آشنایی دارند، اما در عین حال تمام تلاش خود را می‌کنند تا بهترین کدی که می‌شود را بنویسند. به طور کلی، اگر قصد دارید حرفه‌ای به نظر برسید، بایستی کدهای حرفه‌ای بنویسید و برای نوشتن کدهای حرفه‌ای هم می‌توانید استراتژی‌های زیر را مد نظر قرار دهید:
 
-Based on my years of experience in the software factory, I've concluded that the real difference between adequate programmers and great programmers is this: *attitude*. Good programming lies in taking a professional approach, and wanting to write the best software you can, within the Real World constraints and pressures of the software factory.
+- تحت هر شرایطی، صرفاً به کار کردن کد تحت شرایط عادی رضایت ندهید؛ بلکه تمام تلاش خود را به کار گیرید تا تمامی جوانب کار را بسنجید. در واقع، از سالم بودن کد (قابل اجرا بودن کد تحت هر شرایطی) اطمینان حاصل کنید.
 
-*The code to hell is paved with good intentions.* To be an excellent programmer you have to rise above good intentions, and actually *care* about the code — foster positive perspectives and develop healthy attitudes. Great code is carefully crafted by master artisans, not thoughtlessly hacked out by sloppy programmers or erected mysteriously by self-professed coding gurus.
+- کدی بنویسید که از یک سو هر دولوپر دیگری بتواند از آن سر در بیاورد و از سوی دیگر، قابل پشتیبانی و گسترش باشد.
 
-You want to write good code. You want to be a good programmer. So, you care about the code:
+- امروزه کمتر دولوپر موفقی را می‌توان یافت که به تنهایی کار کند؛‌ اکثراً یا در شرکت‌های نرم‌افزاری مشغول به کار هستند و یا اگر هم در منزل روی پروژه‌های اپن‌سورس کار می‌کند، با دیگر دولوپرهای سراسر دنیا در تعامل هستند. در همین راستا، روی مهارت‌های ارتباطی خود با دیگر همکاران فنی/غیرفنی نیز کار کنید.
 
-- In any coding situation, you refuse to hack something that only seems to work. You strive to craft elegant code that is clearly correct (and has good tests to show that it is correct).
-- You write code that is *discoverable* (that other programmers can easily pick up and understand), that is *maintainable* (that you, or other programmers, will be easily able to modify in the future), and that is correct (you take all steps possible to determine that you have solved the problem, not just made it look like the program works).
-- You work well alongside other programmers. No programmer is an island. Few programmers work alone; most work in a team of programmers, either in a company environment or on an open source project. You consider other programmers, and construct code that others can read. You want the team to write the best software possible, rather than to make yourself look clever.
-- Any time you touch a piece of code you strive to leave it better than you found it (either better structured, better tested, more understandable...).
-- You care about code and about programming, so you are constantly learning new languages, idioms, and techniques. But you only apply them when appropriate.
+- هر موقعی که با کدی برخورد کردید، تمام تلاش خود را به کار گیرید تا حتی اگر شده اندکی آن را بهبود بخشید (اگر توانستید که ساختار را بهبود بخشید و اگر امکان‌پذیر نبود، حداقل با کامنت‌گذاری درک آن را بهبود بخشید).
 
-Fortunately, you're reading this collection of advice because you do care about code. It interests you. It's your passion. Have fun programming. Enjoy cutting code to solve tricky problems. Produce software that makes you proud.
-
-By [Pete Goodliffe](http://programmer.97things.oreilly.com/wiki/index.php/Pete_Goodliffe)
+- گرچه دولوپرها همواره در معرض تکنولوژی‌های جدیدی هستند اما این هرگز بدان معنا نیست که در هر پروژه‌ای باید از جدیدترین تکنولوژی‌ها استفاده کنید بلکه بایستی نیاز پروژه را درک کرده و بسته به ماهیت، نیازها و زیرساخت پروژه اقدام به استفاده از زبان‌ برنامه‌نویسی، لایبرری، فریمورک و یا ابزار مناسب کنید.
