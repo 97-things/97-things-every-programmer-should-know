@@ -84,7 +84,7 @@
 1. [تست‌ها علاوه بر صحیح بودن، می‌بایست دقیق هم باشند](thing_81/README.md)
 1. [تست نرم‌افزار و سورس‌کد را آخر شب‌ها و آخر هفته‌ها انجام دهید!](thing_82/README.md)
 1. [مقایسه‌ای مابین مهندسین نرم‌افزار و دیگر مهندسان](thing_83/README.md)
-1. [Thinking in States](thing_84/README.md)
+1. [از نوشتن کدهای اضافی پرهیز کنید](thing_84/README.md)
 1. [دو تا مغز بهتر ایک مغز است!](thing_85/README.md)
 1. [دو اشتباه می توانند یک بخش درست ایجاد کنند! (و رفع آنها دشوار است)](thing_86/README.md)
 1. [Ubuntu Coding for Your Friends](thing_87/README.md)
