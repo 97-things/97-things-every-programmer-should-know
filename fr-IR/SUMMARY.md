@@ -74,7 +74,7 @@
 1. [علوم انسانی بخوانید!](thing_71/README.md)
 1. [تا حد ممکن دست به اختراع مجدد چرخ نزنید!](thing_72/README.md)
 1. [در مقابل وسوسه الگوی Singleton مقاومت کنید](thing_73/README.md)
-1. [مسیر(جاده ی)  Performance مملو از بمب های کد کثیف است!](thing_74/README.md)
+1. [وابستگی‌های زیاد دشمن ریفکتورینگ هستند!](thing_74/README.md)
 1. [سادگی از اختصار می آید(کم گوی و گزیده گوی!)](thing_75/README.md)
 1. [The Single Responsibility Principle](thing_76/README.md)
 1. [با بله هم میتوانید شروع کنید!](thing_77/README.md)
