@@ -1,45 +1,22 @@
-# Test Precisely and Concretely
+# تست‌ها علاوه بر صحیح بودن، می‌بایست دقیق هم باشند
+در آموزش قبل گفتیم که در حین فرایند تست نرم‌افزار، ضروری است که عملکرد مورد انتظار از نرم‌افزار را تست کرد تا اینکه خصوصیات جانبی و حاشیه‌ای نرم‌افزار که ربطی هم به عملکردش ندارند مورد ارزیابی قرار گیرند اما این در حالی است که این سوء‌تفاهم نمی‌بایست پیش بیاید که تست‌های نرم‌افزاری می‌توانند کلی و دقیق نباشند! به‌ عنوان یک قانون کلی، یک تست خوب می‌بایست دقت و درستی عملکرد کد را بسنجد.
 
-It is important to test for the desired, essential behavior of a unit of code, rather than test for the incidental behavior of its particular implementation. But this should not be taken or mistaken as an excuse for vague tests. Tests need to be both accurate *and* precise.
+برای روشن‌تر شدن این مسأله، مثالی از دنیای واقعی برنامه‌نویسی می‌زنیم. الگوریتم سورت کردن یکسری داده (مثلاً از بزرگ به کوچک یا به ترتیب حروف الفبا) چیزی است که معمولاً دولوپرها با آن سروکار دارند. وقتی از دولوپری این سؤال پرسیده شود که هدف از تست چنین الگوریتمی چیست، پاسخی که معمولاً با آن مواجه می‌شویم این است که «داده‌ها باید به درستی یا از بزرگ به کوچک و با بالعکس سورت شوند».
 
-Something of a tried, tested, and testing classic, sorting routines offer an illustrative example. Implementing a sorting algorithm is not necessarily an everyday task for a programmer, but sorting is such a familiar idea that most people believe they know what to expect from it. This casual familiarity, however, can make it harder to see past certain assumptions.
-
-When programmers are asked "What would you test for?" by far and away the most common response is "The result of sorting is a sorted sequence of elements." While this is true, it is not the whole truth. When prompted for a more precise condition, many programmers add that the resulting sequence should be the same length as the original. Although correct, this is still not enough. For example, given the following sequence:
-
+گرچه چنین پاسخی کاملاً درست است، اما تمام ماجرا نیست! در واقع، یک تست دقیق برای سنجش چنین الگوریتمی این‌گونه عمل می‌کند که پس از سورت شدن، طول عناصر آرایهٔ مد نظر می‌بایست با طول آرایه قبل از سورت شدن یکسان باشد. گرچه چنین دیدگاهی درست است،‌ اما باز هم کافی نیست! به عنوان نمونه داریم:
 ```
 3 1 4 1 5 9
 ```
-
-The following sequence satisfies a postcondition of being sorted in non-descending order and having the same length as the original sequence:
-
+خروجی زیر مجموعه اعدادی را نشان می‌دهد که هم از نظر طول با آرایهٔ اورجینال برابری می‌کند و هم اعداد از کوچک به بزرگ سورت شده‌اند:
 ```
 3 3 3 3 3 3
 ```
+اما می‌بینیم که تک‌تک المان‌های آرایه در خروجی وجود ندارند. این مثال برگرفته از کدی واقعی است که خوشبختانه پیش از ریلیس، باگ آن رفع شد؛ در واقع،‌ مشکل از اینجا ناشی می‌شد که کل خروجی با اولین عضو آرایه (عدد ۳) پر می‌شد.
 
-Although it satisfies the spec, it is also most certainly not what was meant! This example is based on an error taken from real production code (fortunately caught before it was released), where a simple slip of a keystroke or a momentary lapse of reason led to an elaborate mechanism for populating the whole result with the first element of the given array.
+پس ما می‌بایست تستی می‌نوشتیم که بسنجد کلیهٔ اعضای آرایه سورت شده، طول آن‌ها برابر با آرایهٔ اصلی باشد و از همه مهم‌تر، اعضا دقیقاً همان اعضای اورجینال باشند.
 
-The full postcondition is that the result is sorted and that it holds a permutation of the original values. This appropriately constrains the required behavior. That the result length is the same as the input length comes out in the wash and doesn't need restating.
+اگر بخواهیم تستی به معنای واقعی کلمه حرفه‌ای بنویسیم، باز هم شرایط توصیف شدهٔ بالا کفایت نمی‌کنند! در حقیقت، یک تست خوب باید خوانا، قابل‌فهم و در عین حال ساده باشد تا یک تستر به سادگی بتواند متوجه شود که آیا نتیجهٔ آن درست است یا غلط به طوری که یک دولوپر صاحب‌نام به اسم Hoare در این باره می‌گوید:
 
-Even stating the postcondition in the way described is not enough to give you a good test. A good test should be readable. It should be comprehensible and simple enough that you can see readily that it is correct (or not). Unless you already have code lying around for checking that a sequence is sorted and that one sequence contains a permutation of values in another, it is quite likely that the test code will be more complex than the code under test. As Tony Hoare observed:
+به‌طورکلی ۲ راه برای طراحی معماری یک نرم‌افزار وجود داره؛ راه اول این‌که آن‌قدر آن‌را ساده طراحی کنی که هیچ نقصی در آن وجود نداشته باشه و راه دوم این‌که آن‌قدر آن‌را پیچیده طراحی کنی که هیچ نقصی آشکارا در آن دیده نشه!
 
-> There are two ways of constructing a software design: One way is to make it so simple that there are *obviously* no deficiencies and the other is to make it so complicated that there are no obvious deficiencies.
-
-Using concrete examples eliminates this accidental complexity and opportunity for accident. For example, given the following sequence:
-
-```
-3 1 4 1 5 9
-```
-
-The result of sorting is the following:
-
-```
-1 1 3 4 5 9
-```
-
-No other answer will do. Accept no substitutes.
-
-Concrete examples helps to illustrate general behavior in an accessible and unambiguous way. The result of adding an item to an empty collection is not simply that it is not empty: It is that the collection now has a single item. And that the single item held is the item added. Two or more items would qualify as not empty. And would also be wrong. A single item of a different value would also be wrong. The result of adding a row to a table is not simply that the table is one row bigger. It also entails that the row's key can be used to recover the row added. And so on.
-
-In specifying behavior, tests should not simply be accurate: They must also be precise.
-
-By [Kevlin Henney](http://programmer.97things.oreilly.com/wiki/index.php/Kevlin_Henney)
+با این تفاسیر، به این نتیجه می‌رسیم که تست نرم‌افزاری در صنعت برنامه‌نویسی که روز به روز شاهد اپلیکیشن‌های پیچیده‌‌تری در آن هستیم الزامی است اما این در حالی است که تست‌ها علاوه بر سنجش صحت نرم‌افزار یا اپلیکیشن، می‌بایست دقیق هم باشند.
