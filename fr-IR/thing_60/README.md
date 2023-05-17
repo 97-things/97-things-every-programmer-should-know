@@ -1,17 +1,16 @@
-# News of the Weird: Testers Are Your Friends
+# تستر‌های نرم‌افزار دشمن دولوپرها نیستند!
 
-Whether they call themselves *Quality Assurance* or *Quality Control*, many programmers call them *Trouble*. In my experience, programmers often have an adversarial relationship with the people who test their software. "They're too picky" and "They want everything perfect" are common complaints. Sound familiar?
+کسانی که اقدام به تست نرم‌افزار به‌منظور اطمینان حاصل کردن از صحت عملکردش می‌کنند معمولاً با نام‌هایی همچون Quality Assurance ،Quality Control و یا Tester شناخته می‌شوند اما از دید دولوپرها فرقی نمی‌کند این متخصصین را چه بنامیم چراکه ایشان این گروه از افراد را «معضل» قلمداد می‌کنند!
 
-I'm not sure why, but I've always had a different view of testers. Maybe it's because the "tester" at my first job was the company secretary. Margaret was a very nice lady who kept the office running, and tried to teach a couple of young programmers how to behave professionally in front of customers. She also had a gift for finding any bug, no matter how obscure, in mere moments.
+جالب است بدانیم که وقتی در مورد تسترها و یا مسئولین کنترل کیفیت از دولوپرها سؤال می‌کنیم، جملاتی همچون «خیلی گیر هستن»، «بیش از حد مته به خشخاش می‌گذارن» و چیزهایی از این است از زبان ایشان می‌شنویم.
 
-Back then I was working on a program written by an accountant who thought he was a programmer. Needless to say, it had some serious problems. When I thought I had a piece straightened out, Margaret would try to use it and, more often than not, it would fail in some new way after just a few keystrokes. It was at times frustrating and embarrassing, but she was such a pleasant person that I never thought to blame her for making me look bad. Eventually the day came when Margaret was able to cleanly start the program, enter an invoice, print it, and shut it down. I was thrilled. Even better, when we installed it on our customer's machine it all worked. They never saw any problems because Margaret had helped me find and fix them first.
+چرا باید به تستترها به شکل یک رفیق نگاه کنیم؟
+ماحصل کار تسترها این است که آبروی ما جلوی مشتری نرود، کارفرما از دست ما شاکی نشود و درنهایت شغل خود را از دست ندهیم! با این تفاسیر، گرچه درظاهر تسترها با ریپورت کردن مشکلات نرم‌افزار ممکن است موجبات ناراحتی دولوپرها را فراهم آورند اما درنهایت این کار تسترها منجر به این خواهد گشت تا دولوپرها حرفه‌ای‌تر جلوه پیدا کنند و از همین روی بهترین رفیق دولوپرها محسوب می‌شوند.
 
-So that's why I say testers are your friends. You may think the testers make you look bad by reporting trivial issues. But when customers are thrilled because they weren't bothered by all those "little things" that QC made you fix, then you look great. See what I mean?
+برای روشن‌تر شدن اهمیت این مسأله، مثالی می‌زنیم؛ فرض کنیم شما دولوپری هستید که روی پروژه‌ای مرتبط با هوش مصنوعی کار می‌کنید (یکی از پیچیده‌ترین نمونه نرم‌افزارهایی که در صنعت IT می‌توان پیاده‌سازی کرد).
 
-Imagine this: You're test-driving a utility that uses "ground-breaking artificial intelligence algorithms" to find and fix concurrency problems. You fire it up and immediately notice they misspelled "intelligence" on the splash screen. A little inauspicious, but it's just a typo, right? Then you notice the configuration screen uses check boxes where there should be radio buttons, and some of the keyboard shortcuts don't work. Now, none of these is a big deal, but as the errors add up you begin to wonder about the programmers. If they can't get the simple things right, what are the odds their AI can really find and fix something tricky like concurrency issues?
+در ادمین پنل اپلیکیشن، یکسری Typo (تایپو یا غلط املایی) وجود دارد، برخی لینک‌ها به صفحهٔ درستی ارجاع نمی‌دهند و چیزهایی از این است که در مقایسه با باگ‌های ساختاری، اصلاً چیزی به‌حساب نمی‌آیند.
 
-They could be geniuses who were so focused on making the AI insanely great that they didn't notice those trivial things. And without "picky testers" pointing out the problems, you wound up finding them. And now you're questioning the competency of the programmers.
+وقتی‌که درحال ارائهٔ دمویی از اپلیکیشن به مشتری هستید، مشتری متوجه مشکلاتی جزئی از این دست می‌شود و اتفاقی که می‌افتد این است که باخود می‌گوید «کسی‌که چیزهایی ابتدایی از این دست رو نتونسته درست کنه، احتمال داره در طراحی الگوریتم‌های هوش مصنوعی، آنالیز داده‌ها و غیره هم بی‌دقتی کرده باشه!».
 
-So as strange as it may sound, those testers who seem determined to expose every little bug in your code really are your friends.
-
-By [Burk Hufnagel](http://programmer.97things.oreilly.com/wiki/index.php/BurkHufnagel)
+به همین سادگی ایماژی منفی از شما در ذهن مشتری یا کارفرما می‌تواند شکل گیرد و این احتمال نیز وجود دارد که ماهیت قرارداد نیز به خطر بیافتد و اینجا است که نقش تسترها اهمیت پیدا می‌کند؛ به‌عبارت دیگر، این گروه از اعضای تیم -که حتی منشی شرکت هم اگر فرد بادقتی باشد می‌تواند به‌نوعی یک تستر خوب محسوب شود- نه‌تنها منجر به این خواهند گشت که آبروی شما نرود، بلکه این کار ایشان درنهایت هم به‌نفع شرکت و هم مشتری خواهد شد.
