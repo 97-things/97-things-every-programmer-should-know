@@ -1,19 +1,28 @@
-# Message Passing Leads to Better Scalability in Parallel Systems
+# ضرورت آشنایی با مفاهیم کانکارنسی و پاراللیزم
 
-Programmers are taught from the very outset of their study of computing that concurrency — and especially parallelism, a special subset of concurrency — is hard, that only the very best can ever hope to get it right, and even they get it wrong. There is invariably great focus on threads, semaphores, monitors, and how hard it is to get concurrent access to variables to be thread-safe.
+بسیاری از دولوپرها بر این باورند که Concurrency (کانکارنسی یا هم‌زمانی) و Parallelism (پاراللیزم یا موازات) فرایندهای بسیار پیچیده‌ای بوده و فقط حرفه‌ای‌ها می‌توانند به شکل صحیحی آن‌ها را پیاده‌سازی کنند.
 
-True, there are many difficult problems, and they can be very hard to solve. But what is the root of the problem? Shared memory. Almost all the problems of concurrency that people go on and on about relate to the use of shared mutable memory: race conditions, deadlock, livelock, etc. The answer seems obvious: Either forgo concurrency or eschew shared memory!
+شاید به‌نوعی بتوان گفت که این دو مفهوم فرایندهای پیچیده‌ای بوده و برای پیاده‌سازی اصولی آن باید باتجربه بود، اما اگر دولوپری بخواهد برچسب حرفه‌ای روی خود بزند، چاره‌ای جز این ندارد که علاوه‌بر آشنایی با این مفاهیم، نحوهٔ پیاده‌سازی آن‌ها در سیستم‌هایی با تعداد پروسس‌های زیاد را هم بلد باشد.
 
-Forgoing concurrency is almost certainly not an option. Computers have more and more cores on an almost quarterly basis, so harnessing true parallelism becomes more and more important. We can no longer rely on ever increasing processor clock speeds to improve application performance. Only by exploiting parallelism will the performance of applications improve. Obviously, not improving performance is an option, but it is unlikely to be acceptable to users.
+ مفهوم Concurrency چیست؟
+به‌طور خلاصه، بایستی گفت که منظور از کانکارنسی این است که ۲ یا بیش از ۲ تسک به‌صورت هم‌زمان شروع شده، اجرا شوند و درنهایت توسط منابع مشترک -همچون یک پردازنده یا حافظهٔ به اشتراک گذاشته شده- بدون ترتیب خاصی تکمیل گردند. به‌عبارت دیگر، زمانی‌که یک اپلیکیشن قادر به پردازش حداقل ۲ تسک در یک زمان باشد، آن را اپلیکیشنی کانکارنت (Concurrent) می‌نامیم.
 
-So can we eschew shared memory? Definitely.
+گرچه به‌نظر می‌رسد که تمامی‌ تسک‌ها به‌صورت موازی درحال اجرا هستند اما در عمل این‌چنین نیست بلکه بدین شکل است که تسک اول شروع شده سپس به حالت انتظار درمی‌آید و منابع به تسک دوم اختصاص می‌یابند و در ادامه سیستم‌عامل هم براساس اولویت تسک‌ها، سی‌پی‌یو و دیگر منابع سیستمی همچون مموری در اختیار تسک‌ها قرار داده تا تکمیل گردند.
 
-Instead of using threads and shared memory as our programming model, we can use processes and message passing. Process here just means a protected independent state with executing code, not necessarily an operating system process. Languages such as Erlang (and occam before it) have shown that processes are a very successful mechanism for programming concurrent and parallel systems. Such systems do not have all the synchronization stresses that shared memory, multi-threaded systems have. Moreover there is a formal model — Communicating Sequential Processes (CSP) — that can be applied as part of the engineering of such systems.
+مقهوم Parallelism چیست؟
+درصورتی‌که چندین تسک یا یک تسکی که به چندین بخش تقسیم‌بندی شده و در آن واحد توسط پردازنده‌ای چندهسته‌ای (Multi-Core) هندل شود ما با Parallelism سروکار داریم بدین شکل که هر هسته به یک تسک یا یکی از بخش‌های تسکی که به چندین بخش تقسیم‌بندی شده اختصاص می‌یابد.
 
-We can go further and introduce dataflow systems as a way of computing. In a dataflow system there is no explicitly programmed control flow. Instead a directed graph of operators, connected by data paths, is set up and then data fed into the system. Evaluation is controlled by the readiness of data within the system. Definitely no synchronization problems.
+به‌خاطر داشته باشیم که در Parallelism ما به سخت‌افزارهایی با پردازندهٔ چندهسته‌ای نیاز داریم و این درحالی است که اگر پردازده صرفاً یک هسته داشته باشد، کانکارنسی اتفاق خواهد افتاد نه پاراللیزم.
 
-Having said all this, languages such as C, C++, Java, Python, and Groovy are the principal languages of systems development and all of these are presented to programmers as languages for developing shared memory, multi-threaded systems. So what can be done? The answer is to use — or, if they don't exist, create — libraries and frameworks that provide process models and message passing, avoiding all use of shared mutable memory.
+تفاوت‌های Concurrency و Parallelism چیست؟
+1 - کانکارنسی زمانی است که حداقل ۲ تسک در بازهٔ زمانی Overlapping (روی‌هم افتاده) شروع، اجرا و تکمیل می‌گردند درحالی‌که پاراللیزم به زمان اطلاق می‌گردد که تسک‌ها به‌معنای واقعی کلمه در آن واحد -مثلاً در یک پردازندهٔ چندهسته‌ای- اجرا می‌شوند.
 
-All in all, not programming with shared memory, but instead using message passing, is likely to be the most successful way of implementing systems that harness the parallelism that is now endemic in computer hardware. Bizarrely perhaps, although processes predate threads as a unit of concurrency, the future seems to be in using threads to implement processes.
+2 - کانکارنسی مرتبط با اجرای پروسه‌های مجزا از یکدیگر است درحالی‌که پاراللیزم اجرای هم‌زمان تسک‌های -احتمالاً- مرتبط است.
 
-By [Russel Winder](http://programmer.97things.oreilly.com/wiki/index.php/Russel_Winder)
+3 - یک اپلیکیشن می‌تواند کانکارنت باشد اما پارالل نباشد؛ به‌عبارت دیگر، چنین اپلیکیشنی بیش از یک تسک را در آن واحد پردازش می‌کند اما هیچ ۲ تسکی در یک لحظه اجرا نمی‌شوند.
+
+4 - یک اپلیکیشن می‌تواند پارالل باشد اما کانکارنت نباشد؛ به‌عبارت دیگر، چنین اپلیکیشنی بخش‌های مختلف یک تسک را توسط یک پردازندهٔ چندهسته‌ای در آن واحد پردازش می‌کند.
+
+5 - یک اپلیکیشن می‌تواند نه پارالل باشد و نه کانکارنت؛ به‌عبارت دیگر، چنین اپلیکیشنی تمامی تسک‌ها را به‌ترتیب یکی پس از دیگری پردازش می‌کند.
+
+6 - یک اپلیکیشن هم می‌تواند پارالل باشد و هم کانکارنت؛ به‌عبارت دیگر، چنین اپلیکیشنی می‌تواند چندین تسک‌ را به‌صورت هم‌زمان از طریق یک پردازندهٔ چندهسته‌ای در آن واحد پردازش کند.
