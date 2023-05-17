@@ -1,33 +1,21 @@
-# The Longevity of Interim Solutions
+# چه‌موقع و چگونه از راه‌کارهای موقتی در کدنویسی استفاده کنیم؟
 
-Why do we create interim solutions?
+در پاسخ به این سؤال که چرا برخی دولوپرها دست به استفاده از سولوشن‌های (راه‌کارهای) موقتی می‌زنند بایستی گفت که علت اصلی مشکلات غیرمنتظره‌ای هستند که پیش می‌آیند و بایستی در کوتاه‌ترین زمان ممکن رفع شوند.
 
-Typically there is some immediate problem to solve. It might be internal to the development team, some tooling that fills a gap in the tool chain. It might be external, visible to end users, such as a workaround that addresses missing functionality.
+در بسیاری از تیم‌های توسعه‌ٔ نرم‌افزار همواره بخش‌‌هایی وجود دارند که هرگز از استانداردهای کدنویسی تبعیت نکرده و با سایر بخش‌های سورس‌کد هم‌خوانی ندارند و بالاخره روزی می‌بایست ریفکتور شده و با سایر بخش‌های سیستم هارمونی پیدا کنند.
 
-In most systems and teams you will find some software that is somewhat dis-integrated from the system, that is considered a draft to be changed sometime, that does not follow the standards and guidelines that shaped the rest of the code. Inevitably you will hear developers complaining about these. The reasons for their creation are many and varied, but the key to an interim solution's success is simple: It is useful.
+نیاز به توضیح هم نیست که اکثر دولوپرها همواره از این موضوع شاکی هستند؛ گرچه دلایل بسیاری برای وجود این دست «راه‌کارهای موقتی» بسیارند اما کلید موفقیت این دست راه‌کارها کاربردی بودنشان است!
 
-Interim solutions, however, acquire inertia (or momentum, depending on your point of view). Because they are there, ultimately useful and widely accepted, there is no immediate need to do anything else. Whenever a stakeholder has to decide what action adds the most value, there will be many that are ranked higher than proper integration of an interim solution. Why? Because it is there, it works, and it is accepted. The only perceived downside is that it does not follow the chosen standards and guidelines — except for a few niche markets, this is not considered to be a significant force.
+باتوجه به این که Interim Solutions (راه‌کارهای موقتی) به‌نوعی مفید واقع شده و مورد قبول برخی دولوپرها قرار گرفته‌اند، کمتر کسی را می‌توان یافت که برای رفع آن‌ها گامی بردارد چراکه مفید، کاربردی و مشکل‌گشا بوده و تنها نقطه‌ضعفی که دارند این است که استانداردهای کدنویسی را فالو نمی‌کنند (البته این درحالی است که چنین چیزی در بسیاری از شرکت‌های نرم‌افزاری و تیم‌های توسعه اصلاً مشکل خاصی محسوب نمی‌شود).
 
-So the interim solution remains in place. Forever.
+حال ممکن است زمان‌هایی پیش آید که پس از پیاده‌سازی راه‌کارهای موقتی به‌منظور رفع یک باگ و یا افزودن یک فیچر جدید، نرم‌افزار پس از مدتی به مشکل می‌خورد و از آنجا که استانداردهای کدنویسی در پیاده‌سازی این دست راه‌کارها اعمال نشده، طبق روال هم به‌سادگی نمی‌توان دست به رفع مشکلات پیش آمده زد.
 
-And if problems arise with that interim solution, it is unlikely there will be provision for an update that brings it into line with accepted production quality. What to do? A quick interim update on that interim solution often does the job. And will most likely be well received. It exhibits the same strengths as the initial interim solution... it is just more up to date.
+در پاسخ به این سؤال که در چنین مواقعی چه باید کرد؟ بایستی گفت که معمولاً آپدیت‌های موقعی روی باگ‌های موجود در راه‌کارهای موقتی جواب می‌دهند و از لحاظ ماهیت، آپدیت‌های موقتی دقیقاً شبیه راه‌کارهای موقتی هستند با این تفاوت که کمی به‌روزشده‌تر می‌باشند.
 
-Is this a problem?
+همواره این نکته را به‌خاطر داشته باشیم زمانی‌که پروژه‌ای حاوی راه‌کارهای موقتی بسیاری باشد، از یک سو پیچیدگی سورس‌کد افزایش یافته و از سوی دیگر نگهداری، آپدیت و دیباگینگ نرم‌افزار هم به‌مراتب دشوارتر خواهد شد. به‌عنوان یک Best Practice کلی، وقتی در فرایند توسعه‌ٔ نرم‌افزار با مشکلی روبه‌رو شدید، ابتدا مراحل زیر را به ترتیب اولویت انجام دهید:
 
-The answer depends on your project, and on your personal stake in the production code standards. When the systems contains too many interim solutions, its entropy or internal complexity grows and its maintainability decreases. However, this is probably the wrong question to ask first. Remember that we are talking about a solution. It may not be your preferred solution — it is unlikely to be anyone's preferred solution — but the motivation to rework this solution is weak.
+۱- تا حد ممکن از ارائهٔ راه‌کارهای موقتی خودداری کنید. خودداری‌هایی از این دست در بسیاری از موارد چارهٔ کار نیست چراکه ممکن است مشکلی جدی بوجود آمده باشد که نیاز است تا در اسرع وقت رفع گردد و اگر دولوپر پروژه بخواهد استانداردهایی که تا پیش از این به‌کار می‌‌بسته را در رفع مشکل فعلی مدنظر گیرد، این استانداردها دست‌وپاگیر خواهند بود اما به‌هرحال به‌عنوان اولین تلاش چنین چیزی توصیه می‌شود.
 
-So what can we do if we see a problem?
+۲- تا حد ممکن مقابل اصرارهای مدیر پروژه به‌منظور اعمال یک فیچر خاص در کمترین زمان ممکن مقابله نمایید. در برخی موارد، اصرارهای مدیر پروژه آنقدرها هم که وی وانمود می‌کند لازم‌الاجرا نیست و از همین روی ضرری ندارد که تا حدی در مقابل اصرارهای وی مقاومت کرد.
 
-1. Avoid creating an interim solution in the first place.
-2. Change the forces that influence the decision of the project manager.
-3. Leave it as is.
-
-Let's examine these options more closely:
-
-1. Avoidance does not work in most places. There is an actual problem to solve, and the standards have turned out to be too restrictive. You might spend some energy trying to change the standards. An honorable albeit tedious endeavor... and that change will not be effective in time for your problem at hand.
-2. The forces are rooted in the project culture, which resists volitional change. It could be successful in very small projects — especially if it's just you — and you just happen to clean the mess without asking in advance. It could also be successful if the project is such a mess that it is visibly stalled and some time for cleaning up is commonly accepted.
-3. The status quo automatically applies if the previous option does not.
-
-You will create many solutions, some of them will be interim, most of them will be useful. The best way to overcome interim solutions is to make them superfluous, to provide a more elegant and useful solution. May you be granted the [serenity](http://en.wikipedia.org/wiki/Serenity_prayer) to accept the things you cannot change, courage to change the things you can, and wisdom to know the difference.
-
-By [Klaus Marquardt](http://programmer.97things.oreilly.com/wiki/index.php/Klaus_Marquardt)
+۳- اگر هم مجبور به این کار شدید، تا حد ممکن حداقل‌ استانداردهای کدنویسی را رعایت نمایید. به‌عبارت دیگر، اگر گایدلاین‌ها و استانداردهای کدنویسی را گروه‌بندی کنید، می‌توانید در اعمال چنین راه‌کارهایی آن‌دسته از استانداردهایی که به‌مراتب مهم‌تر از بقیه هستند را رعایت نموده و الباقی را نادیده بگیرید.
