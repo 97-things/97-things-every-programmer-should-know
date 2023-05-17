@@ -1,21 +1,11 @@
-# Don't Rely on "Magic Happens Here"
+# فرایند توسعه یک نرم‌افزار خوب اصلاً شانسی نیست
 
-If you look at any activity, process, or discipline from far enough away it looks simple. Managers with no experience of development think what programmers do is simple and programmers with no experience of management think the same of what managers do.
+اگر ما به هر چیزی از مکانیکی گرفته تا نجاری و یا طراحی و سایر کارهای هنری نگاه کنیم، خارج از گود همه این کارها ساده به نظر می رسند؛ مدیران معمولاً بر این باورند که توسعه دهندگان اصلاً کار عجیب و غریبی انجام نمی‌دهند و توسعه دهندگان هم در مقابل فکر می‌کنند مدیران فقط در دفتر خود نشسته و دستور می دهند!
 
-Programming is something some people do — some of the time. And the hard part — the thinking — is the least visible and least appreciated by the uninitiated. There have been many attempts to remove the need for this skilled thinking over the decades. One of the earliest and most memorable is the effort by Grace Hopper to make programming languages less cryptic — which some accounts predicted would remove the need for specialist programmers. The result (COBOL) has contributed to the income of many specialist programmers over subsequent decades.
+برنامه نویسی صرفاً نوشتن کد نیست بلکه توانایی حل مسئله، الگوریتم نویسی، تحلیل دیتابیس و … جزو بخش‌های لاینفک حرفه ی برنامه نویسی اند که کمتر مد نظر قرار داده می‌شوند و سختی این دست مهارت ها در مقایسه با کدنویسی به مراتب بیشتر است.
 
-The persistent vision that software development can be simplified by removing programming is, to the programmer who understands what is involved, obviously naïve. But the mental process that leads to this mistake is part of human nature and programmers are just as prone to making it as everyone else.
+با در نظر گرفتن این مسائل، باز هم شاهد برخی برنامه نویسان هستیم که صرفاً درگیر فرایند توسعه ی نرم‌افزار بوده و هرگز در مسائلی همچون تحلیل بازار، تجربه ی کاربری، تأمین بودجه ی توسعه ی نرم افزار، راه اندازی سرور، تضمین کیفیت محصول نهایی، نگهداری نرم‌افزار و … دخالت نمی کنند و معمولاً فکر می‌کنند که دشوارترین کار ممکن در توسعه ی یک محصول نرم‌افزاری مختص به خودشان است و سایر اعضای تیم هیچ کار خاصی انجام نمی دهند.
 
-On any project there are likely many things that an individual programmer doesn't get actively involved in: eliciting requirements from users, getting budgets approved, setting up the build server, deploying the application to QA and production environments, migrating the business from the old processes or programs, etc.
+گاهی اوقات مدیران شرکت های نرم افزاری هم در چنین دامی می افتند. پروژه آنقدر سر وقت، بدون باگ و خوب تحویل مشتری می‌شود که مدیر فکر می‌کند همه چیز با «اجی مجی لاترجی» درست شده و حضور «مدیر پروژه» را اساساً اضافی تلقی می کنند.
 
-When you aren't actively involved in things there is an unconscious tendency to assume that they are simple and happen "by magic." While the magic continues to happen all is well. But when — it is usually "when" and not "if" — the magic stops the project is in trouble.
-
-I've known projects lose weeks of developer time because no one understood how they relied on "the right" version of a DLL being loaded. When things started failing intermittently team members looked everywhere else before someone noticed that "a wrong" version of the DLL was being loaded.
-
-Another department was running smoothly — projects delivered on time, no late night debugging sessions, no emergency fixes. So smoothly, in fact, that senior management decided that things "ran themselves" and they could do without the project manager. Inside six months the projects in the department looked just like the rest of the organization — late, buggy and continually being patched.
-
-You don't have to understand all the magic that makes your project work, but it doesn't hurt to understand some of it — or to appreciate someone who understands the bits you don't.
-
-Most importantly, make sure that when the magic stops it can be started again.
-
-By [AlanGriffiths](http://programmer.97things.oreilly.com/wiki/index.php/AlanGriffiths)
+این‌ها دام‌هایی هستند که معمولاً اعضای تیم های نرم افزاری در آن‌ها می‌افتند که شدیداً باید از این‌گونه دام‌ها حذر کرد. در فرایند توسعه ی نرم‌افزار سعی کنید در یک حوزه عمیق شوید و به خوبی زیر و بم آن را فرا بگیرید اما هرگز از سایر حوزه ها مثل هاستینگ، کانفیگ سرور، مسائل امنیتی، بهینه سازی و … غافل نشوید چرا که آگاهی از این حوزه ها، منجر به این خواهد شد تا با دید بازتری بتوانید برای حل مسائل پیچیده ی پروژه ی خود، الگوریتم هایی اصولی و بهینه بنویسید.
