@@ -1,27 +1,23 @@
-# Prevent Errors
+# تا حد ممکن از نمایش ارورها برای کاربر اجتناب کنید!
 
-Error messages are the most critical interactions between the user and the rest of the system. They happen when communication between the user and the system is near breaking point.
+پیام‌های خطا (Error Messages) یکی از رایج‌ترین راه‌های ارتباطی کاربران با سیستم پیش‌رویشان است و درواقع این پیام‌‌ها خبر از اتفاقی غیرمنتظره می‌دهند.
 
-It is easy to think of an error as being caused by a wrong input from the user. But people make mistakes in predictable, systematic ways. So it is possible to 'debug' the communication between the user and the rest of the system just as you would between other system components.
+آنچه در ارتباط با تعامل کاربران با یک سیستم نرم‌افزاری می‌بایست همواره مدنظر قرار داد این است که کاربران معمولاً به شکلی سیستماتیک و قابل‌پیش‌بینی منجر به ایجاد ارورها می‌شوند (به‌طورمثال، وارد کردن یک ورودی غیر عددی در فیلدی که صرفاً عدد می‌گیرد). از همین روی، به دلیل قابل‌پیش‌بینی بودن این نوع تعامل، به‌سادگی قادر خواهیم بود همان‌طور که سایر بخش‌های سیستم را دیباگ می‌کنیم، دست به دیباگ کردن نحوهٔ تعامل کاربران با سیستم نیز بزنیم.
 
-For instance, say you want the user to enter a date within an allowed range. Rather than letting the user enter any date, it is better to offer a device such as a list or calendar showing only the allowed dates. This eliminates any chance of the user entering a date outside of the range.
+برای روشن‌تر شدن این مسأله، مثالی می‌زنیم؛ فرض کنیم یک فیلد ورودی داریم که صرفاً مخصوص دریافت تاریخ است آن‌هم در یک بازهٔ خاص؛ در چنین شرایطی، به‌جای آن که به کاربر اجازه دهیم تا هر تاریخی را وارد کند، به‌سادگی می‌توانیم طیفی از تاریخ‌هایی که مجاز هستند را درمعرض دیدش قرار داده تا وی یکی از آن‌ها را انتخاب کند. چنین کاری احتمال آن‌که کاربر تاریخی خارج از طیف مدنظر را وارد سازد کاهش داده و همین مسأله منجر به ایجاد تجربهٔ کاربری به‌مراتب بهتری می‌گردد.
 
-Formatting errors are another common problem. For instance, if a user is presented with a Date text field and enters an unambiguous date such as "July 29, 2012" it is unreasonable to reject it simply because it is not in a preferred format (such as "DD/MM/YYYY"). It is worse still to reject "29 / 07 / 2012" because it contains extra spaces — this kind of problem is particularly hard for users to understand as the date appears to be in the desired format.
+علاوه‌بر این، گاهی‌اوقات تنبلی دولوپرها هم منجر به سختی کشیدن بیشتر کاربران درحین استفاده از اپلیکیشن می‌شود. برای روشن‌تر شدن این مسأله، مجدد به مثال فوق بازمی‌گردیم؛ وقتی که کاربران با فیلدی که برای درج تاریخ درمعرض دیدشان قرار می‌گیرند مواجه می‌شوند، ممکن است تاریخ مدنظر خود را به‌صورت مثلاً 14-12-1390 وارد کنند اما این درحالی است که پس از ارسال دیتا برای سرور، صرفاً فرمتی همچون ۱۳۹۰/۱۲/۱۴ قابل‌قبول است و دادهٔ ورودی کاربر غیرقابل‌قبول تلقی می‌گردد.
 
-This error occurs because it is easier to reject the date than parse the three or four most common date formats. These kind of petty errors lead to user frustration, which in turn lead to additional errors as the user loses concentration. Instead, respect users' preference to enter information, not data.
+در چنین شرایطی، دولوپرها ۲ راه‌کار پیش‌رو دارند؛ راه‌کار اول این که انواع فرمت‌هایی که کاربر می‌تواند وارد کند را تفسیر کرده و در دیتابیس ذخیره سازند (مثلاً فرمت‌هایی همچون 14-12-1390 یا ۱۳۹۰/۱۲/۱۴ یا حتی بااستفاده از اسپیس و به‌صورت 14 12 1390) و راه‌کار دوم این که صرفاً یک فرمت را مدنظر قرار داده و اگر کاربری چیزی به غیر از آن‌را وارد ساخت، خیلی ساده یک پیام خطا درمعرض دیدش قرار دهند.
 
-Another way of avoiding formatting errors is to offer cues — for instance, with a label within the field showing the desired format ("DD/MM/YYYY"). Another cue might be to divide the field into three text boxes of two, two, and four characters.
+از آنجا که راه‌کار دوم بار کدنویسی کمتری روی دولوپر دارا است، اکثر دولوپرها چنین راه‌کاری را انتخاب می‌کنند غافل از این‌که انتخاب چنین رویکردی باعث سردرگمی بیشتر کاربران می‌شود!
 
-Cues are different from instructions: Cues tend to be hints; instructions are verbose. Cues occur at the point of interaction; instructions appear before the point of interaction. Cues provide context; instructions dictate use.
+حال اگر هم راه‌کار دوم مدنظر دولوپر باشد، بازهم راه‌کارهایی برای به حداقل رساندن خطاها از طرف کاربران وجود دارد؛ مثلاً به‌سادگی می‌توان لیبل‌هایی حاوی متنی مرتبط با فرمت مدنظر درمعرض دید کاربر قرار داد و یا ۳ فیلد مجزا یکی برای سال، یکی برای ماه و دیگری برای روز با لیبل‌های گویا و مشخص درنظر گرفت تا احتمال خطا را به حداقل رساند.
 
-In general, instructions are ineffective at preventing error. Users tend to assume that interfaces will work in line with their past experience ("Surely everyone knows what 'July 29, 2012' means?"). So instructions go unread. Cues nudge users away from errors.
+به‌طورکلی، برخی دولوپرها هستند که دستورالعمل‌هایی برای نحوهٔ تعامل کاربر با اپلیکیشن درنظر می‌گیرند اما این درحالی است که بسیاری از این دستورالعمل‌های توسط کاربران اصلاً خوانده نمی‌شوند چراکه کاربران یا حوصلهٔ مطالعهٔ چنین دستورالعمل‌هایی را ندارند و یا فرض را بر این می‌گذارند که نحوهٔ تعامل با سیستم -باتوجه به تجربیات گذشتهٔ خود در تعامل با سرویس‌هایی مشابه- را بلد هستند.
 
-Another way of avoiding errors is to offer defaults. For instance, users typically enter values that correspond to *today*, *tomorrow*, *my birthday*, *my deadline*, or *the date I entered last time I used this form*. Depending on context, one of these is likely to be a good choice as a smart default.
+در همین راستا، توصیه می‌شود که به‌جای استفاده از دستورالعمل‌های نحوهٔ استفاده از یک سرویس، اصطلاحاً Hint در اختیار کاربران قرار گیرد. درواقع، تفاوت Hint (به‌معنی ایما، تذکر و اشاره) با Instruction (دستورالعمل) در این است که دستورالعمل‌ها همواره پیش از تعامل کاربر با سیستم در قالب یک پاپ‌آپ، پیام، باکس و … درمعرض دیدش قرار می‌گیرد اما این درحالی است که هینت‌ها درحین تعامل کاربر با سیستم چیزی را به وی گوشزد می‌کنند و به همین دلیل هم هست که اثربخش‌تر هستند (مثلاً وقتی که در یکی از فیلدهای فرمی کلیک می‌کنیم و پیامی درمعرض دیدمان قرار می‌گیرد، این پیام نوعی Hint است).
 
-Whatever the cause, systems should be tolerant of errors. You can do this by providing multiple levels of *undo* to all actions — and in particular actions which have the potential to destroy or amend users' data.
+راه‌کار دیگری که برای جلوگیری از وقوع ارورها می‌توان اتخاذ کرد این است که مثلاً در فیلدهای یک فرم از مقادیر دیفات (پیش‌فرض) استفاده کرد؛ در همان مثال فیلد مرتبط با تاریخ، می‌توان تاریخ روز را به‌صورت مقدار پیش‌فرض درنظر گرفت و این درحالی است که اگر تاریخ مدنظر کاربر تاریخ همان روز باشد که آن‌را دست‌نخورده باقی می‌گذارد و در غیر این صورت، می‌داند که فرمت مدنظر سیستم چیست و چگونه دیتا را می‌بایست وارد کند.
 
-Logging and analyzing *undo* actions can also highlight where the interface is drawing users into unconscious errors, such as persistently clicking on the 'wrong' button. These errors are often caused by misleading cues or interaction sequences that you can redesign to prevent further error.
-
-Whichever approach you take, most errors are systematic — the result of misunderstandings between the user and the software. Understanding how users think, interpret information, make decisions, and input data will help you debug the interactions between your software and your users.
-
-by [Giles Colborne](http://programmer.97things.oreilly.com/wiki/index.php/Giles_Colborne)
+به‌طورکلی، دولوپرها پیش از هرچیز می‌بایست به این درک برسند که کاربران هدفشان چگونه فکر می‌کنند و بر همین اساس هم سیستم را مطابق به نحوهٔ فکر کردن اکثر کاربران هدف طراحی کنند و همین مسأله منجر به بروز پیام‌های خطای کمتر و درنتیجه تجربهٔ کاربری بهتر از جانب کاربران می‌گردد.
