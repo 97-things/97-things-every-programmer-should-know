@@ -1,31 +1,18 @@
-# The Unix Tools Are Your Friends
+#  ابزارهای یونیکسی دوست دولوپرها هستند!
 
-If on my way to exile on a desert island I had to choose between an IDE and the Unix toolchest, I'd pick the Unix tools without a second thought. Here are the reasons why you should become proficient with Unix tools.
+فارغ از اینکه با چه زبانی کد بزنیم، در چه حوزه‌ای به توسعهٔ اپلیکیشن بپردازیم و از چه ابزارهایی برای کدنویسی استفاده کنیم، برای دولوپرها استفاده از ابزارهایی که برای UNIX به بازار عرضه شده‌اند یک باید است.
 
-First, IDEs target specific languages, while Unix tools can work with anything that appears in textual form. In today's development environment where new languages and notations spring up every year, learning to work in the Unix way is an investment that will pay off time and again.
+اگر بخواهیم به عمده‌ترین دلایل استفاده از ابزارهای یونیکسی اشاره کنیم، بایستی بگوییم که به طور مثال IDEها برای زبان‌های برنامه‌نویسی به‌خصوصی طراحی شده‌اند اما این در حالی است که ابزارهای یونیکسی برای هر چیزی کاربرد خواهند داشت. در عصری که سال به سال زبان‌های برنامه‌نویسی جدیدی به بازار عرضه می‌شوند، سرمایه‌گذاری روی ابزارهای جهان‌شمولی همچون «اپلیکیشن‌های یونیکسی» به منزلهٔ سرمایه‌گذاری در صرفه‌جویی زمان و انرژی دولوپر است.
 
-Furthermore, while IDEs offer just the commands their developers conceived, with Unix tools you can perform any task you can imagine. Think of them as (classic pre-Bionicle) Lego blocks: You create your own commands simply by combining the small but versatile Unix tools. For instance, the following sequence is a text-based implementation of Cunningham's signature analysis — a sequence of each file's semicolons, braces, and quotes, which can reveal a lot about the file's contents.
+نکتهٔ دیگری که در ارتباط با تفاوت‌های یک IDE با یک UNIX Tool وجود دارد این است که معمولاً محیط‌های توسعهٔ یکپارچه (IDE) از یکسری کامندهای از پیش‌ تعریف شده برخوردارند که دولوپرها با استفاده از آنها به کدنویسی می‌پردازند،؛ اما دولوپرها با استفاده از ابزارهای یونیکسی می‌توانند محیط‌های توسعهٔ نرم‌افزار کاستومایز شدهٔ خود را ایجاد کنند و بسته به تمایلات شخصی خود، دست به ساخت محیطی بزنند که سرعت توسعهٔ ایشان را چند برابر کند.
 
-```
-for i in *.java; do 
-    echo -n "$i: "
-    sed 's/[^"{};]//g' $i | tr -d '\n'
-    echo
-done
-```
+علاوه بر این، وقتی که ما به عنوان یک دولوپر کار با یک IDE را فرا می‌گیریم، کلیدهای میانبر، کامندها و غیره همگی اختصاصی همان نرم‌افزار هستند و این در حالی است که اگر روزی بخواهیم به نرم‌افزار دیگری مهاجرت کنیم، می‌بایست با یکسری کلید میانبر جدید آشنا شویم اما وقتی که ما با ابزارهای یونیکسی همچون کامندهای cat ،sed ،grep و غیره آشنا شویم، این ابزارها جهان‌شمول بوده و در هر جایی و هر سیستم‌عامل قابل استفاده می‌باشند.
 
-In addition, each IDE operation you learn is specific to that given task; for instance, adding a new step in a project's debug build configuration. By contrast, sharpening your Unix tool skills makes you more effective at any task. As an example, I've employed the sed tool used in the preceding command sequence to morph a project's build for cross-compiling on multiple processor architectures.
+نکته البته به خاطر داشته باشیم که در IDEها به سادگی می‌توان کلیدهای میانبر را شخصی‌سازی کرد و همین مسأله منجر به این خواهد گشت که مهاجرت از یک نرم‌افزار به نرم‌افزاری دیگر خیلی چالش‌برانگیز نباشد.
+جالب است بدانیم که ابزارهای UNIX در عصری ابداع شدند که یک سیستم چندکاربره (Multiuser) حافظهٔ رَمی برابر با ۱۲۸ کیلوبایت داشت و طراحان چنین ابزارهایی می‌بایست به بهینه‌ترین شکل ممکن به کدنویسی ابزارهای مد نظرشان می‌پرداختند تا با استفاده از کمترین منابع سیستمی، کار چنین کاربر را راه بیندازند.
 
-Unix tools were developed in an age when a multiuser computer had 128kB of RAM. The ingenuity that went into their design means that nowadays they can handle huge data sets extremely efficiently. Most tools work like filters, processing just a single line at the time, meaning that there is no upper limit in the amount of data they can handle. You want to search for the number of edits stored in the half-terabyte English Wikipedia dump? A simple invocation of
+علاوه بر این، اگر کامندی را خیلی مفید یافتیم و یا کارمان به شکلی است که بارها و بارها می‌بایست از آن در حین فرایند کاری خود استفاده نماییم، به سادگی می‌توان کامند مد نظر را در قالب یک فایل بَش پکیج نموده و به عنوان یک نرم‌افزار کامندلاینی کوچک از آن استفاده نماییم.
 
-```
-grep '<revision>' | wc –l 
-```
+نکتهٔ دیگری که در ارتباط با ابزارهای یونیکسی که در سیستم‌عامل‌های مبتنی بر UNIX همچون لینوکس و مکینتاش وجود دارند این است که اکثر این ابزارها اپن‌سورس و رایگان هستند و همین مسأله میزان محبوبیت آنها را در میان دولوپرها دوچندان کرده است.
 
-will give you the answer without sweat. If you find a command sequence generally useful, you can easily package it into a shell script, using some uniquely powerful programming constructs, such as piping data into loops and conditionals. Even more impressively, Unix commands executing as pipelines, like the preceding one, will naturally distribute their load among the many processing units of modern multicore CPUs.
-
-The small-is-beautiful provenance and open source implementations of the Unix tools make them ubiquitously available, even on resource-constrained platforms, like my set-top media player or DSL router. Such devices are unlikely to offer a powerful graphical user interface, but they often include the BusyBox application, which provides the most commonly-used tools. And if you are developing on Windows, the Cygwin environment offers you all imaginable Unix tools, both as executables and in source code form.
-
-Finally, if none of the available tools match your needs, it's very easy to extend the world of the Unix tools. Just write a program (in any language you fancy) that plays by a few simple rules: Your program should perform just a single task; it should read data as text lines from its standard input; and it should display its results unadorned by headers and other noise on its standard output. Parameters affecting the tool's operation are given in the command line. Follow these rules and "yours is the Earth and everything that's in it."
-
-By [Diomidis Spinellis](http://programmer.97things.oreilly.com/wiki/index.php/Diomidis_Spinellis)
+در پایان هم بایستی گفت اگر هیچ‌کدام از ابزارهای یونیکسی عرضه شده به بازار نیازهای شما را مرتفع نمی‌سازند، با یادگیری Shell Scripting به سادگی قادر خواهید بود دست به کدنویسی ابزارهای اختصاصی خود بزنید.
