@@ -1,31 +1,23 @@
-# Prefer Domain-Specific Types to Primitive Types
+# آشنایی با تفاوت Static Typing و Dynamic Typing در برنامه‌نویسی
 
-On 23rd September 1999 the $327.6 million Mars Climate Orbiter was lost while entering orbit around Mars due to a software error back on Earth. The error was later called the *metric mix-up*. The ground station software was working in pounds while the spacecraft expected newtons, leading the ground station to underestimate the power of the spacecraft's thrusters by a factor of 4.45.
+پیش از هرچیز، به این نکته توجه داشته باشیم که در اینجا منظور از Type، نوع داده‌ای است که با آن سرورکار خواهیم داشت. به‌طورکلی، زبانی که به‌اصطلاح Statically Typed است در آن نوع متغیرها در زمان کامپایل شدن (Compile Time) برنامه‌ مشخص می‌گردد که از آن جمله می‌توان به زبان‌های جاوا، اسکالا، سی‌شارپ، سی و سی‌پلاس‌پلاس اشاره کرد و همین مسأله منجر به این خواهد گشت که پرفورمنس برنامه بالا رود چراکه هر دفعه که برنامه اجرا می‌گردد، دیگر نیازی به چک کردن نوع متغیرها نخواهد بود (لازم به‌ذکر است که این فیچر به‌عنوان یکی از برگ‌برنده‌های زبان‌هایی از این دست است).
 
-This is one of many examples of software failures that could have been prevented if stronger and more domain-specific typing had been applied. It is also an example of the rationale behind many features in the Ada language, one of whose primary design goals was to implement embedded safety-critical software. Ada has strong typing with static checking for both primitive types and user-defined types:
-
+علاوه‌بر این، در این نوع زبان‌ها زمانی‌‌که دولوپر تایپی را برای یک متغیر درنظر می‌گیرد، دیگر قادر به تغییر آن نخواهد بود چراکه در این نوع زبان‌ها تایپ به متغیر اختصاص می‌یابد نه مقدار درنظر گرفته شده برای آن متغیر و درصورتی‌که تغییر تایپ صورت گیرد، با اکسپشن مواجه خواهیم شد. به‌عنوان نمونه در زبان جاوا داریم:
 ```
-type Velocity_In_Knots is new Float range 0.0 .. 500.00;
-
-type Distance_In_Nautical_Miles is new Float range 0.0 .. 3000.00;
-
-Velocity: Velocity_In_Knots;
-
-Distance: Distance_In_Nautical_Miles;
-
-Some_Number: Float;
-
-Some_Number:= Distance + Velocity; -- Will be caught by the compiler as a type error.
+String str = "Hello World";
+str = 7;
 ```
+همان‌طور که در کد فوق ملاحظه می‌شود، ابتدا متغیری از جنس String با مقدار Hello World ایجاد کرده‌ایم که در این صورت برنامه بدون هیچ مشکلی کامپایل خواهد شد اما در خط دوم، مجدد مقدار این متغیر را برابر با یک عدد صحیح درنظر گرفته‌ایم و از آنجا که تایپ عدد صحیح با تایپ استرینگ متفاوت است، در حین کامپایل شدن برنامه با اکسپشن مواجه خواهیم شد.
 
-Developers in less demanding domains might also benefit from applying more domain-specific typing, where they might otherwise continue to use the primitive data types offered by the language and its libraries, such as strings and floats. In Java, C++, Python, and other modern languages the abstract data type is known as class. Using classes such as `Velocity_In_Knots` and `Distance_In_Nautical_Miles` adds a lot of value with respect to code quality:
+یکی از خوبی‌های این نوع زبان‌ها این است که چک کردن برنامه توسط کامپایلر و در حین فرایند کامپایل شدن صورت می‌گیرد و بنابراین باگ‌های جزئی که ممکن است از دید پنهان بمانند خیلی زود یافت خواهند شد.
 
-- The code becomes more readable as it expresses concepts of a domain, not just Float or String.
-- The code becomes more testable as the code encapsulates behavior that is easily testable.
-- The code facilitates reuse across applications and systems.
+زبانی هم که به‌اصطلاح Dynamically Typed است در آن نوع متغیرها در حین اجرای برنامه‌ (Run Time) مشخص می‌شود و دولوپر در حین کدنویسی نیازی به مشخص کردن دیتاتایپ‌ متغیر نخواهد داشت که از آن جمله می‌توان به زبان‌های پایتون، جاوااسکریپت و پی‌اچ‌پی اشاره کرد.
 
-The approach is equally valid for users of both statically and dynamically typed languages. The only difference is that developers using statically typed languages get some help from the compiler while those embracing dynamically typed languages are more likely to rely on their unit tests. The style of checking may be different, but the motivation and style of expression is not.
+علاوه‌بر این، در این نوع زبان‌ها پس از آن که تایپی برای یک متغیر درنظر گرفته شد، مجدد می‌توان تایپ آن متغیر را تغییر داد چراکه در این نوع زبان‌ها، دیتاتایپ به مقادیر متغیرها بر‌می‌گردد نه خود آن‌ها؛ به‌عنوان‌مثال، در زبان پی‌اچ‌پی داریم:
+```
+$str = "Hello World";
+$str = 7;
+```
+می‌بینیم که در خط اول متغیری تحت‌عنوان str$ ساخته‌ایم که حاوی مقدار Hello World است و در خط دوم هم این مقدار که پیش از این استرینگ بود را به یک عدد صحیح (Integer) تغییر داده و برنامه هم بدون هیچ مشکلی اجرا خواهد شد.
 
-The moral is to start exploring domain-specific types for the purpose of developing quality software.
-
-By [Einar Landre](http://programmer.97things.oreilly.com/wiki/index.php/Einar_Landre)
+به خاطر داشته باشید باتوجه به‌ این که در زبان‌های Dynamically Typed چک کردن دیتاتایپ‌ها در حین اجرا صورت می‌گیرد، برنامه‌های نوشته شده با این زبان‌ها تاحدودی مشکل پرفورمنسی دارند چراکه هردفعه در حین اجرا، فرایند چک کردن دیتاتایپ‌ها می‌بایست صورت گیرد.
