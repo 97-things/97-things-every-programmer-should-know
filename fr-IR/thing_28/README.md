@@ -1,20 +1,15 @@
-# Don't Nail Your Program into the Upright Position
+# اکسپش‌ها را به راحت‌ترین شکل ممکن هَندل کنید
 
-I once wrote a spoof C++ quiz, in which I satirically suggested the following strategy for exception handling:
+فرض کنیم برای هندل کردن Exception ها یا بهتر بگوییم «خطاهای» برنامه ی خود، کلاسی مخصوص این کار می نویسیم که مسئول هندل کردن هر گونه اکسپشنی است. مثلاً در زبان PHP برای هندل کردن اکسپشن ها، از ساختار زیر استفاده می شود:
+``` C
+try {
+      // do something
+ } catch (Exception $e) {
+      return $e;
+ }
+ ```
+کدی که می‌خواهیم اجرا شود را داخل بلوک try قرار داده و در صورت بروز هر گونه اکسپشنی، بلوک داخل catch اجرا خواهد شد. برخی برنامه نویسان هستند که داخل بلوک catch از یک جفت try/catch دیگر نیز استفاده می‌کنند تا بتوانند به صورت لایه به لایه، اصطلاحاً اکسپشن ها را هندل کنند.
 
-> By dint of plentiful `try...catch` constructs throughout our code base, we are sometimes able to prevent our applications from aborting. We think of the resultant state as "nailing the corpse in the upright position."
+چنین رویکردی گاهی اوقات منجر به سردرگمی های فراوانی می‌شود و نتیجه این که وقتی با یک اکسپشن رو به رو می شوید، متوجه نخواهید شد که مشکل دقیقاً از کجا است. همواره سعی کنید برای هندل کردن اکسپشن ها راحت‌ ترین و سر راست ترین رویکرد ممکن را انتخاب کنید تا در حین بزرگ شدن برنامه، با کمترین میزان سردرگمی مواجه شوید.
 
-Despite my levity, I was actually summarizing a lesson I received at the knee of Dame Bitter Experience herself.
-
-It was a base application class in our own, homemade C++ library. It had suffered the pokings of many programmers' fingers over the years: Nobody's hands were clean. It contained code to deal with all escaped exceptions from everything else. Taking our lead from Yossarian in Catch-22, we decided, or rather felt (*decided* implies more thought than went into the construction of this monster) that an instance of this class should live forever or die in the attempt.
-
-To this end, we intertwined multiple exception handlers. We mixed in Windows' structured exception handling with the native kind (remember `__try...__except` in C++? Me neither). When things threw unexpectedly, we tried calling them again, pressing the parameters harder. Looking back, I like to think that when writing an inner `try...catch` handler within the catch clause of another, some sort of awareness crept over me that I might have accidentally taken a slip road from the motorway of good practice into the aromatic but insalubrious lane of lunacy. However, this is probably retrospective wisdom.
-
-Needless to say, whenever something went wrong in applications based on this class, they vanished like Mafia victims at the dockside, leaving behind no useful trail of bubbles to indicate what the hell happened, notwithstanding the dump routines that were supposedly called to record the disaster. Eventually — a long eventually — we took stock of what we had done, and experienced shame. We replaced the whole mess with a minimal and robust reporting mechanism. But this was many crashes down the line.
-
-I wouldn't bother you with this — for surely nobody else could ever be as stupid as we were — but for an online argument I had recently with a bloke whose academic job title declared he should know better. We were discussing Java code in a remote transaction. If the code failed, he argued, it should catch and block the exception *in situ*. ("And then do *what* with it?" I asked. "Cook it for supper?")
-
-He quoted the UI designers' rule: NEVER LET THE USER SEE AN EXCEPTION REPORT, rather as though this settled the matter, what with it being in caps and everything. I wonder if he was responsible for the code in one of those blue-screened ATMs whose photos decorate the feebler blogs, and had been permanently traumatized.
-Anyway, if you should meet him, nod and smile and take no notice, as you sidle towards the door.
-
-By [Verity Stob](http://programmer.97things.oreilly.com/wiki/index.php/Verity_Stob)
+علاوه بر این، توجه داشته باشید که کاربر نرم‌افزار شما تحت هیچ عنوان نباید اکسپشن هایی که اساساً راهنمای توسعه دهندگان برای رفع باگ های سیستم هستند را مشاهده کنند چرا که علاوه بر ایجاد یک تجربه کاربری نامطلوب، اکسپشن ها معمولاً اطلاعاتی زیرساخت از نرم‌افزار در اختیار کاربر قرار می‌دهند که همین مسأله می‌تواند منجر به پایین آمدن ضریب امنیتی نرم‌افزار شما شود.
