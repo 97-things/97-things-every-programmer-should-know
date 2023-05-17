@@ -1,23 +1,18 @@
-# Two Heads Are Often Better than One
+# اهمیت برنامه‌نویسی دونفره در کدنویسی را هرگز نادیده نگیرید
 
-Programming requires deep thought, and deep thought requires solitude. So goes the programmer stereotype.
+نیاز به توضیح نیست که کدنویسی نیاز به تفکر عمیقی دارد و تفکر عمیق هم در محیط‌های شلوغ امکان‌پذیر نبوده و نیازمند محیطی آرام و تنها است اما آنچه مسلم است اینکه در دنیای امروز فقط و فقط با تکیه بر داشته‌های خود نمی‌توان در حوزهٔ توسعهٔ نرم‌افزار به موفقیت‌های چندانی دست یافت و آشنایی با مهارت Team Work (کار گروهی) چیزی است که از دولوپرها، خواه فریلنسر باشند و خواه در تیم کد بزنند، انتظار می‌رود.
 
-This "lone wolf" approach to programming has been giving way to a more collaborative approach, which, I would argue, improves quality, productivity, and job satisfaction for programmers. This approach has developers working more closely with each other and also with non-developers — business and systems analysts, quality assurance professionals, and users.
+اما به خاطر داشته باشیم که منظور از کار گروهی این نیست که به سؤالات دیگر دولوپرها پاسخ دهیم، در جلسات شرکت کنیم، ایده بدهیم و کارهایی از این دست بلکه منظور کلی این است که به شکلی کاملاً پویا و فعال به همکاری با دیگر اعضای تیم بپردازیم.
 
-What does this mean for developers? Being the expert technologist is no longer sufficient. You must become effective at working with others.
+در همین راستا، یکی از راه‌های پیاده‌سازی کار گروهی چیزی است تحت‌ عنوان Pair Programming (برنامه‌نویسی دونفره) که مزایای بسیاری برای هر دو دولوپر دارا است. اگر فرض را بر این بگذاریم که شما از همکارتان حرفه‌ای‌تر باشید، مسلماً با انتقال دانش خود منجر به ارتقاء مهارت‌های تیم توسعه خواهید شد و همچنین به توانایی‌های خود بیشتر واقف می‌گردید؛ اگر هم همکارتان از شما حرفه‌ای‌تر باشد، دیگر نیاز به توضیح نیست که این نوع کدنویسی می‌تواند در بالا بردن سطح مهارت‌های شما مفید واقع گردد.
 
-Collaboration is not about asking and answering questions or sitting in meetings. It's about rolling up your sleeves with someone else to jointly attack work.
+آنچه مسلم است اینکه نگاه هیچ ۲ دولوپری در حین فرایند توسعهٔ نرم‌افزار ۱۰۰٪ شبیه به یکدیگر نیست و همین مسأله اهمیت برنامه‌نویسی دونفره را دوچندان می‌سازد چرا که دولوپرها می‌توانند از زوایای مختلفی به مسألهٔ پیش‌رویشان نگاه کرده و بهترین راه‌کار را برایش اتخاذ کنند.
 
-I'm a big fan of pair programming. You might call this "extreme collaboration." As a developer, my skills grow when I pair. If I am weaker than my pairing partner in the domain or technology, I clearly learn from his or her experience. When I am stronger in some aspect, I learn more about what I know and don't know by having to explain myself. Invariably, we both bring something to the table and learn from each other.
+حال بایستی از نقطه‌نظر مدیران شرکت‌های نرم‌افزاری هم به این قضیه نگاه کنیم؛ این دست مدیران که عموماً طرفدار مدیریت پروژه به سبک اجایل هستند بر این باورند که گماشتن ۲ دولوپر روی پروژه‌ای که ۱ دولوپر هم به خوبی از عهدهٔ آن برمی‌آید، کاری غیرمنطقی است!
 
-When pairing, we each bring our collective programming experiences — domain as well as technical — to the problem at hand and can bring unique insight and experience into writing software effectively and efficiently. Even in cases of extreme imbalance in domain or technical knowledge, the more experienced participant invariably learns something from the other — perhaps a new keyboard shortcut, or exposure to a new tool or library. For the less-experienced member of the pair, this is a great way to get up to speed.
+چنین دیدگاهی کاملاً درست و به‌جا است و ما هرگز نمی‌گوییم که «باید» همواره کلیهٔ پروژه‌ها را با گماشتن ۲ دولوپر پیاده‌سازی کرد اما در اینجا بحث بالا بردن کیفیت کار از یک سو و انتقال دانش و ارتقاء مهارت‌های تک‌تک اعضای تیم توسعهٔ نرم‌افزار از سوی دیگر است.
 
-Pair programming is popular with, though not exclusive to, proponents of agile software development. Some who object to pairing suggest "Why should I pay two programmers to do the work of one?" My response is that, indeed, you should not. I argue that pairing increases quality, understanding of the domain and technology, techniques (like IDE tricks), and mitigates the impact of lottery risk (one of your expert developers wins the lottery and quits the next day).
+نیاز به توضیح نیست که بازار کار همواره به دنبال بهترین دولوپرها است و اگر شرکت‌های نرم‌افزاری این شانس را داشته باشند که دولوپرهایی از این دست را به استخدام خود درآورده باشند، همواره بایستی این نگرانی را داشته باشند که روزی دولوپرهای درجه ۱ خود را از دست بدهند و این در حالی است که پیروی کردن از سیاست برنامه‌نویسی دونفره می‌تواند دانش، مهارت و تجربیات دولوپرهای حرفه‌ای تیم را تا حد امکان به دولوپرهای مبتدی‌تر انتقال دهد و چنانچه روزی برسد که دولوپر یا دولوپرهای حرفه‌ای تیم بخواهند شرکت را ترک کنند، می‌توان این اطمینان را داشت که بخش قابل‌توجهی از دانش ایشان با سایرین به اشتراک گذاشته شده است.
 
-What is the long-term value of learning a new keyboard shortcut? How do we measure the overall quality improvement to the product resulting from pairing? How do we measure the impact of your partner not letting you pursue a dead-end approach to solving a difficult problem? One study cites an increase of 40% in effectiveness and speed (J T Nosek, "The Case for Collaborative Programming," *Communications of the ACM*, March 1998). What is the value of mitigating your "lottery risk?" Most of these gains are difficult to measure.
-
-Who should pair with whom? If you're new to the team, it's important to find a team member who is knowledgeable. Just as important find someone who has good interpersonal and coaching skills. If you don't have much domain experience, pair with a team member who is an expert in the domain.
-
-If you are not convinced, experiment: collaborate with your colleagues. Pair on an interesting, gnarly problem. See how it feels. Try it a few times.
-
-By [Adrian Wible](http://programmer.97things.oreilly.com/wiki/index.php/Adrian_Wible)
+چه نوع دولوپرهایی می‌بایست با یکدیگر در یک تیم قرار بگیرند؟
+اگر به طور مثال شما دولوپری مبتدی هستید، خیلی مهم است که در صورت داشتن امکان برنامه‌نویسی دونفره در شرکت به جای دولوپری مبتدی همچون خودتان، با فردی ماهرتر هم‌ گروه شوید اما بایستی به خاطر داشته باشیم که مهارت‌های فنی برای هم گروه شده صرفاً کافی نیستند بلکه فردی که قرار است هم گروه ما شود، می‌بایست از مهارت‌های برقراری ارتباط با دیگران و مربی‌گری نیز برخوردار باشد که در این صورت بهترین نتیجهٔ ممکن را خواهیم گرفت.
