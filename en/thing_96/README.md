@@ -1,4 +1,4 @@
-# You Gotta Care about the Code
+# You Gotta Care About the Code
 
 It doesn't take Sherlock Holmes to work out that good programmers write good code. Bad programmers... don't. They produce monstrosities that the rest of us have to clean up. You want to write the good stuff, right? You want to be a good programmer.
 
