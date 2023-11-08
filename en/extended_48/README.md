@@ -1,0 +1,17 @@
+# Restrict Mutability of State
+
+> "When it is not necessary to change, it is necessary not to change." - Lucius Cary
+
+What appears at first to be a trivial observation turns out to be a subtly important one: A large number of software defects arise from the (incorrect) modification of state. It follows from this that if there is less opportunity for code to change state, there will be fewer defects that arise from state change!
+
+Perhaps the most obvious example of restricting mutability is its most complete realization: immutability. A moratorium on state change is an idea carried to its logical conclusion in pure functional programming languages such as Haskell. But even the modest application of immutability in other programming models has a simplifying effect. If an object is immutable it can be shared freely across different parts of a program without concern for aliasing or synchronization problems. An object that does not change state is inherently thread-safe — there is no need to synchronize state change if there is no state change. An immutable object does not need locking or any other palliative workaround to achieve safety.
+
+Depending on the language and the idiom, immutability can be expressed in the definition of a type or through the declaration of a variable. For example, Java's `String` class represents objects that are essentially immutable — if you want another string value, you use another string object. Immutability is particularly suitable for value objects in languages that favor predominantly reference-based semantics. In contrast, the `const` qualifier found in C and C++, and more strictly the `immutable` qualifier in D, constrain mutability through declaration. `const` qualification restricts mutability in terms of access rights, typically expressing the notion of read-only access rather than necessarily immutability.
+
+Perhaps a little counterintuitively, copying offers an alternative technique for restricting mutability. In languages offering a transparent syntax for passing by copy, such as C#'s `struct` objects and C++'s default argument passing mode, copying value objects can greatly improve encapsulation and reduce opportunities for unnecessary and unintended state change. Passing or returning a copy of a value object ensures that the caller and callee cannot interfere with one another's view of a value. But beware that this technique is somewhat error prone if the passing syntax is not transparent. If programmers have to make special efforts to remember to make the copy, such as explicitly call a `clone` method, they are also being given the opportunity to forget to do it. It becomes a complication that is easy to overlook rather than a simplification.
+
+In general, make state and any modification to it as local as possible. For local variables, declare as late as possible, when a variable can be sensibly initialized. Try to avoid broadcasting mutability through public data, global and class `static` variables (which are essentially globals with scope etiquette), and modifier methods. Resist the temptation to mirror every _getter_ with a _setter_.
+
+Restricting mutability of state is not some kind of silver bullet you can use to shoot down all defects. But the resulting code simplification and improvement in encapsulation make it less likely that you will introduce defects, and more likely that you can change code with confidence rather than trepidation.
+
+By [Kevlin Henney](http://programmer.97things.oreilly.com/wiki/index.php/Kevlin_Henney)
