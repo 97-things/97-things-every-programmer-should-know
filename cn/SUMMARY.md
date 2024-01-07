@@ -15,7 +15,7 @@
 12. [代码即设计](thing_12/README.md)
 13. [代码布局的重要性](thing_13/README.md)
 14. [代码评审](thing_14/README.md)
-15. [Coding with Reason](thing_15/README.md)
+15. [使用理性进行编码](thing_15/README.md)
 16. [A Comment on Comments](thing_16/README.md)
 17. [Comment Only What the Code Cannot Say](thing_17/README.md)
 18. [Continuous Learning](thing_18/README.md)
