@@ -16,7 +16,7 @@
 13. [代码布局的重要性](thing_13/README.md)
 14. [代码评审](thing_14/README.md)
 15. [使用理性进行编码](thing_15/README.md)
-16. [A Comment on Comments](thing_16/README.md)
+16. [对注释的评论](thing_16/README.md)
 17. [Comment Only What the Code Cannot Say](thing_17/README.md)
 18. [Continuous Learning](thing_18/README.md)
 19. [Convenience Is not an -ility](thing_19/README.md)
