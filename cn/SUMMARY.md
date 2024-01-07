@@ -13,7 +13,7 @@
 10. [谨慎选择工具](thing_10/README.md)
 11. [用领域语言编写代码](thing_11/README.md)
 12. [代码即设计](thing_12/README.md)
-13. [Code Layout Matters](thing_13/README.md)
+13. [代码布局的重要性](thing_13/README.md)
 14. [Code Reviews](thing_14/README.md)
 15. [Coding with Reason](thing_15/README.md)
 16. [A Comment on Comments](thing_16/README.md)
