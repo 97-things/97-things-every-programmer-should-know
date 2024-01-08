@@ -23,7 +23,7 @@
 20. [提早且经常部署](thing_20/README.md)
 21. [将业务异常与技术异常区分开来](thing_21/README.md)
 22. [进行大量的刻意练习](thing_22/README.md)
-23. [Domain-Specific Languages](thing_23/README.md)
+23. [领域特定语言](thing_23/README.md)
 24. [Don't Be Afraid to Break Things](thing_24/README.md)
 25. [Don't Be Cute with Your Test Data](thing_25/README.md)
 26. [Don't Ignore that Error!](thing_26/README.md)
