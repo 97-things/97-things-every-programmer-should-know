@@ -1,6 +1,7 @@
-# Summary
+# 摘要
 
 * [简介](README.md)
+
 1. [谨慎行事](thing_01/README.md)
 2. [应用函数式编程原则](thing_02/README.md)
 3. [问“用户会做什么？”（您不是用户）](thing_03/README.md)
