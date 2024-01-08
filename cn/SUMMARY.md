@@ -26,7 +26,7 @@
 23. [领域特定语言](thing_23/README.md)
 24. [不要害怕打破事物](thing_24/README.md)
 25. [不要在测试数据中搞怪](thing_25/README.md)
-26. [Don't Ignore that Error!](thing_26/README.md)
+26. [不要忽略那个错误！](thing_26/README.md)
 27. [Don't Just Learn the Language, Understand its Culture](thing_27/README.md)
 28. [Don't Nail Your Program into the Upright Position](thing_28/README.md)
 29. [Don't Rely on "Magic Happens Here"](thing_29/README.md)
