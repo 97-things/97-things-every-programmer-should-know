@@ -29,7 +29,7 @@
 25. [不要在测试数据中搞怪](thing_25/README.md)
 26. [不要忽略那个错误！](thing_26/README.md)
 27. [不仅学习语言，还要理解其文化](thing_27/README.md)
-28. [Don't Nail Your Program into the Upright Position](thing_28/README.md)
+28. [不要将你的程序固定在直立位置](thing_28/README.md)
 29. [Don't Rely on "Magic Happens Here"](thing_29/README.md)
 30. [Don't Repeat Yourself](thing_30/README.md)
 31. [Don't Touch that Code!](thing_31/README.md)
