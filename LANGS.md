@@ -2,3 +2,4 @@
 * [русский язык](ru)
 * [Türkçe](tr)
 * [Persian(فارسی)](fa)
+* [Chinese(中文)](cn)
