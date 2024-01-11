@@ -35,7 +35,7 @@
 31. [不要碰那段代码！](thing_31/README.md)
 32. [封装行为，而不仅仅是状态](thing_32/README.md)
 33. [浮点数不是实数](thing_33/README.md)
-34. [Fulfill Your Ambitions with Open Source](thing_34/README.md)
+34. [用开源实现你的抱负](thing_34/README.md)
 35. [The Golden Rule of API Design](thing_35/README.md)
 36. [The Guru Myth](thing_36/README.md)
 37. [Hard Work Does not Pay Off](thing_37/README.md)
