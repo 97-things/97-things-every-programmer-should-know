@@ -37,7 +37,7 @@
 33. [浮点数不是实数](thing_33/README.md)
 34. [用开源实现你的抱负](thing_34/README.md)
 35. [API设计的黄金法则](thing_35/README.md)
-36. [The Guru Myth](thing_36/README.md)
+36. [偶像迷思](thing_36/README.md)
 37. [Hard Work Does not Pay Off](thing_37/README.md)
 38. [How to Use a Bug Tracker](thing_38/README.md)
 39. [Improve Code by Removing It](thing_39/README.md)
