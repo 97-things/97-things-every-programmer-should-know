@@ -38,7 +38,7 @@
 34. [用开源实现你的抱负](thing_34/README.md)
 35. [API设计的黄金法则](thing_35/README.md)
 36. [偶像迷思](thing_36/README.md)
-37. [Hard Work Does not Pay Off](thing_37/README.md)
+37. [努力工作并不能带来好结果](thing_37/README.md)
 38. [How to Use a Bug Tracker](thing_38/README.md)
 39. [Improve Code by Removing It](thing_39/README.md)
 40. [Install Me](thing_40/README.md)
