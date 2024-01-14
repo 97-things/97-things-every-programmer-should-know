@@ -42,7 +42,7 @@
 38. [如何使用错误跟踪器](thing_38/README.md)
 39. [通过删除代码来改善代码](thing_39/README.md)
 40. [安装我](thing_40/README.md)
-41. [Inter-Process Communication Affects Application Response Time](thing_41/README.md)
+41. [进程间通信对应用响应时间的影响](thing_41/README.md)
 42. [Keep the Build Clean](thing_42/README.md)
 43. [Know How to Use Command-line Tools](thing_43/README.md)
 44. [Know Well More than Two Programming Languages](thing_44/README.md)
