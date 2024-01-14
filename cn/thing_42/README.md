@@ -1,15 +1,15 @@
-# Keep the Build Clean
+# 保持构建的清洁
 
-Have you ever looked at a list of compiler warnings the length of an essay on bad coding and thought to yourself: "You know, I really should do something about that... but I don't have time just now?" On the other hand, have you ever looked at a lone warning that just appeared in a compilation and just fixed it?
+你是否曾经看过一长串编译器警告，就像是一篇关于糟糕编码的文章，然后对自己说：“你知道，我真的应该处理一下这些问题... 但眼下我没有时间。” 另一方面，你是否曾经看到一个刚刚出现在编译中的警告，然后立即修复了它？
 
-When I start a new project from scratch, there are no warnings, no clutter, no problems. But as the code base grows, if I don't pay attention, the clutter, the cruft, the warnings, and the problems can start piling up. When there's a lot of noise, it's much harder to find the warning that I really want to read among the hundreds of warnings I don't care about.
+当我从头开始一个新项目时，没有警告、没有杂乱、没有问题。但随着代码库的增长，如果我不注意，杂乱、垃圾、警告和问题会开始堆积起来。当有很多噪声时，要在我不关心的数百个警告中找到我真正想要阅读的警告就变得非常困难。
 
-To make warnings useful again, I try to use a zero-tolerance policy for warnings from the build. Even if the warning isn't important, I deal with it. If not critical, but still relevant, I fix it. If the compiler warns about a potential null-pointer exception, I fix the cause — even if I "know" the problem will never show up in production. If the embedded documentation (Javadoc or similar) refers to parameters that have been removed or renamed, I clean up the documentation.
+为了再次让警告有用，我尽量对构建过程中的警告采取零容忍政策。即使警告不重要，我也会处理它。如果不是关键问题，但仍然相关，我会修复它。如果编译器警告可能导致空指针异常，我会修复原因，即使我“知道”这个问题永远不会在实际生产中出现。如果嵌入式文档（Javadoc或类似）引用了已删除或重命名的参数，我会清理文档。
 
-If it's something I really don't care about and that really doesn't matter, I ask the team if we can change our warning policy. For example, I find that documenting the parameters and return value of a method in many cases doesn't add any value, so it shouldn't be a warning if they are missing. Or, upgrading to a new version of the programming language may make code that was previously OK now emit warnings. For example, when Java 5 introduced generics, all the old code that didn't specify the generic type parameter would give a warning. This is a sort of warning I don't want to be nagged about (at least, not yet). Having a set of warnings that are out of step with reality does not serve anyone.
+如果是我真的不关心且真的无关紧要的事情，我会询问团队是否可以改变我们的警告政策。例如，我发现在许多情况下，记录方法的参数和返回值并没有增加任何价值，所以如果它们缺失就不应该是一个警告。或者，升级到编程语言的新版本可能会导致以前正常的代码现在产生警告。例如，当Java 5引入泛型时，所有没有指定泛型类型参数的旧代码都会产生警告。这是一种我不想被纠缠的警告（至少目前不想）。拥有一套与现实不符的警告并不对任何人有益。
 
-By making sure that the build is always clean, I will not have to decide that a warning is irrelevant every time I encounter it. Ignoring things is mental work, and I need to get rid of all the unnecessary mental work I can. Having a clean build also makes it easier for someone else to take over my work. If I leave the warnings, someone else will have to wade through what is relevant and what is not. Or more likely, just ignore all the warnings, including the significant ones.
+通过确保构建始终保持干净，我将不必每次遇到警告时都决定它是否无关紧要。忽略事物是一种心理负担，我需要尽可能摆脱所有不必要的心理负担。保持构建的清洁还可以让其他人更容易接管我的工作。如果我留下警告，其他人将不得不浏览哪些是相关的，哪些是无关紧要的。或者更有可能的是，忽略所有警告，包括那些重要的警告。
 
-Warnings from your build are useful. You just need to get rid of the noise to start noticing them. Don't wait for a big clean-up. When something appears that you don't want to see, deal with it right away. Either fix the source of the warning, suppress this warning or fix the warning policies of your tool. Keeping the build clean is not just about keeping it free of compilation errors or test failures: Warnings are also an important and critical part of code hygiene.
+来自构建的警告是有用的。你只需要消除噪音才能开始注意到它们。不要等待大规模的清理。当出现你不想看到的东西时，立即处理。要么修复警告的源代码，要么抑制此警告，要么修复工具的警告策略。保持构建的清洁不仅仅是保持它没有编译错误或测试失败：警告也是代码卫生的重要和关键部分。
 
-By [Johannes Brodwall](http://programmer.97things.oreilly.com/wiki/index.php/Johannes_Brodwall)
+由[Johannes Brodwall](http://programmer.97things.oreilly.com/wiki/index.php/Johannes_Brodwall)撰写
