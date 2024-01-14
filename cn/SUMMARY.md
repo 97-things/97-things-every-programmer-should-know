@@ -40,7 +40,7 @@
 36. [偶像迷思](thing_36/README.md)
 37. [努力工作并不能带来好结果](thing_37/README.md)
 38. [如何使用错误跟踪器](thing_38/README.md)
-39. [Improve Code by Removing It](thing_39/README.md)
+39. [通过删除代码来改善代码](thing_39/README.md)
 40. [Install Me](thing_40/README.md)
 41. [Inter-Process Communication Affects Application Response Time](thing_41/README.md)
 42. [Keep the Build Clean](thing_42/README.md)
