@@ -2,7 +2,7 @@
 
 * [Introdução](README.md)
 1. [Aja com Prudência](thing_01/README.md)
-1. [Apply Functional Programming Principles](thing_02/README.md)
+1. [Aplique princípios de programação funcional](thing_02/README.md)
 1. [Ask "What Would the User Do?" (You Are not the User)](thing_03/README.md)
 1. [Automate Your Coding Standard](thing_04/README.md)
 1. [Beauty Is in Simplicity](thing_05/README.md)
