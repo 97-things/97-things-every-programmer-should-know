@@ -13,3 +13,5 @@ Se você programar o pagamento do débito na próxima iteração, o custo será 
 Resolva o débito técnico assim que possível. Seria imprudente fazer o contrário.
 
 Por [Seb Rose's GitHub profile](https://github.com/sebrose) / [Seb Rose's LinkedIn Profile](https://www.linkedin.com/in/sebrose)
+
+https://www.oreilly.com/library/view/97-things-every/9780596809515/ch01.html
