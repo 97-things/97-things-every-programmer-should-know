@@ -4,7 +4,7 @@
 1. [Aja com Prudência](thing_01/README.md)
 1. [Aplique princípios de programação funcional](thing_02/README.md)
 1. [Pergunte-se "O que o usuário faria?" (Você não é o usuário)](thing_03/README.md)
-1. [Automate Your Coding Standard](thing_04/README.md)
+1. [Automatize seu padrão de codigo](thing_04/README.md)
 1. [Beauty Is in Simplicity](thing_05/README.md)
 1. [Before You Refactor](thing_06/README.md)
 1. [Beware the Share](thing_07/README.md)
