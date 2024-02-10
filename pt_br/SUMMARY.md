@@ -7,7 +7,7 @@
 1. [Automatize seu padrão de codigo](thing_04/README.md)
 1. [A beleza está na simplicidade](thing_05/README.md)
 1. [Antes que você refatore](thing_06/README.md)
-1. [Beware the Share](thing_07/README.md)
+1. [Esteja ciente da sua parte no todo](thing_07/README.md)
 1. [The Boy Scout Rule](thing_08/README.md)
 1. [Check Your Code First before Looking to Blame Others](thing_09/README.md)
 1. [Choose Your Tools with Care](thing_10/README.md)
