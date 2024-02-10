@@ -9,7 +9,7 @@
 1. [Antes que você refatore](thing_06/README.md)
 1. [Esteja ciente da sua parte no todo](thing_07/README.md)
 1. [A regra do escoteiro](thing_08/README.md)
-1. [Check Your Code First before Looking to Blame Others](thing_09/README.md)
+1. [Confira seu próprio código antes de acusar os outros](thing_09/README.md)
 1. [Choose Your Tools with Care](thing_10/README.md)
 1. [Code in the Language of the Domain](thing_11/README.md)
 1. [Code Is Design](thing_12/README.md)
