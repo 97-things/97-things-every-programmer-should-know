@@ -11,7 +11,7 @@
 1. [A regra do escoteiro](thing_08/README.md)
 1. [Confira seu próprio código antes de acusar os outros](thing_09/README.md)
 1. [Escolha suas ferramentas com cuidado](thing_10/README.md)
-1. [Code in the Language of the Domain](thing_11/README.md)
+1. [Desenvolva usando a linguagem do domínio de negócios](thing_11/README.md)
 1. [Code Is Design](thing_12/README.md)
 1. [Code Layout Matters](thing_13/README.md)
 1. [Code Reviews](thing_14/README.md)
