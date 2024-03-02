@@ -13,7 +13,7 @@
 1. [Escolha suas ferramentas com cuidado](thing_10/README.md)
 1. [Desenvolva usando a linguagem do domínio de negócios](thing_11/README.md)
 1. [Código é Design](thing_12/README.md)
-1. [Code Layout Matters](thing_13/README.md)
+1. [O layout do código é importante](thing_13/README.md)
 1. [Code Reviews](thing_14/README.md)
 1. [Coding with Reason](thing_15/README.md)
 1. [A Comment on Comments](thing_16/README.md)
