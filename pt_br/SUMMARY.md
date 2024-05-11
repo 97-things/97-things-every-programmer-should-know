@@ -16,7 +16,7 @@
 1. [O layout do código é importante](thing_13/README.md)
 1. [Revisão de código](thing_14/README.md)
 1. [Programando com um motivo](thing_15/README.md)
-1. [A Comment on Comments](thing_16/README.md)
+1. [Um comentário sobre os comentários](thing_16/README.md)
 1. [Comment Only What the Code Cannot Say](thing_17/README.md)
 1. [Continuous Learning](thing_18/README.md)
 1. [Convenience Is not an -ility](thing_19/README.md)
