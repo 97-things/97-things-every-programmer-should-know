@@ -18,7 +18,7 @@
 1. [Programando com um motivo](thing_15/README.md)
 1. [Um comentário sobre os comentários](thing_16/README.md)
 1. [Comente somente o que o código não diz](thing_17/README.md)
-1. [Continuous Learning](thing_18/README.md)
+1. [Aprendizado contínuo](thing_18/README.md)
 1. [Convenience Is not an -ility](thing_19/README.md)
 1. [Deploy Early and Often](thing_20/README.md)
 1. [Distinguish Business Exceptions from Technical](thing_21/README.md)
