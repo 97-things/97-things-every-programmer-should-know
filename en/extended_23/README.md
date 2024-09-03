@@ -1,0 +1,19 @@
+# Execution Speed versus Maintenance Effort
+
+Most of the time spent in the execution of a program is in a small proportion of the code. An approach based on simplicity is suitable for the majority of a codebase. It is maintainable without adversely slowing down the application. Following Amdahl's Law, to make the program fast we should concentrate on those few lines which are run most of the time. Determine bottlenecks by empirically profiling representative runs instead of merely relying on algorithmic complexity theory or a hunch.
+
+The need for speed can encourage the use of an unobvious algorithm. Typical dividers are slower than multipliers, so it is faster to multiply by the reciprocal of the divisor than to divide by it. Given typical hardware with no choice to use better hardware, division should (if efficiency is important) be performed by multiplication, even though the algorithmic complexity of division and multiplication are identical.
+
+Other bottlenecks provide an incentive for several alternative algorithms to be used in the same application for the same problem (sometimes even for the same inputs!). Unfortunately, a practical demand for speed punishes having strictly one algorithm per problem. An example is supporting uniprocessor and multiprocessor modes. When sequential, quicksort is preferable to merge sort, but for concurrency, more research effort has been devoted to producing excellent merge sort and radix sorts than quicksort. You should be aware that the best uniprocessor algorithm is not necessarily the best multiprocessor algorithm. You should also be aware that algorithm choice is not merely a question of one uniprocessor architecture versus one multiprocessor architecture. For example, a primitive (and hence cheaper) embedded uniprocessor may lack a branch predictor so a radix sort algorithm may not be advantageous. Different kinds of multiprocessors exist. In 2009, the best published algorithm for multiplying typical m×n matrices (by P. D'Alberto and A. Nicolau) was designed for a small quantity of desktop multicore machines, whereas other algorithms are viable for machine clusters.
+
+Changing the quantity or architecture of processors is not the only motivation for diverse algorithms. Special features of different inputs may be exploitable for a faster algorithm. E.g., a practical method for multiplying general square matrices would be _O_(_n_>2.376) but the special case of (tri)diagonal matrices admits an _O_(_n_) method.
+
+Divide-and-conquer algorithms, such as quicksort, start out well but suffer from excessive subprogram call overhead when their recursive invocations inevitably reach small subproblems. It is faster to apply a cut-off problem size, at which point recursion is stopped. A nonrecursive algorithm can finish off the remaining work.
+
+Some applications need a problem solved more than once for the same instance. Exploit dynamic programming instead of recomputing. Dynamic programming is suitable for chained matrix multiplication and optimizing searching binary trees. Unlike a web browser's cache, it guarantees correctness.
+
+Given vertex coloring, sometimes graph coloring should be directly performed, sometimes clique partitioning should be performed instead. Determining the vertex-chromatic index is NP-hard. Check whether the graph has many edges. If so, get the graph's complement. Find a minimum clique partitioning of the complement. The algorithmic complexity is unchanged but the speed is improved. Graph coloring is applicable to networking and numerical differentiation.
+
+Littering a codebase with unintelligible tricks throughout would be bad, as would letting the application run too slowly. Find the right balance for you. Consult books and papers on algorithms. Measure the performance.
+
+By [Paul Colin Gloster](http://programmer.97things.oreilly.com/wiki/index.php/Paul_Colin_Gloster)
