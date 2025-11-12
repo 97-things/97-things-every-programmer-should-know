@@ -1,0 +1,15 @@
+# Encapsule comportamentos, não apenas estado
+
+Na teoria de sistemas, a contenção é uma das construções mais úteis ao lidar com estruturas de sistemas complexas e gigantescas. Na indústria de software, o valor da contenção ou encapsulamento é bem entendido. A contenção é suportada por construções da linguagem de programação como subrotinas, funções, módulos, pacotes, classes e assim por diante.
+
+Módulos e pacotes resolvem as necessidades de larga escala para encapsulamento, enquanto classes, subrotinas e funções resolvem os aspectos menores, mais detalhados desse tópico. Ao longo dos anos, descobri que as classes parecem ser as construções mais difíceis de serem entendidas corretamente pelos desenvolvedores. Não é incomum encontrar uma classe com um método principal de 300 linhas, ou uma classe contendo somente métodos *setters* e *getters* para seus atributos primitivos. Esses exemplos demonstram que os desenvolvedores enlolvidos não entenderam completamente o pensamento da orientação a objetos, falhando em obter as vantagens do poder dos objetos como construções de modelamento. Para desenvolvedores familiares com os termos POJO (Plain Old Java Object) e POCO (Plain Old C# Object ou Plain Old CLR Object), essa era a intenção ao retornar ao básico de orientação a objetos como um paradigma de modelamento - os objetos são simples mas não burros.
+
+Um objeto encapsula tanto estado como comportamento, onde o comportamento é definido pelo estado atual. Considere um objeto *porta*. Ele possui quatro estados: fechado, aberto, fechando e abrindo. Fornece duas operações: abrir e fechar. Dependendo do estado, as operações de abrir e fechar se comportarão de forma diferente. Essa propriedade inerente de um objeto torna o processo de projeto conceitualmente simples. Resume-se a duas simples tarefas: alocação e delegação de responsabilidade aos diferentes objetos incluindo os protocolos de interação entre objetos.
+
+Como isso opera na prática é melhor ilustrado por meio de um exemplo. Digamos que temos três classes: Cliente, Pedido e Item. Um objeto Cliente é o lugar natural para o limite de crédito e para as regras de validação de crédito. Um objeto Pedido sabe sobre o Cliente associado, e sua operação de adicionar Item delega a verificação de crédito presente ao chamar `cliente.validaCrédito(item.preço())`. Se a pós-condição para o método falhar, uma exceção pode ser lançada e a compra então é abortada.
+
+Desenvolvedores menos experientes podem decidir encpasular todas as regras de negócio em um objeto geralmente chamado de `GerenteDePedidos` ou `ServiçoDePedidos`. Nesses projectos, `Pedido`, `Cliente` e `Item` são tratados como meros registros. Toda a lógica é extraida dessas classes e envolvida junto em um método grande, procedural com vários elementos *if-then-else*. Esses métodos falham com frequência e são quase impossíveis de manter. A razão? O encapsulamento está quebrado!
+
+Para concluir, não quebre o encapsulamento e use o poder da sua linguagem de programação para manter ele.
+
+Por [Einar Landre](http://programmer.97things.oreilly.com/wiki/index.php/Einar_Landre)
